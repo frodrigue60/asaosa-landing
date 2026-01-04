@@ -1,3 +1,0 @@
-@echo off
-echo Iniciando tunel Cloudflare...
-cloudflared tunnel --url http://localhost:8000
