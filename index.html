@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Organización dedicada a la valorización de residuos mediante reciclaje y compostaje. Aprende qué materiales aceptamos y cómo preparar tus residuos para el centro de acopio." />
+  <meta name="keywords"
+    content="reciclaje, compostaje, valorización de residuos, plásticos PET, plásticos HDPE, cartón, papel, vidrio, aluminio" />
+  <title>Valorización de Residuos | Reciclaje Sostenible</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- HEADER & NAVIGATION -->
+  <header class="header" id="header">
+    <nav class="nav-container">
+      <div class="logo">
+        <div class="logo-icon">♻️</div>
+        <span id="org-name-nav">ASAOSA</span>
+      </div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#materiales">Materiales</a></li>
+        <li><a href="#rutas">Rutas</a></li>
+        <li><a href="#junta">Junta</a></li>
+        <li><a href="#preparacion">Preparación</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menú">
+        ☰
+      </button>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="inicio">
+    <!-- Video Background -->
+    <div class="hero-video-background">
+      <iframe
+        src="https://www.youtube.com/embed/i7LGcgGXxyM?autoplay=1&mute=1&controls=0&loop=1&playlist=i7LGcgGXxyM&modestbranding=1&rel=0&showinfo=0&playsinline=1&disablekb=1&iv_load_policy=3"
+        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen title="Video de fondo - Reciclaje"></iframe>
+    </div>
+    <!-- Overlay oscuro para mejorar legibilidad del texto -->
+    <div class="hero-overlay"></div>
+    <!-- Contenido del hero -->
+    <div class="hero-content">
+      <h1 id="hero-title">Transformamos Residuos en Valor</h1>
+      <p id="hero-desc">
+        Juntos creamos un futuro más sostenible a través del reciclaje y la
+        valorización de residuos. Cada material que reciclas hace la
+        diferencia.
+      </p>
+      <a href="#materiales" class="cta-button">Descubre Qué Reciclamos</a>
+    </div>
+  </section>
+
+  <!-- MATERIALS SECTION -->
+  <section id="materiales">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">¿Qué Materiales Reciclamos?</h2>
+        <p class="section-subtitle">
+          Aceptamos una amplia variedad de materiales valorizables. Encuentra
+          el tuyo y comienza a reciclar.
+        </p>
+      </div>
+
+      <div class="materials-grid">
+        <!-- Content will be loaded from JSON -->
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- ROUTES SECTION -->
+  <section class="routes-section" id="rutas">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Nuestras Rutas de Recolección</h2>
+        <p class="section-subtitle">
+          Entérate de los días y lugares donde recolectamos tus materiales.
+        </p>
+      </div>
+      <div class="routes-grid" id="routes-container">
+        <!-- Dynamically populated -->
+      </div>
+    </div>
+  </section>
+
+  <!-- BOARD SECTION -->
+  <section class="board-section" id="junta">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Junta Directiva</h2>
+        <p class="section-subtitle">
+          Las personas detrás de la Asociación que hacen esto posible.
+        </p>
+      </div>
+      <div class="board-grid" id="board-container">
+        <!-- Dynamically populated -->
+      </div>
+    </div>
+  </section>
+  </div>
+  </section>
+
+  <!-- PLASTICS SECTION -->
+  <section class="plastics-section" id="plasticos">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Tipos de Plásticos Reciclables</h2>
+        <p class="section-subtitle">
+          Conoce los plásticos que aceptamos y aprende a identificarlos por su
+          código de reciclaje.
+        </p>
+      </div>
+
+      <div class="plastics-grid">
+        <!-- PET -->
+        <div class="plastic-card fade-in-up">
+          <div class="recycle-code">1</div>
+          <h3 class="plastic-name">PET</h3>
+          <p class="plastic-full-name">Polietileno Tereftalato</p>
+          <p>
+            El PET es uno de los plásticos más reciclables y comunes. Es
+            ligero, resistente y transparente, ideal para bebidas y alimentos.
+          </p>
+          <div class="plastic-examples">
+            <h4>Ejemplos comunes:</h4>
+            <ul>
+              <li>Botellas de agua y refrescos</li>
+              <li>Envases de jugos y aceite</li>
+              <li>Recipientes de alimentos transparentes</li>
+              <li>Botellas de productos de higiene</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- HDPE -->
+        <div class="plastic-card fade-in-up">
+          <div class="recycle-code">2</div>
+          <h3 class="plastic-name">HDPE</h3>
+          <p class="plastic-full-name">Polietileno de Alta Densidad</p>
+          <p>
+            El HDPE es un plástico rígido y duradero, resistente a químicos y
+            perfecto para productos de limpieza y cuidado personal.
+          </p>
+          <div class="plastic-examples">
+            <h4>Ejemplos comunes:</h4>
+            <ul>
+              <li>Botellas de detergente y limpiadores</li>
+              <li>Envases de champú y acondicionador</li>
+              <li>Botellas de leche y jugos (opacas)</li>
+              <li>Recipientes de productos químicos domésticos</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div style="
+            margin-top: 3rem;
+            padding: 2rem;
+            background: rgba(124, 179, 66, 0.1);
+            border-radius: 16px;
+            border-left: 6px solid var(--color-green-medium);
+          ">
+        <h3 style="color: var(--color-green-dark); margin-bottom: 1rem">
+          💡 Consejo Importante
+        </h3>
+        <p style="margin: 0; color: var(--color-gray-dark)">
+          Busca el número dentro del símbolo de reciclaje (triángulo de
+          flechas) en la parte inferior de los envases. Si es #1 (PET) o #2
+          (HDPE), ¡lo aceptamos! Otros números de plástico actualmente no los
+          procesamos.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREPARATION SECTION -->
+  <section class="preparation-section" id="preparacion">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">¿Cómo Preparar Tus Residuos?</h2>
+        <p class="section-subtitle">
+          Sigue estos pasos simples para asegurar que tus materiales sean
+          aceptados en nuestro centro de acopio.
+        </p>
+      </div>
+
+      <div class="steps-container">
+        <div class="step fade-in-up">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Limpia los Materiales</h3>
+            <p>
+              Enjuaga los envases para eliminar residuos de comida, bebidas o
+              productos. No necesitan estar completamente esterilizados, pero
+              sí libres de residuos visibles.
+            </p>
+          </div>
+        </div>
+
+        <div class="step fade-in-up">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Seca Completamente</h3>
+            <p>
+              Deja que los materiales se sequen al aire antes de almacenarlos.
+              Esto previene malos olores y el crecimiento de moho o bacterias.
+            </p>
+          </div>
+        </div>
+
+        <div class="step fade-in-up">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Separa por Tipo</h3>
+            <p>
+              Agrupa los materiales por categoría: papel con papel, plástico
+              con plástico, vidrio con vidrio, metales con metales. No mezcles
+              diferentes tipos.
+            </p>
+          </div>
+        </div>
+
+        <div class="step fade-in-up">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>Remueve Tapas y Etiquetas</h3>
+            <p>
+              Quita tapas, tapones y etiquetas siempre que sea posible. Estos
+              suelen ser de materiales diferentes que dificultan el proceso de
+              reciclaje.
+            </p>
+          </div>
+        </div>
+
+        <div class="step fade-in-up">
+          <div class="step-number">5</div>
+          <div class="step-content">
+            <h3>Compacta los Envases</h3>
+            <p>
+              Aplasta botellas y cajas para reducir el volumen. Esto facilita
+              el transporte y almacenamiento, haciendo el proceso más
+              eficiente.
+            </p>
+          </div>
+        </div>
+
+        <div class="step fade-in-up">
+          <div class="step-number">6</div>
+          <div class="step-content">
+            <h3>Lleva al Centro de Acopio</h3>
+            <p>
+              Transporta tus materiales preparados a nuestro centro de acopio
+              en bolsas o cajas. Nuestro equipo estará feliz de recibirlos y
+              orientarte.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section" id="contacto">
+    <div class="container">
+      <div class="eco-icon">🌿</div>
+      <div id="contact-details">
+        <!-- Dynamically populated -->
+      </div>
+      <figure class="qr-wrapper">
+        <img src="QR_CGA.png" alt="QR CERTIFICADO GESTOR AUTORIZADO">
+        <figcaption>QR CERTIFICADO GESTOR AUTORIZADO</figcaption>
+      </figure>
+      <a href="mailto:Asaosa2005@gmail.com" class="cta-button-pill" id="contact-link">Contáctanos</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p id="footer-text">
+        &copy; 2025 ASAOSA - Asociación de Artesanos, recolectores y recicladores de la Península de Osa.
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
