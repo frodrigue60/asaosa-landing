@@ -4,17 +4,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="{{ description or 'ONG dedicada a la valorización de residuos mediante reciclaje y compostaje en la Península de Osa.' }}" />
-  <meta name="keywords" content="reciclaje, compostaje, valorización de residuos, plásticos PET, plásticos HDPE, cartón, papel, vidrio, aluminio, ASAOSA, Península de Osa" />
+  <meta name="description"
+    content="{{ description or 'ONG dedicada a la valorización de residuos mediante reciclaje y compostaje en la Península de Osa.' }}" />
+  <meta name="keywords"
+    content="reciclaje, compostaje, valorización de residuos, plásticos PET, plásticos HDPE, cartón, papel, vidrio, aluminio, ASAOSA, Península de Osa" />
   <title>{{ title or 'ASAOSA - Valorización de Residuos' }}</title>
   <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
   {% include "components/navbar.njk" %}
-  
+
   {{ content | safe }}
-  
+
   {% include "components/footer.njk" %}
 
   <script src="/assets/js/script.js"></script>
