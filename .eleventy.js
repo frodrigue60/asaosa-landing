@@ -5,6 +5,7 @@ module.exports = function (eleventyConfig) {
   // Watch CSS files for changes
   eleventyConfig.addWatchTarget("src/assets/css/");
   eleventyConfig.addWatchTarget("src/assets/js/");
+  eleventyConfig.addWatchTarget("src/assets/images/");
 
   return {
     dir: {
