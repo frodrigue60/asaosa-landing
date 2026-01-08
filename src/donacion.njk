@@ -70,7 +70,7 @@ description: "Apoya nuestra labor de reciclaje y valorización de residuos en la
         </div>
       </div>
 
-      <div
+      {# <div
         style="background: linear-gradient(135deg, var(--color-green-medium), var(--color-green-dark)); padding: 3rem; border-radius: 16px; color: white; margin-bottom: 3rem;">
         <h3 style="color: white; margin-bottom: 2rem; text-align: center;">Formas de Donar</h3>
 
@@ -131,7 +131,404 @@ description: "Apoya nuestra labor de reciclaje y valorización de residuos en la
             </a>
           </div>
         </div>
-      </div>
+      </div> #}
+
+      <!-- Bloque HTML: Formas de Donar -->
+      <section class="donate-section" aria-labelledby="donate-title">
+        <div class="donate-inner container">
+          <h2 id="donate-title" class="donate-title">Formas de Donar</h2>
+
+          <!-- Feedback accesible para acciones (copiar) -->
+          <p id="donate-status" class="donate-status" role="status" aria-live="polite"></p>
+
+          <div class="donate-grid">
+            <!-- IBAN Account 1 -->
+            <article class="donate-card" aria-labelledby="iban1-title">
+              <header class="donate-card__header" style="display: flex; align-items: center; gap: 0.5rem;">
+                <span class="donate-card__icon" aria-hidden="true">🏦</span>
+                <h3 id="iban1-title" class="donate-card__title">Cuenta IBAN (Principal)</h3>
+              </header>
+
+              <div class="donate-card__details" aria-labelledby="iban1-title">
+                <div class="" style="display: flex; align-items: start; gap: 0.5rem;flex-direction: column;">
+                  <span style="color: #a5d6a7;"><strong>Banco</strong></span>
+                  <span>[Nombre del Banco 1]</span>
+                </div>
+                <div class="" style="display: flex; align-items: start; gap: 0.5rem;flex-direction: column;">
+                  <span style="color: #a5d6a7;"><strong>IBAN</strong></span>
+                  <div style="display: flex; align-items: start; gap: 0.5rem;flex-direction: column;">
+                    <code class="code-inline iban">CR00 0000 0000 0000 0000 01</code>
+                    <button class="btn btn-ghost copy-btn" data-copy="CR00 0000 0000 0000 0000 01"
+                      aria-label="Copiar IBAN de la cuenta principal">
+                      Copiar
+                    </button>
+                  </div>
+                </div>
+                <div class="" style="display: flex; align-items: start; gap: 0.5rem;flex-direction: column;">
+                  <span style="color: #a5d6a7;"><strong>Beneficiario</strong></span>
+                  <span>ASAOSA</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- IBAN Account 2 -->
+            <article class="donate-card" aria-labelledby="iban2-title">
+              <header class="donate-card__header">
+                <span class="donate-card__icon" aria-hidden="true">🏦</span>
+                <h3 id="iban2-title" class="donate-card__title">Cuenta IBAN (Secundaria)</h3>
+              </header>
+
+              <div class="donate-card__details">
+                <div class="" style="display: flex; align-items: start; gap: 0.5rem;flex-direction: column;">
+                  <span style="color: #a5d6a7;"><strong>Banco</strong></span>
+                  <span>[Nombre del Banco 2]</span>
+                </div>
+                <div class="" style="display: flex; align-items: start; gap: 0.5rem;flex-direction: column;">
+                  <span style="color: #a5d6a7;"><strong>IBAN</strong></span>
+                  <div style="display: flex; align-items: start; gap: 0.5rem;flex-direction: column;">
+                    <code class="code-inline iban">CR00 0000 0000 0000 0000 02</code>
+                    <button class="btn btn-ghost copy-btn" data-copy="CR00 0000 0000 0000 0000 02"
+                      aria-label="Copiar IBAN de la cuenta principal">
+                      Copiar
+                    </button>
+                  </div>
+                </div>
+                <div class="" style="display: flex; align-items: start; gap: 0.5rem;flex-direction: column;">
+                  <span style="color: #a5d6a7;"><strong>Beneficiario</strong></span>
+                  <span>ASAOSA</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- SINPE Móvil -->
+            <article class="donate-card" aria-labelledby="sinpe-title">
+              <header class="donate-card__header">
+                <span class="donate-card__icon" aria-hidden="true">📱</span>
+                <h3 id="sinpe-title" class="donate-card__title">SINPE Móvil</h3>
+              </header>
+
+              <div class="donate-card__details">
+                <div class="" style="display: flex; align-items: start; gap: 0.5rem;flex-direction: column;">
+                  <span style="color: #a5d6a7;"><strong>Teléfono</strong></span>
+                  <div style="display: flex; align-items: start; gap: 0.5rem;flex-direction: column;">
+                    <code class="code-inline phone">[Número de teléfono]</code>
+                    <button class="btn btn-ghost copy-btn" data-copy="[Número de teléfono]"
+                      aria-label="Copiar número de SINPE Móvil">
+                      Copiar
+                    </button>
+                  </div>
+                </div>
+                <div class="" style="display: flex; align-items: start; gap: 0.5rem;flex-direction: column;">
+                  <span style="color: #a5d6a7;"><strong>Beneficiario</strong></span>
+                  <span>ASAOSA</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- PayPal -->
+            <article class="donate-card" aria-labelledby="paypal-title">
+              <header class="donate-card__header">
+                <span class="donate-card__icon" aria-hidden="true">💳</span>
+                <h3 id="paypal-title" class="donate-card__title">PayPal</h3>
+              </header>
+
+              <div class="donate-card__content">
+                <p class="donate-description">
+                  Donaciones internacionales de forma segura a través de PayPal.
+                </p>
+                <a href="https://www.paypal.me/ASAOSA" class="btn btn-ghost copy-btn"
+                  data-copy="https://www.paypal.me/ASAOSA" aria-label="Donar con PayPal">
+                  Donar con PayPal
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <style>
+        /* CSS */
+        /* Paleta proporcionada */
+        :root {
+          /* Primary Green Palette */
+          --color-green-dark: #2d5016;
+          --color-green-medium: #4a7c2f;
+          --color-green-light: #7cb342;
+          --color-green-pale: #a5d6a7;
+          --color-green-extra-light: #e8f5e9;
+
+          /* Yellow Palette */
+          --color-yellow-primary: #f9a825;
+          --color-yellow-light: #fdd835;
+          --color-yellow-pale: #fff9c4;
+
+          /* Neutral Colors */
+          --color-white: #ffffff;
+          --color-cream: #f5f5f0;
+          --color-gray-light: #e0e0e0;
+          --color-gray-medium: #757575;
+          --color-gray-dark: #2d2d2d;
+
+          /* Tokens del componente */
+          --donate-radius: 16px;
+          --donate-card-radius: 12px;
+          --donate-space-1: .5rem;
+          --donate-space-2: 1rem;
+          --donate-space-3: 1.5rem;
+          --donate-space-4: 2rem;
+
+          --donate-text: var(--color-white);
+          --donate-heading: var(--color-yellow-light);
+
+          --donate-card-bg: rgba(255, 255, 255, 0.12);
+          /* glass surface */
+          --donate-card-border: rgba(255, 255, 255, 0.22);
+          --donate-card-shadow: 0 8px 24px rgba(0, 0, 0, .18);
+
+          --paypal-blue: #0070ba;
+
+          --focus-outline: 3px solid var(--color-yellow-primary);
+        }
+
+        /* Utilidades mínimas */
+        .container {
+          width: min(1100px, 100% - 2rem);
+          margin-inline: auto;
+        }
+
+        .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+        }
+
+        :focus-visible {
+          outline: var(--focus-outline);
+          outline-offset: 3px;
+        }
+
+        /* Sección principal */
+        .donate-section {
+          color: var(--donate-text);
+          background: linear-gradient(135deg, var(--color-green-medium), var(--color-green-dark));
+          position: relative;
+          border-radius: var(--donate-radius);
+          padding: var(--donate-space-4);
+          margin-block: var(--donate-space-4);
+          overflow: hidden;
+        }
+
+        /* Highlight sutil en el fondo para armonía */
+        .donate-section::before {
+          content: "";
+          position: absolute;
+          inset: -20% -20% auto auto;
+          width: 60%;
+          height: 60%;
+          background: radial-gradient(closest-side, rgba(255, 255, 255, .18), transparent 70%);
+          transform: translate(10%, -10%);
+          pointer-events: none;
+        }
+
+        .donate-inner {
+          position: relative;
+          z-index: 1;
+        }
+
+        .donate-title {
+          margin: 0 0 var(--donate-space-3);
+          text-align: center;
+          font-size: clamp(1.4rem, 2.8vw, 1.8rem);
+          letter-spacing: .2px;
+          color: var(--donate-text);
+        }
+
+        .donate-status {
+          min-height: 1.25rem;
+          text-align: center;
+          color: var(--color-yellow-pale);
+          margin-bottom: var(--donate-space-2);
+        }
+
+        /* Grid responsivo */
+        .donate-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: var(--donate-space-2);
+        }
+
+        @media (min-width: 768px) {
+          .donate-section {
+            padding: calc(var(--donate-space-4) + .5rem);
+          }
+
+          .donate-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        /* Tarjeta */
+        .donate-card {
+          background: var(--donate-card-bg);
+          border: 1px solid var(--donate-card-border);
+          border-radius: var(--donate-card-radius);
+          backdrop-filter: blur(8px);
+          box-shadow: var(--donate-card-shadow);
+          padding: var(--donate-space-3);
+        }
+
+        .donate-card__header {
+          display: flex;
+          align-items: center;
+          gap: .6rem;
+          margin-bottom: var(--donate-space-2);
+          border-bottom: 1px solid rgba(255, 255, 255, .14);
+          padding-bottom: .75rem;
+        }
+
+        .donate-card__icon {
+          font-size: 1.5rem;
+          line-height: 1;
+        }
+
+        .donate-card__title {
+          margin: 0;
+          font-size: 1.125rem;
+          color: var(--donate-heading);
+        }
+
+        /* Detalles con semántica */
+        .donate-card__details {
+          display: grid;
+          gap: .75rem;
+          margin: 0;
+        }
+
+        .detail-row {
+          display: grid;
+          grid-template-columns: 120px 1fr;
+          align-items: start;
+          gap: .75rem;
+        }
+
+        .detail-row dt {
+          font-weight: 700;
+          color: var(--color-green-pale);
+        }
+
+        .detail-row dd {
+          margin: 0;
+        }
+
+        .code-inline {
+          display: inline-block;
+          padding: .35rem .55rem;
+          border-radius: 8px;
+          background: rgba(255, 255, 255, .10);
+          border: 1px solid rgba(255, 255, 255, .20);
+          font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+          color: var(--donate-text);
+          letter-spacing: .4px;
+        }
+
+        /* Contenido libre (PayPal) */
+        .donate-card__content {
+          display: grid;
+          gap: var(--donate-space-2);
+        }
+
+        .donate-description {
+          margin: 0;
+          color: var(--color-cream);
+        }
+
+        /* Botones */
+        .btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          height: 40px;
+          padding: 0 .9rem;
+          border-radius: 10px;
+          border: 1px solid transparent;
+          font-weight: 600;
+          letter-spacing: .2px;
+          cursor: pointer;
+          transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease, color .18s ease;
+        }
+
+        .btn:hover {
+          transform: translateY(-1px);
+        }
+
+        .btn-ghost {
+          background: rgba(255, 255, 255, .10);
+          border-color: rgba(255, 255, 255, .22);
+          color: var(--donate-text);
+        }
+
+        .btn-ghost:hover {
+          background: rgba(255, 255, 255, .16);
+          box-shadow: 0 6px 16px rgba(0, 0, 0, .18);
+        }
+
+        .paypal-btn {
+          background: var(--paypal-blue);
+          color: var(--color-white);
+          box-shadow: 0 6px 16px rgba(0, 112, 186, .35);
+        }
+
+        .paypal-btn:hover {
+          box-shadow: 0 10px 24px rgba(0, 112, 186, .5);
+        }
+
+        /* Movimiento reducido */
+        @media (prefers-reduced-motion: reduce) {
+          * {
+            animation-duration: .001ms !important;
+            transition-duration: .001ms !important;
+          }
+        }
+      </style>
+
+      <script>
+
+        /* JavaScript (ES6+) */
+        (function donateBlock() {
+          const status = document.getElementById('donate-status');
+
+          const copyText = async (text) => {
+            try {
+              await navigator.clipboard.writeText(text);
+              status.textContent = 'Copiado al portapapeles.';
+            } catch {
+              // Fallback si el permiso de clipboard falla
+              const ta = document.createElement('textarea');
+              ta.value = text;
+              document.body.appendChild(ta);
+              ta.select();
+              try { document.execCommand('copy'); status.textContent = 'Copiado al portapapeles.'; }
+              catch { status.textContent = 'No se pudo copiar. Selecciona y copia manualmente.'; }
+              finally { document.body.removeChild(ta); }
+            }
+          };
+
+          document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+              const text = btn.dataset.copy || '';
+              if (!text) return;
+              copyText(text);
+            });
+          });
+        })();
+
+      </script>
 
       <div
         style="background: var(--color-yellow-pale); padding: 2.5rem; border-radius: 16px; border-left: 6px solid var(--color-yellow-primary); margin-bottom: 2rem;">
