@@ -37,14 +37,6 @@
           fontFamily: {
             sans: ['"DM Sans"', 'sans-serif'],
             display: ['"Playfair Display"', 'serif'],
-          },
-          borderRadius: {
-            DEFAULT: "0.5rem",
-            'xl': '1rem',
-            '2xl': '1.5rem',
-          },
-          boxShadow: {
-            'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
           }
         },
       },
@@ -77,6 +69,14 @@
       -ms-overflow-style: none;
       scrollbar-width: none;
     }
+
+    .section-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-content {
+      font-size: 2.5rem;
+    }
   </style>
 
   <link rel="stylesheet" href="/assets/css/styles.css" />
@@ -85,24 +85,34 @@
 
 <body>
   <header class="header" id="header">
-  <nav class="nav-container">
-    <div class="logo">
-      <a href="/" style="text-decoration: none; color: inherit;display: flex; align-items:center; gap: 0.5rem;">
-        <div class="">
-          <img src="/assets/images/asaosa-logo-nav.png" alt="ASAOSA Logo" style="width: 50px; height: 50px;">
+  <nav
+    class="fixed w-full z-50 top-0 transition-all duration-300 bg-surface-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <div class="flex-shrink-0 flex items-center gap-2">
+          <a href="/" class="flex items-center gap-2">
+            <img alt="ASAOSA Logo" class="h-10 w-10 rounded-full" src="/assets/images/asaosa-logo-nav.png" />
+            <span
+              class="font-display font-bold text-4xl text-primary dark:text-primary uppercase tracking-tight">ASAOSA</span>
+          </a>
         </div>
-        <span>ASAOSA</span>
-      </a>
+        <div class="hidden md:flex space-x-8 items-center">
+          <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors"
+            href="/">Inicio</a>
+          <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors"
+            href="/about/">Nosotros</a>
+          <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors"
+            href="/junta-directiva/">Junta Directiva</a>
+          <a class="bg-primary text-white px-6 py-2.5 rounded-full hover:bg-opacity-90 transition-all shadow-md hover:shadow-lg font-medium"
+            href="/donacion">Donación</a>
+        </div>
+        <div class="md:hidden flex items-center">
+          <button class="text-gray-600 dark:text-gray-300 hover:text-primary">
+            <span class="material-symbols-outlined text-3xl">menu</span>
+          </button>
+        </div>
+      </div>
     </div>
-    <ul class="nav-menu" id="navMenu">
-      <li><a href="/">Inicio</a></li>
-      <li><a href="/about/">Nosotros</a></li>
-      <li><a href="/junta-directiva/">Junta Directiva</a></li>
-      <li><a href="/donacion/">Donación</a></li>
-    </ul>
-    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menú">
-      ☰
-    </button>
   </nav>
 </header>
 
@@ -141,7 +151,10 @@
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
           <div
             style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: var(--shadow-sm); text-align: center; border: 2px solid var(--color-green-light);">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">🚛</div>
+            <div style="font-size: 3rem; margin-bottom: 1rem;"><span
+                class="material-symbols-outlined text-[3rem] text-primary">
+                local_shipping
+              </span></div>
             <h4 style="color: var(--color-green-dark); margin-bottom: 0.5rem;">Expandir Rutas</h4>
             <p style="color: var(--color-gray-dark); margin: 0; font-size: 0.95rem;">Llegar a más comunidades con
               nuestro servicio de recolección</p>
@@ -149,7 +162,11 @@
 
           <div
             style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: var(--shadow-sm); text-align: center; border: 2px solid var(--color-green-light);">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">🏗️</div>
+            <div style="font-size: 3rem; margin-bottom: 1rem;">
+              <span class="material-symbols-outlined text-[3rem] text-primary">
+                warehouse
+              </span>
+            </div>
             <h4 style="color: var(--color-green-dark); margin-bottom: 0.5rem;">Mejorar Instalaciones</h4>
             <p style="color: var(--color-gray-dark); margin: 0; font-size: 0.95rem;">Actualizar equipos y ampliar el
               centro de acopio</p>
@@ -157,7 +174,11 @@
 
           <div
             style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: var(--shadow-sm); text-align: center; border: 2px solid var(--color-green-light);">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">📚</div>
+            <div style="font-size: 3rem; margin-bottom: 1rem;">
+              <span class="material-symbols-outlined text-[3rem] text-primary">
+                book_ribbon
+              </span>
+            </div>
             <h4 style="color: var(--color-green-dark); margin-bottom: 0.5rem;">Educar</h4>
             <p style="color: var(--color-gray-dark); margin: 0; font-size: 0.95rem;">Programas de educación ambiental en
               escuelas y comunidades</p>
@@ -165,7 +186,11 @@
 
           <div
             style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: var(--shadow-sm); text-align: center; border: 2px solid var(--color-green-light);">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">👥</div>
+            <div style="font-size: 3rem; margin-bottom: 1rem;">
+              <span class="material-symbols-outlined text-[3rem] text-primary">
+                work
+              </span>
+            </div>
             <h4 style="color: var(--color-green-dark); margin-bottom: 0.5rem;">Crear Empleos</h4>
             <p style="color: var(--color-gray-dark); margin: 0; font-size: 0.95rem;">Generar oportunidades de trabajo
               sostenible en la comunidad</p>
@@ -187,8 +212,10 @@
             <!-- IBAN Account 1 -->
             <article class="donate-card" aria-labelledby="iban1-title">
               <header class="donate-card__header" style="display: flex; align-items: center; gap: 0.5rem;">
-                <span class="donate-card__icon" aria-hidden="true">🏦</span>
-                <h3 id="iban1-title" class="donate-card__title">Cuenta IBAN (Principal)</h3>
+                <span class="material-symbols-outlined text-[2rem] text-white">
+                  account_balance
+                </span>
+                <h3 id="iban1-title" class="text-white text-2xl">Cuenta IBAN (Principal)</h3>
               </header>
 
               <div class="donate-card__details" aria-labelledby="iban1-title">
@@ -216,8 +243,10 @@
             <!-- IBAN Account 2 -->
             <article class="donate-card" aria-labelledby="iban2-title">
               <header class="donate-card__header">
-                <span class="donate-card__icon" aria-hidden="true">🏦</span>
-                <h3 id="iban2-title" class="donate-card__title">Cuenta IBAN (Secundaria)</h3>
+                <span class="material-symbols-outlined text-[2rem] text-white">
+                  account_balance
+                </span>
+                <h3 id="iban2-title" class="text-white text-2xl">Cuenta IBAN (Secundaria)</h3>
               </header>
 
               <div class="donate-card__details">
@@ -245,8 +274,10 @@
             <!-- SINPE Móvil -->
             <article class="donate-card" aria-labelledby="sinpe-title">
               <header class="donate-card__header">
-                <span class="donate-card__icon" aria-hidden="true">📱</span>
-                <h3 id="sinpe-title" class="donate-card__title">SINPE Móvil</h3>
+                <span class="material-symbols-outlined text-[2rem] text-white">
+                  mobile_3
+                </span>
+                <h3 id="sinpe-title" class="text-white text-2xl">SINPE Móvil</h3>
               </header>
 
               <div class="donate-card__details">
@@ -270,8 +301,10 @@
             <!-- PayPal -->
             <article class="donate-card" aria-labelledby="paypal-title">
               <header class="donate-card__header">
-                <span class="donate-card__icon" aria-hidden="true">💳</span>
-                <h3 id="paypal-title" class="donate-card__title">PayPal</h3>
+                <span class="material-symbols-outlined text-[2rem] text-white">
+                  credit_card
+                </span>
+                <h3 id="paypal-title" class="text-white text-2xl">PayPal</h3>
               </header>
 
               <div class="donate-card__content">
@@ -590,13 +623,17 @@
         </ul>
       </div>
 
-      <div style="text-align: center; margin-top: 3rem;">
+      <div class="flex flex-col items-center">
         <h3 style="color: var(--color-green-dark); margin-bottom: 1.5rem;">¿Tienes Preguntas?</h3>
         <p style="font-size: 1.125rem; color: var(--color-gray-dark); margin-bottom: 2rem;">
           Contáctanos para más información sobre cómo puedes apoyar nuestra misión
         </p>
-        <a href="mailto:Asaosa2005@gmail.com" class="cta-button" style="display: inline-block;">
-          <span style="margin-right: 0.5rem;">✉️</span> Contáctanos
+        <a href="mailto:Asaosa2005@gmail.com" class="rounded-full bg-[#799F5E] flex items-center gap-2 px-4 py-2 w-fit">
+          <span class="material-symbols-outlined text-[2rem] text-white">
+            mail
+          </span> <span class="text-white">
+            Contáctanos
+          </span>
         </a>
       </div>
 
@@ -611,27 +648,53 @@
   </div>
 </section>
 
-  <footer class="footer">
-  <div class="container">
-    <div style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1.5rem;">
-      <a href="https://facebook.com/ASAOSA" target="_blank" aria-label="Facebook"
-        style="color: white; font-size: 1.5rem; transition: transform 0.3s ease;">
-        <span style="font-style: normal;">📘</span>
-      </a>
-      <a href="https://instagram.com/ASAOSA" target="_blank" aria-label="Instagram"
-        style="color: white; font-size: 1.5rem; transition: transform 0.3s ease;">
-        <span style="font-style: normal;">📸</span>
-      </a>
-      <a href="https://tiktok.com/@ASAOSA" target="_blank" aria-label="TikTok"
-        style="color: white; font-size: 1.5rem; transition: transform 0.3s ease;">
-        <span style="font-style: normal;">🎵</span>
-      </a>
+  <footer class="bg-primary dark:bg-black text-white py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div class="space-y-6">
+        <div class="flex items-center gap-2">
+          <img alt="ASAOSA Logo" class="h-10 w-10 rounded-full bg-white p-0.5"
+            src="/assets/images/asaosa-logo-nav.png" />
+          <span class="font-display font-bold text-2xl">ASAOSA</span>
+        </div>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Comprometidos con el desarrollo sostenible de la Península de Osa a través del manejo integral de residuos.
+        </p>
+        <a class="inline-block bg-white text-[#1A4517] font-bold px-6 py-2.5 rounded-full hover:bg-secondary transition-colors text-sm"
+          href="#">Contáctanos</a>
+      </div>
+      <div class="space-y-4">
+        <h3 class="font-display font-bold text-lg text-white">Dirección</h3>
+        <p class="text-gray-300 text-sm">
+          500 metros sur de la Pulpería Playa Blanca<br />
+          La Palma de Puerto Jiménez<br />
+          Puerto Jiménez, Puntarenas
+        </p>
+      </div>
+      <div class="space-y-4">
+        <h3 class="font-display font-bold text-lg text-white">Enlaces</h3>
+        <ul class="space-y-2 text-sm text-gray-300">
+          <li><a class="hover:text-secondary transition-colors" href="/">Inicio</a></li>
+          <li><a class="hover:text-secondary transition-colors" href="/about">Nosotros</a></li>
+          <li><a class="hover:text-secondary transition-colors" href="/junta-directiva">Junta Directiva</a></li>
+          <li><a class="hover:text-secondary transition-colors" href="/donacion">Donación</a></li>
+        </ul>
+      </div>
+
     </div>
-    <p>
-      &copy; 2025 ASAOSA - Asociación de Artesanos, recolectores y recicladores de la Península de Osa.
-    </p>
+    <div class="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-xs text-center md:text-left">
+        © 2025 ASAOSA - Asociación de Artesanos, recolectores y recicladores de la Península de Osa.
+      </p>
+      <div class="flex gap-4">
+        <a class="hover:text-white transition-colors" href="#"><span class="material-icons-outlined">facebook</span></a>
+        <a class="hover:text-white transition-colors" href="#"><span class="material-icons-outlined">email</span></a>
+        <a class="hover:text-white transition-colors" href="#"><span class="material-icons-outlined">tiktok</span></a>
+      </div>
+    </div>
   </div>
 </footer>
+
 
   <script src="/assets/js/script.js"></script>
 </body>

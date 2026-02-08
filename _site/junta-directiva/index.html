@@ -37,14 +37,6 @@
           fontFamily: {
             sans: ['"DM Sans"', 'sans-serif'],
             display: ['"Playfair Display"', 'serif'],
-          },
-          borderRadius: {
-            DEFAULT: "0.5rem",
-            'xl': '1rem',
-            '2xl': '1.5rem',
-          },
-          boxShadow: {
-            'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
           }
         },
       },
@@ -77,6 +69,14 @@
       -ms-overflow-style: none;
       scrollbar-width: none;
     }
+
+    .section-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-content {
+      font-size: 2.5rem;
+    }
   </style>
 
   <link rel="stylesheet" href="/assets/css/styles.css" />
@@ -85,114 +85,155 @@
 
 <body>
   <header class="header" id="header">
-  <nav class="nav-container">
-    <div class="logo">
-      <a href="/" style="text-decoration: none; color: inherit;display: flex; align-items:center; gap: 0.5rem;">
-        <div class="">
-          <img src="/assets/images/asaosa-logo-nav.png" alt="ASAOSA Logo" style="width: 50px; height: 50px;">
+  <nav
+    class="fixed w-full z-50 top-0 transition-all duration-300 bg-surface-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <div class="flex-shrink-0 flex items-center gap-2">
+          <a href="/" class="flex items-center gap-2">
+            <img alt="ASAOSA Logo" class="h-10 w-10 rounded-full" src="/assets/images/asaosa-logo-nav.png" />
+            <span
+              class="font-display font-bold text-4xl text-primary dark:text-primary uppercase tracking-tight">ASAOSA</span>
+          </a>
         </div>
-        <span>ASAOSA</span>
-      </a>
+        <div class="hidden md:flex space-x-8 items-center">
+          <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors"
+            href="/">Inicio</a>
+          <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors"
+            href="/about/">Nosotros</a>
+          <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors"
+            href="/junta-directiva/">Junta Directiva</a>
+          <a class="bg-primary text-white px-6 py-2.5 rounded-full hover:bg-opacity-90 transition-all shadow-md hover:shadow-lg font-medium"
+            href="/donacion">Donación</a>
+        </div>
+        <div class="md:hidden flex items-center">
+          <button class="text-gray-600 dark:text-gray-300 hover:text-primary">
+            <span class="material-symbols-outlined text-3xl">menu</span>
+          </button>
+        </div>
+      </div>
     </div>
-    <ul class="nav-menu" id="navMenu">
-      <li><a href="/">Inicio</a></li>
-      <li><a href="/about/">Nosotros</a></li>
-      <li><a href="/junta-directiva/">Junta Directiva</a></li>
-      <li><a href="/donacion/">Donación</a></li>
-    </ul>
-    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menú">
-      ☰
-    </button>
   </nav>
 </header>
 
   
-<section class="hero" style="min-height: 50vh; padding-top: 120px;">
-  <div class="hero-overlay"
-    style="background: linear-gradient(135deg, rgba(45, 80, 22, 0.85) 0%, rgba(74, 124, 47, 0.8) 100%);"></div>
-  <div class="hero-content">
-    <h1>Junta Directiva</h1>
-    <p>Las personas detrás de la Asociación que hacen esto posible</p>
-  </div>
-</section>
+<main class="pt-20">
+  <!-- Hero Section -->
+  <section class="hero" style="min-height: 50vh; padding-top: 120px;">
+    <div class="hero-overlay"
+      style="background: linear-gradient(135deg, rgba(45, 80, 22, 0.85) 0%, rgba(74, 124, 47, 0.8) 100%);"></div>
+    <div class="hero-content">
+      <h1 class="font-display text-4xl md:text-5xl font-bold mb-6 capitalize text-white">Junta Directiva</h1>
+      <p class="text-white text-lg md:text-xl font-light">Las personas detrás de la Asociación que hacen esto posible
+      </p>
+    </div>
+  </section>
 
-<section class="board-section" style="padding: 4rem 2rem; background: var(--color-cream);">
-  <div class="container">
-    <div class="board-grid">
-      <div class="board-member-card fade-in-up">
-        <div class="member-role">Presidente</div>
-        <h3 class="member-name">Rosa Iris Gerarda Avila Araya</h3>
-        <div class="member-info">Cédula: 5-0188-0330</div>
-        <div class="member-info">Representación: Judicial y Extrajudicial</div>
-        <div class="member-validity">
-          Vigencia: 16/07/2024 al 15/07/2026
+  <!-- Board Members Grid -->
+  <section class="board-section p-0">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-12 mx-12 lg:mx-0">
+        <div class="bg-white p-10 border-l-4 border-primary shadow-sm rounded-md flex flex-col justify-between">
+          <div class="font-display text-2xl font-bold text-primary mb-2">Presidente</div>
+          <h3 class="member-name">Rosa Iris Gerarda Avila Araya</h3>
+          <div class="member-info">Cédula: 5-0188-0330</div>
+          <div class="member-info">Representación: Judicial y Extrajudicial</div>
+          <div class="member-validity">
+            Vigencia: 16/07/2024 al 15/07/2026
+          </div>
         </div>
-      </div>
 
-      <div class="board-member-card fade-in-up">
-        <div class="member-role">Vicepresidente</div>
-        <h3 class="member-name">Emanuel Porras Avila</h3>
-        <div class="member-info">Cédula: 6-0386-0935</div>
-        <div class="member-info">Representación: Judicial y Extrajudicial</div>
-        <div class="member-validity">
-          Vigencia: 16/07/2024 al 15/07/2026
+        <div class="bg-white p-10 border-l-4 border-primary shadow-sm rounded-md flex flex-col justify-between">
+          <div class="font-display text-2xl font-bold text-primary mb-2">Vicepresidente</div>
+          <h3 class="member-name">Emanuel Porras Avila</h3>
+          <div class="member-info">Cédula: 6-0386-0935</div>
+          <div class="member-info">Representación: Judicial y Extrajudicial</div>
+          <div class="member-validity">
+            Vigencia: 16/07/2024 al 15/07/2026
+          </div>
         </div>
-      </div>
 
-      <div class="board-member-card fade-in-up">
-        <div class="member-role">Secretario</div>
-        <h3 class="member-name">Merys Dayanna Badilla Aguero</h3>
-        <div class="member-info">Cédula: 1-1277-0778</div>
-        <div class="member-info">Representación: No aplica</div>
-        <div class="member-validity">
-          Vigencia: 16/07/2024 al 15/07/2026
+        <div class="bg-white p-10 border-l-4 border-primary shadow-sm rounded-md flex flex-col justify-between">
+          <div class="font-display text-2xl font-bold text-primary mb-2">Secretario</div>
+          <h3 class="member-name">Merys Dayanna Badilla Aguero</h3>
+          <div class="member-info">Cédula: 1-1277-0778</div>
+          <div class="member-info">Representación: No aplica</div>
+          <div class="member-validity">
+            Vigencia: 16/07/2024 al 15/07/2026
+          </div>
         </div>
-      </div>
 
-      <div class="board-member-card fade-in-up">
-        <div class="member-role">Tesorero</div>
-        <h3 class="member-name">Soriada Porras Avila</h3>
-        <div class="member-info">Cédula: 1-1293-0861</div>
-        <div class="member-info">Representación: No aplica</div>
-        <div class="member-validity">
-          Vigencia: 16/07/2024 al 15/07/2026
+        <div class="bg-white p-10 border-l-4 border-primary shadow-sm rounded-md flex flex-col justify-between">
+          <div class="font-display text-2xl font-bold text-primary mb-2">Tesorero</div>
+          <h3 class="member-name">Soriada Porras Avila</h3>
+          <div class="member-info">Cédula: 1-1293-0861</div>
+          <div class="member-info">Representación: No aplica</div>
+          <div class="member-validity">
+            Vigencia: 16/07/2024 al 15/07/2026
+          </div>
         </div>
-      </div>
 
-      <div class="board-member-card fade-in-up">
-        <div class="member-role">Vocal</div>
-        <h3 class="member-name">Marjorie Porras Avila</h3>
-        <div class="member-info">Cédula: 6-0291-0147</div>
-        <div class="member-info">Representación: No aplica</div>
-        <div class="member-validity">
-          Vigencia: 16/07/2024 al 15/07/2026
+        <div class="bg-white p-10 border-l-4 border-primary shadow-sm rounded-md flex flex-col justify-between">
+          <div class="font-display text-2xl font-bold text-primary mb-2">Vocal</div>
+          <h3 class="member-name">Marjorie Porras Avila</h3>
+          <div class="member-info">Cédula: 6-0291-0147</div>
+          <div class="member-info">Representación: No aplica</div>
+          <div class="member-validity">
+            Vigencia: 16/07/2024 al 15/07/2026
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</main>
 
-  <footer class="footer">
-  <div class="container">
-    <div style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1.5rem;">
-      <a href="https://facebook.com/ASAOSA" target="_blank" aria-label="Facebook"
-        style="color: white; font-size: 1.5rem; transition: transform 0.3s ease;">
-        <span style="font-style: normal;">📘</span>
-      </a>
-      <a href="https://instagram.com/ASAOSA" target="_blank" aria-label="Instagram"
-        style="color: white; font-size: 1.5rem; transition: transform 0.3s ease;">
-        <span style="font-style: normal;">📸</span>
-      </a>
-      <a href="https://tiktok.com/@ASAOSA" target="_blank" aria-label="TikTok"
-        style="color: white; font-size: 1.5rem; transition: transform 0.3s ease;">
-        <span style="font-style: normal;">🎵</span>
-      </a>
+  <footer class="bg-primary dark:bg-black text-white py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div class="space-y-6">
+        <div class="flex items-center gap-2">
+          <img alt="ASAOSA Logo" class="h-10 w-10 rounded-full bg-white p-0.5"
+            src="/assets/images/asaosa-logo-nav.png" />
+          <span class="font-display font-bold text-2xl">ASAOSA</span>
+        </div>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Comprometidos con el desarrollo sostenible de la Península de Osa a través del manejo integral de residuos.
+        </p>
+        <a class="inline-block bg-white text-[#1A4517] font-bold px-6 py-2.5 rounded-full hover:bg-secondary transition-colors text-sm"
+          href="#">Contáctanos</a>
+      </div>
+      <div class="space-y-4">
+        <h3 class="font-display font-bold text-lg text-white">Dirección</h3>
+        <p class="text-gray-300 text-sm">
+          500 metros sur de la Pulpería Playa Blanca<br />
+          La Palma de Puerto Jiménez<br />
+          Puerto Jiménez, Puntarenas
+        </p>
+      </div>
+      <div class="space-y-4">
+        <h3 class="font-display font-bold text-lg text-white">Enlaces</h3>
+        <ul class="space-y-2 text-sm text-gray-300">
+          <li><a class="hover:text-secondary transition-colors" href="/">Inicio</a></li>
+          <li><a class="hover:text-secondary transition-colors" href="/about">Nosotros</a></li>
+          <li><a class="hover:text-secondary transition-colors" href="/junta-directiva">Junta Directiva</a></li>
+          <li><a class="hover:text-secondary transition-colors" href="/donacion">Donación</a></li>
+        </ul>
+      </div>
+
     </div>
-    <p>
-      &copy; 2025 ASAOSA - Asociación de Artesanos, recolectores y recicladores de la Península de Osa.
-    </p>
+    <div class="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-xs text-center md:text-left">
+        © 2025 ASAOSA - Asociación de Artesanos, recolectores y recicladores de la Península de Osa.
+      </p>
+      <div class="flex gap-4">
+        <a class="hover:text-white transition-colors" href="#"><span class="material-icons-outlined">facebook</span></a>
+        <a class="hover:text-white transition-colors" href="#"><span class="material-icons-outlined">email</span></a>
+        <a class="hover:text-white transition-colors" href="#"><span class="material-icons-outlined">tiktok</span></a>
+      </div>
+    </div>
   </div>
 </footer>
+
 
   <script src="/assets/js/script.js"></script>
 </body>

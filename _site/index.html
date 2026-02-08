@@ -37,14 +37,6 @@
           fontFamily: {
             sans: ['"DM Sans"', 'sans-serif'],
             display: ['"Playfair Display"', 'serif'],
-          },
-          borderRadius: {
-            DEFAULT: "0.5rem",
-            'xl': '1rem',
-            '2xl': '1.5rem',
-          },
-          boxShadow: {
-            'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
           }
         },
       },
@@ -77,6 +69,14 @@
       -ms-overflow-style: none;
       scrollbar-width: none;
     }
+
+    .section-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-content {
+      font-size: 2.5rem;
+    }
   </style>
 
   <link rel="stylesheet" href="/assets/css/styles.css" />
@@ -85,24 +85,34 @@
 
 <body>
   <header class="header" id="header">
-  <nav class="nav-container">
-    <div class="logo">
-      <a href="/" style="text-decoration: none; color: inherit;display: flex; align-items:center; gap: 0.5rem;">
-        <div class="">
-          <img src="/assets/images/asaosa-logo-nav.png" alt="ASAOSA Logo" style="width: 50px; height: 50px;">
+  <nav
+    class="fixed w-full z-50 top-0 transition-all duration-300 bg-surface-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <div class="flex-shrink-0 flex items-center gap-2">
+          <a href="/" class="flex items-center gap-2">
+            <img alt="ASAOSA Logo" class="h-10 w-10 rounded-full" src="/assets/images/asaosa-logo-nav.png" />
+            <span
+              class="font-display font-bold text-4xl text-primary dark:text-primary uppercase tracking-tight">ASAOSA</span>
+          </a>
         </div>
-        <span>ASAOSA</span>
-      </a>
+        <div class="hidden md:flex space-x-8 items-center">
+          <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors"
+            href="/">Inicio</a>
+          <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors"
+            href="/about/">Nosotros</a>
+          <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors"
+            href="/junta-directiva/">Junta Directiva</a>
+          <a class="bg-primary text-white px-6 py-2.5 rounded-full hover:bg-opacity-90 transition-all shadow-md hover:shadow-lg font-medium"
+            href="/donacion">Donación</a>
+        </div>
+        <div class="md:hidden flex items-center">
+          <button class="text-gray-600 dark:text-gray-300 hover:text-primary">
+            <span class="material-symbols-outlined text-3xl">menu</span>
+          </button>
+        </div>
+      </div>
     </div>
-    <ul class="nav-menu" id="navMenu">
-      <li><a href="/">Inicio</a></li>
-      <li><a href="/about/">Nosotros</a></li>
-      <li><a href="/junta-directiva/">Junta Directiva</a></li>
-      <li><a href="/donacion/">Donación</a></li>
-    </ul>
-    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menú">
-      ☰
-    </button>
   </nav>
 </header>
 
@@ -119,13 +129,16 @@
   <div class="hero-overlay"></div>
   <!-- Contenido del hero -->
   <div class="hero-content">
-    <h1>Transformamos Residuos en Valor</h1>
-    <p>
+    <h1 class="font-display text-4xl md:text-5xl font-bold text-white mb-4">Transformamos Residuos en Valor</h1>
+    <p class="text-white text-lg md:text-xl font-light">
       Juntos creamos un futuro más sostenible a través del reciclaje y la
       valorización de residuos. Cada material que reciclas hace la
       diferencia.
     </p>
-    <a href="#materiales" class="cta-button">Descubre Qué Reciclamos</a>
+    <a href="#materiales"
+      class="rounded-full px-8 py-4 text-white bg-yellow-600 hover:bg-yellow-700 hover:text-gray-200 transition-colors text-[22px] font-light shadow-md">Descubre
+      Qué
+      Reciclamos</a>
   </div>
 </section>
 
@@ -133,7 +146,9 @@
 <section class="py-24 bg-background-light dark:bg-background-dark" id="materiales">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
-      <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">¿Qué Materiales
+      <span class="text-primary font-bold tracking-widest uppercase text-xs">Materiales</span>
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">¿Qué
+        Materiales
         Reciclamos?</h2>
       <div class="w-20 h-1 bg-secondary mx-auto rounded-full mb-6"></div>
       <p class="max-w-2xl mx-auto text-gray-600 dark:text-gray-400">
@@ -142,7 +157,7 @@
     </div>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
       <div
-        class="group bg-surface-light dark:bg-surface-dark rounded-2xl p-6 text-center shadow-soft hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
+        class="group bg-surface-light dark:bg-surface-dark rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
         <div
           class="w-16 h-16 mx-auto bg-green-50 dark:bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
           <span class="material-icons-outlined text-3xl text-primary">description</span>
@@ -152,7 +167,7 @@
           revistas, cajas limpias y secas.</p>
       </div>
       <div
-        class="group bg-surface-light dark:bg-surface-dark rounded-2xl p-6 text-center shadow-soft hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
+        class="group bg-surface-light dark:bg-surface-dark rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
         <div
           class="w-16 h-16 mx-auto bg-green-50 dark:bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
           <span class="material-icons-outlined text-3xl text-primary">local_drink</span>
@@ -162,7 +177,7 @@
           detergentes. Limpios.</p>
       </div>
       <div
-        class="group bg-surface-light dark:bg-surface-dark rounded-2xl p-6 text-center shadow-soft hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
+        class="group bg-surface-light dark:bg-surface-dark rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
         <div
           class="w-16 h-16 mx-auto bg-green-50 dark:bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
           <span class="material-icons-outlined text-3xl text-primary">sanitizer</span>
@@ -172,7 +187,7 @@
           productos de limpieza.</p>
       </div>
       <div
-        class="group bg-surface-light dark:bg-surface-dark rounded-2xl p-6 text-center shadow-soft hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
+        class="group bg-surface-light dark:bg-surface-dark rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
         <div
           class="w-16 h-16 mx-auto bg-green-50 dark:bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
           <span class="material-icons-outlined text-3xl text-primary">takeout_dining</span>
@@ -182,7 +197,7 @@
           limpio. Sin restos.</p>
       </div>
       <div
-        class="group bg-surface-light dark:bg-surface-dark rounded-2xl p-6 text-center shadow-soft hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
+        class="group bg-surface-light dark:bg-surface-dark rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
         <div
           class="w-16 h-16 mx-auto bg-green-50 dark:bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
           <span class="material-icons-outlined text-3xl text-primary">build</span>
@@ -192,7 +207,7 @@
           metálicos. Limpios y sin óxido.</p>
       </div>
       <div
-        class="group bg-surface-light dark:bg-surface-dark rounded-2xl p-6 text-center shadow-soft hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
+        class="group bg-surface-light dark:bg-surface-dark rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
         <div
           class="w-16 h-16 mx-auto bg-green-50 dark:bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
           <span class="material-icons-outlined text-3xl text-primary">electrical_services</span>
@@ -202,7 +217,7 @@
           electrodomésticos pequeños.</p>
       </div>
       <div
-        class="group bg-surface-light dark:bg-surface-dark rounded-2xl p-6 text-center shadow-soft hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
+        class="group bg-surface-light dark:bg-surface-dark rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
         <div
           class="w-16 h-16 mx-auto bg-green-50 dark:bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
           <span class="material-icons-outlined text-3xl text-primary">wine_bar</span>
@@ -212,7 +227,7 @@
           vidrio. Sin espejos.</p>
       </div>
       <div
-        class="group bg-surface-light dark:bg-surface-dark rounded-2xl p-6 text-center shadow-soft hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
+        class="group bg-surface-light dark:bg-surface-dark rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
         <div
           class="w-16 h-16 mx-auto bg-green-50 dark:bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
           <span class="material-icons-outlined text-3xl text-primary">inventory_2</span>
@@ -246,18 +261,17 @@
         <div class="flex flex-col items-center relative">
           <div
             class="relative z-10 w-24 h-24 md:w-32 md:h-32 rounded-full bg-white dark:bg-surface-dark border-4 border-primary shadow-timeline flex flex-col items-center justify-center transition-transform hover:scale-105 duration-300 mb-6 md:mb-10 group">
-            <span
-              class="text-[10px] md:text-xs uppercase font-bold text-gray-400 group-hover:text-primary transition-colors">Todos
+            <span class="text-[10px] md:text-sm sm:text-xs uppercase font-bold text-gray-400 text-primary">Todos
               los</span>
             <span class="text-xl md:text-2xl font-bold text-primary">Martes</span>
           </div>
           <div class="absolute top-32 left-1/2 -translate-x-1/2 w-0.5 h-10 bg-gray-100 lg:hidden"></div>
           <div
-            class="m-2 bg-background-light dark:bg-surface-dark rounded-2xl p-6 md:p-8 border border-gray-100 dark:border-gray-800 shadow-soft hover:shadow-xl transition-all text-center">
+            class="m-2 bg-background-light dark:bg-surface-dark rounded-xl p-6 md:p-8 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl transition-all text-center">
             <span class="material-symbols-outlined text-primary mb-4 block text-3xl md:text-4xl">location_on</span>
             <h4 class="font-bold text-gray-900 dark:text-white text-base md:text-lg mb-4">Puntos de Entrega</h4>
             <ul class="space-y-2 md:space-y-3">
-              <li class="text-gray-600 dark:text-gray-400 flex items-center justify-center gap-2 text-sm md:text-base">
+              <li class="text-gray-600 dark:text-gray-400 flex items-center gap-2 text-sm md:text-base">
                 <span class="w-1 h-1 rounded-full bg-secondary"></span> Puerto Jiménez
               </li>
             </ul>
@@ -268,24 +282,23 @@
         <div class="flex flex-col items-center relative">
           <div
             class="relative z-10 w-24 h-24 md:w-32 md:h-32 rounded-full bg-white dark:bg-surface-dark border-4 border-primary shadow-timeline flex flex-col items-center justify-center transition-transform hover:scale-105 duration-300 mb-6 md:mb-10 group">
-            <span
-              class="text-[10px] md:text-xs uppercase font-bold text-gray-400 group-hover:text-primary transition-colors">1er
+            <span class="text-[10px] md:text-sm sm:text-xs uppercase font-bold text-gray-400 text-primary">1er
               Jueves</span>
             <span class="text-xl md:text-2xl font-bold text-primary">del Mes</span>
           </div>
           <div class="absolute top-32 left-1/2 -translate-x-1/2 w-0.5 h-10 bg-gray-100 lg:hidden"></div>
           <div
-            class="m-2 bg-background-light dark:bg-surface-dark rounded-2xl p-6 md:p-8 border border-gray-100 dark:border-gray-800 shadow-soft hover:shadow-xl transition-all text-center">
+            class="m-2 bg-background-light dark:bg-surface-dark rounded-xl p-6 md:p-8 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl transition-all text-center">
             <span class="material-symbols-outlined text-primary mb-4 block text-3xl md:text-4xl">location_on</span>
             <h4 class="font-bold text-gray-900 dark:text-white text-base md:text-lg mb-4">Puntos de Entrega</h4>
             <ul class="space-y-2 md:space-y-3">
-              <li class="text-gray-600 dark:text-gray-400 flex items-center justify-center gap-2 text-sm md:text-base">
+              <li class="text-gray-600 dark:text-gray-400 flex items-center gap-2 text-sm md:text-base">
                 <span class="w-1 h-1 rounded-full bg-secondary"></span> Puerto Escondido
               </li>
-              <li class="text-gray-600 dark:text-gray-400 flex items-center justify-center gap-2 text-sm md:text-base">
+              <li class="text-gray-600 dark:text-gray-400 flex items-center gap-2 text-sm md:text-base">
                 <span class="w-1 h-1 rounded-full bg-secondary"></span> La Palma
               </li>
-              <li class="text-gray-600 dark:text-gray-400 flex items-center justify-center gap-2 text-sm md:text-base">
+              <li class="text-gray-600 dark:text-gray-400 flex items-center gap-2 text-sm md:text-base">
                 <span class="w-1 h-1 rounded-full bg-secondary"></span> Guadalupe
               </li>
             </ul>
@@ -296,24 +309,23 @@
         <div class="flex flex-col items-center relative">
           <div
             class="relative z-10 w-24 h-24 md:w-32 md:h-32 rounded-full bg-white dark:bg-surface-dark border-4 border-primary shadow-timeline flex flex-col items-center justify-center transition-transform hover:scale-105 duration-300 mb-6 md:mb-10 group">
-            <span
-              class="text-[10px] md:text-xs uppercase font-bold text-gray-400 group-hover:text-primary transition-colors">2do
+            <span class="text-[10px] md:text-sm sm:text-xs uppercase font-bold text-gray-400 text-primary">2do
               Jueves</span>
             <span class="text-xl md:text-2xl font-bold text-primary">del Mes</span>
           </div>
           <div class="absolute top-32 left-1/2 -translate-x-1/2 w-0.5 h-10 bg-gray-100 lg:hidden"></div>
           <div
-            class="m-2 bg-background-light dark:bg-surface-dark rounded-2xl p-6 md:p-8 border border-gray-100 dark:border-gray-800 shadow-soft hover:shadow-xl transition-all text-center">
+            class="m-2 bg-background-light dark:bg-surface-dark rounded-xl p-6 md:p-8 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl transition-all text-center">
             <span class="material-symbols-outlined text-primary mb-4 block text-3xl md:text-4xl">location_on</span>
             <h4 class="font-bold text-gray-900 dark:text-white text-base md:text-lg mb-4">Puntos de Entrega</h4>
             <ul class="space-y-2 md:space-y-3">
-              <li class="text-gray-600 dark:text-gray-400 flex items-center justify-center gap-2 text-sm md:text-base">
+              <li class="text-gray-600 dark:text-gray-400 flex items-center gap-2 text-sm md:text-base">
                 <span class="w-1 h-1 rounded-full bg-secondary"></span> Palo Seco
               </li>
-              <li class="text-gray-600 dark:text-gray-400 flex items-center justify-center gap-2 text-sm md:text-base">
+              <li class="text-gray-600 dark:text-gray-400 flex items-center gap-2 text-sm md:text-base">
                 <span class="w-1 h-1 rounded-full bg-secondary"></span> Cañaza
               </li>
-              <li class="text-gray-600 dark:text-gray-400 flex items-center justify-center gap-2 text-sm md:text-base">
+              <li class="text-gray-600 dark:text-gray-400 flex items-center gap-2 text-sm md:text-base">
                 <span class="w-1 h-1 rounded-full bg-secondary"></span> Agujas
               </li>
             </ul>
@@ -324,23 +336,22 @@
         <div class="flex flex-col items-center relative">
           <div
             class="relative z-10 w-24 h-24 md:w-32 md:h-32 rounded-full bg-white dark:bg-surface-dark border-4 border-primary shadow-timeline flex flex-col items-center justify-center transition-transform hover:scale-105 duration-300 mb-6 md:mb-10 group">
-            <span
-              class="text-[10px] md:text-xs uppercase font-bold text-gray-400 group-hover:text-primary transition-colors">3er
+            <span class="text-[10px] md:text-sm sm:text-xs uppercase font-bold text-gray-400 text-primary">3er
               Jueves</span>
             <span class="text-xl md:text-2xl font-bold text-primary">del Mes</span>
           </div>
           <div
-            class="m-2 bg-background-light dark:bg-surface-dark rounded-2xl p-6 md:p-8 border border-gray-100 dark:border-gray-800 shadow-soft hover:shadow-xl transition-all text-center">
+            class="m-2 bg-background-light dark:bg-surface-dark rounded-xl p-6 md:p-8 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl transition-all text-center">
             <span class="material-symbols-outlined text-primary mb-4 block text-3xl md:text-4xl">location_on</span>
             <h4 class="font-bold text-gray-900 dark:text-white text-base md:text-lg mb-4">Puntos de Entrega</h4>
             <ul class="space-y-2 md:space-y-3">
-              <li class="text-gray-600 dark:text-gray-400 flex items-center justify-center gap-2 text-sm md:text-base">
+              <li class="text-gray-600 dark:text-gray-400 flex items-center gap-2 text-sm md:text-base">
                 <span class="w-1 h-1 rounded-full bg-secondary"></span> Sandalo
               </li>
-              <li class="text-gray-600 dark:text-gray-400 flex items-center justify-center gap-2 text-sm md:text-base">
+              <li class="text-gray-600 dark:text-gray-400 flex items-center gap-2 text-sm md:text-base">
                 <span class="w-1 h-1 rounded-full bg-secondary"></span> Gallardo
               </li>
-              <li class="text-gray-600 dark:text-gray-400 flex items-center justify-center gap-2 text-xs">
+              <li class="text-gray-600 dark:text-gray-400 flex items-center gap-2 text-xs">
                 <span class="w-1 h-1 rounded-full bg-secondary shrink-0"></span> Dos Brazos de Río Tigre
               </li>
             </ul>
@@ -364,7 +375,7 @@
     </div>
     <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
       <div
-        class="bg-surface-light dark:bg-surface-dark rounded-2xl shadow-soft p-8 border border-gray-100 dark:border-gray-800 flex flex-col items-center">
+        class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm p-8 border border-gray-100 dark:border-gray-800 flex flex-col items-center">
         <div
           class="w-20 h-20 rounded-full bg-primary flex items-center justify-center text-white text-3xl font-bold mb-4 shadow-lg shadow-primary/30">
           1</div>
@@ -372,7 +383,7 @@
         <p class="text-xs uppercase tracking-widest text-gray-400 mb-4">Polietileno Tereftalato</p>
         <p class="text-gray-600 dark:text-gray-300 text-center mb-6 text-sm">El PET es uno de los plásticos más
           reciclables y comunes. Es ligero, resistente y transparente, ideal para bebidas y alimentos.</p>
-        <div class="bg-green-50 dark:bg-background-dark w-full rounded-xl p-5">
+        <div class="bg-green-50 dark:bg-background-dark w-full rounded-md p-5">
           <p class="font-bold text-sm text-primary mb-3">Ejemplos comunes:</p>
           <ul class="text-sm space-y-2 text-gray-600 dark:text-gray-400">
             <li class="flex items-center gap-2"><span
@@ -387,7 +398,7 @@
         </div>
       </div>
       <div
-        class="bg-surface-light dark:bg-surface-dark rounded-2xl shadow-soft p-8 border border-gray-100 dark:border-gray-800 flex flex-col items-center">
+        class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm p-8 border border-gray-100 dark:border-gray-800 flex flex-col items-center">
         <div
           class="w-20 h-20 rounded-full bg-primary flex items-center justify-center text-white text-3xl font-bold mb-4 shadow-lg shadow-primary/30">
           2</div>
@@ -395,7 +406,7 @@
         <p class="text-xs uppercase tracking-widest text-gray-400 mb-4">Polietileno de Alta Densidad</p>
         <p class="text-gray-600 dark:text-gray-300 text-center mb-6 text-sm">El HDPE es un plástico rígido y duradero,
           resistente a químicos y perfecto para productos de limpieza y cuidado personal.</p>
-        <div class="bg-green-50 dark:bg-background-dark w-full rounded-xl p-5">
+        <div class="bg-green-50 dark:bg-background-dark w-full rounded-md p-5">
           <p class="font-bold text-sm text-primary mb-3">Ejemplos comunes:</p>
           <ul class="text-sm space-y-2 text-gray-600 dark:text-gray-400">
             <li class="flex items-center gap-2"><span
@@ -411,8 +422,7 @@
         </div>
       </div>
     </div>
-    <div class="mt-12 bg-[#EFF6E8] dark:bg-primary/20 rounded-xl p-6 flex items-start gap-4">
-
+    <div class="mt-12 bg-[#EFF6E8] dark:bg-primary/20 rounded-md p-6 flex items-start gap-4 shadow-md">
       <div>
         <div class="flex items-center gap-2">
           <span class="material-symbols-outlined text-3xl text-green-600">emoji_objects</span>
@@ -431,6 +441,7 @@
 <section class="py-24 bg-white dark:bg-gray-900 overflow-hidden" id="preparacion">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
+      <span class="text-primary font-bold tracking-widest uppercase text-xs">Preparación</span>
       <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">¿Cómo Preparar Tus
         Residuos?</h2>
       <div class="w-20 h-1 bg-secondary mx-auto rounded-full mb-6"></div>
@@ -440,10 +451,10 @@
     </div>
     <div class="space-y-6">
       <div
-        class="flex flex-col md:flex-row gap-6 p-6 bg-surface-light dark:bg-surface-dark rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 hover:border-l-8 hover:border-l-secondary transition-all">
+        class="flex flex-col md:flex-row gap-6 p-6 bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 hover:border-l-8 hover:border-l-secondary transition-all">
         <div class="flex-shrink-0">
           <div
-            class="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center text-secondary font-bold text-xl">
+            class="w-12 h-12 rounded-full bg-primary/50 flex items-center justify-center text-primary font-bold text-xl">
             1</div>
         </div>
         <div>
@@ -455,10 +466,10 @@
         </div>
       </div>
       <div
-        class="flex flex-col md:flex-row gap-6 p-6 bg-surface-light dark:bg-surface-dark rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 hover:border-l-8 hover:border-l-secondary transition-all">
+        class="flex flex-col md:flex-row gap-6 p-6 bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 hover:border-l-8 hover:border-l-secondary transition-all">
         <div class="flex-shrink-0">
           <div
-            class="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center text-secondary font-bold text-xl">
+            class="w-12 h-12 rounded-full bg-primary/50 flex items-center justify-center text-primary font-bold text-xl">
             2</div>
         </div>
         <div>
@@ -470,10 +481,10 @@
         </div>
       </div>
       <div
-        class="flex flex-col md:flex-row gap-6 p-6 bg-surface-light dark:bg-surface-dark rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 hover:border-l-8 hover:border-l-secondary transition-all">
+        class="flex flex-col md:flex-row gap-6 p-6 bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 hover:border-l-8 hover:border-l-secondary transition-all">
         <div class="flex-shrink-0">
           <div
-            class="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center text-secondary font-bold text-xl">
+            class="w-12 h-12 rounded-full bg-primary/50 flex items-center justify-center text-primary font-bold text-xl">
             3</div>
         </div>
         <div>
@@ -485,10 +496,10 @@
         </div>
       </div>
       <div
-        class="flex flex-col md:flex-row gap-6 p-6 bg-surface-light dark:bg-surface-dark rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 hover:border-l-8 hover:border-l-secondary transition-all">
+        class="flex flex-col md:flex-row gap-6 p-6 bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 hover:border-l-8 hover:border-l-secondary transition-all">
         <div class="flex-shrink-0">
           <div
-            class="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center text-secondary font-bold text-xl">
+            class="w-12 h-12 rounded-full bg-primary/50 flex items-center justify-center text-primary font-bold text-xl">
             4</div>
         </div>
         <div>
@@ -500,10 +511,10 @@
         </div>
       </div>
       <div
-        class="flex flex-col md:flex-row gap-6 p-6 bg-surface-light dark:bg-surface-dark rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 hover:border-l-8 hover:border-l-secondary transition-all">
+        class="flex flex-col md:flex-row gap-6 p-6 bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 hover:border-l-8 hover:border-l-secondary transition-all">
         <div class="flex-shrink-0">
           <div
-            class="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center text-secondary font-bold text-xl">
+            class="w-12 h-12 rounded-full bg-primary/50 flex items-center justify-center text-primary font-bold text-xl">
             5</div>
         </div>
         <div>
@@ -515,10 +526,10 @@
         </div>
       </div>
       <div
-        class="flex flex-col md:flex-row gap-6 p-6 bg-surface-light dark:bg-surface-dark rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 hover:border-l-8 hover:border-l-secondary transition-all">
+        class="flex flex-col md:flex-row gap-6 p-6 bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 hover:border-l-8 hover:border-l-secondary transition-all">
         <div class="flex-shrink-0">
           <div
-            class="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center text-secondary font-bold text-xl">
+            class="w-12 h-12 rounded-full bg-primary/50 flex items-center justify-center text-primary font-bold text-xl">
             6</div>
         </div>
         <div>
@@ -533,13 +544,13 @@
   </div>
 </section>
 
-<footer class="bg-[#1A4517] dark:bg-black text-white py-16">
+  <footer class="bg-primary dark:bg-black text-white py-16">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
       <div class="space-y-6">
         <div class="flex items-center gap-2">
           <img alt="ASAOSA Logo" class="h-10 w-10 rounded-full bg-white p-0.5"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHPjQXtRTFbZZ0pnJomNKFiYpnCPgL3OLRvqqL2rSyYSJs76LvlvxZAJRgrJaHaRFDjcG3qGj4x23KH4JtICCXaQLarJsErNqMGh_jU2oMKvrpfPJTC9eHyLy9OXDMeeoY1i5WfISmJQMs1L1E4BKdFUiLA37pEjrq-M2lPCoyGbjLc0kWBobwzuzwOpKyNLacAy-QoBmOyGWBIjqfbkj9luxhgpt0dM1t7hf4Zg9UvT32PrnD3B1Uoh6G2urX13cQdBzUR15IrcA2" />
+            src="/assets/images/asaosa-logo-nav.png" />
           <span class="font-display font-bold text-2xl">ASAOSA</span>
         </div>
         <p class="text-gray-300 text-sm leading-relaxed">
@@ -549,8 +560,7 @@
           href="#">Contáctanos</a>
       </div>
       <div class="space-y-4">
-        <h3 class="font-display font-bold text-lg text-secondary">MS-DRRSBRU-DARSG-RGA0705-2025</h3>
-        <p class="text-xs font-bold text-secondary uppercase tracking-wider">Dirección:</p>
+        <h3 class="font-display font-bold text-lg text-white">Dirección</h3>
         <p class="text-gray-300 text-sm">
           500 metros sur de la Pulpería Playa Blanca<br />
           La Palma de Puerto Jiménez<br />
@@ -558,60 +568,29 @@
         </p>
       </div>
       <div class="space-y-4">
-        <h3 class="font-display font-bold text-lg text-secondary">Enlaces</h3>
+        <h3 class="font-display font-bold text-lg text-white">Enlaces</h3>
         <ul class="space-y-2 text-sm text-gray-300">
-          <li><a class="hover:text-secondary transition-colors" href="#">Inicio</a></li>
-          <li><a class="hover:text-secondary transition-colors" href="#">Nosotros</a></li>
-          <li><a class="hover:text-secondary transition-colors" href="#">Junta Directiva</a></li>
-          <li><a class="hover:text-secondary transition-colors" href="#">Donación</a></li>
+          <li><a class="hover:text-secondary transition-colors" href="/">Inicio</a></li>
+          <li><a class="hover:text-secondary transition-colors" href="/about">Nosotros</a></li>
+          <li><a class="hover:text-secondary transition-colors" href="/junta-directiva">Junta Directiva</a></li>
+          <li><a class="hover:text-secondary transition-colors" href="/donacion">Donación</a></li>
         </ul>
       </div>
-      <div class="flex flex-col items-center md:items-start">
-        <div class="bg-white p-2 rounded-lg inline-block mb-3">
-          <img alt="QR Certificado" class="w-32 h-32"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCykg7npenbBMP2F2er0n__OzlSqTb7hAfHUHrdbbPRAI9FCoC3BcAQpD2huap9MPTJtWfqOvJdquJd8qiwIlSJEa8PFyOqelklwcrcUXl31rLljDaO6Z_vY5WX28-U-yNPVig6ldkSZ2718LgPH4EgddbTnvBZHyLE9Ed71XGBkAPaerqypg-cN-9dwy4nCS2y_MWOOsTVfm8B4nyft_MWxnIKpr2P5ZAFN_O2NnDw_monbuM3TpmJILYfzx6BZOWzYMZZ7zY3XtxP" />
-        </div>
-        <p class="text-[10px] font-bold uppercase tracking-widest text-center md:text-left w-32">QR
-          Certificado<br />Gestor Autorizado</p>
-      </div>
+
     </div>
     <div class="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-      <p class="text-xs text-gray-400 text-center md:text-left">
+      <p class="text-xs text-center md:text-left">
         © 2025 ASAOSA - Asociación de Artesanos, recolectores y recicladores de la Península de Osa.
       </p>
       <div class="flex gap-4">
-        <a class="text-gray-400 hover:text-white transition-colors" href="#"><span
-            class="material-icons-outlined">facebook</span></a>
-        <a class="text-gray-400 hover:text-white transition-colors" href="#"><span
-            class="material-icons-outlined">email</span></a>
-        <a class="text-gray-400 hover:text-white transition-colors" href="#"><span
-            class="material-icons-outlined">share</span></a>
+        <a class="hover:text-white transition-colors" href="#"><span class="material-icons-outlined">facebook</span></a>
+        <a class="hover:text-white transition-colors" href="#"><span class="material-icons-outlined">email</span></a>
+        <a class="hover:text-white transition-colors" href="#"><span class="material-icons-outlined">tiktok</span></a>
       </div>
     </div>
   </div>
 </footer>
 
-  <footer class="footer">
-  <div class="container">
-    <div style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1.5rem;">
-      <a href="https://facebook.com/ASAOSA" target="_blank" aria-label="Facebook"
-        style="color: white; font-size: 1.5rem; transition: transform 0.3s ease;">
-        <span style="font-style: normal;">📘</span>
-      </a>
-      <a href="https://instagram.com/ASAOSA" target="_blank" aria-label="Instagram"
-        style="color: white; font-size: 1.5rem; transition: transform 0.3s ease;">
-        <span style="font-style: normal;">📸</span>
-      </a>
-      <a href="https://tiktok.com/@ASAOSA" target="_blank" aria-label="TikTok"
-        style="color: white; font-size: 1.5rem; transition: transform 0.3s ease;">
-        <span style="font-style: normal;">🎵</span>
-      </a>
-    </div>
-    <p>
-      &copy; 2025 ASAOSA - Asociación de Artesanos, recolectores y recicladores de la Península de Osa.
-    </p>
-  </div>
-</footer>
 
   <script src="/assets/js/script.js"></script>
 </body>

@@ -37,14 +37,6 @@
           fontFamily: {
             sans: ['"DM Sans"', 'sans-serif'],
             display: ['"Playfair Display"', 'serif'],
-          },
-          borderRadius: {
-            DEFAULT: "0.5rem",
-            'xl': '1rem',
-            '2xl': '1.5rem',
-          },
-          boxShadow: {
-            'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
           }
         },
       },
@@ -77,6 +69,14 @@
       -ms-overflow-style: none;
       scrollbar-width: none;
     }
+
+    .section-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-content {
+      font-size: 2.5rem;
+    }
   </style>
 
   <link rel="stylesheet" href="/assets/css/styles.css" />
@@ -85,197 +85,239 @@
 
 <body>
   <header class="header" id="header">
-  <nav class="nav-container">
-    <div class="logo">
-      <a href="/" style="text-decoration: none; color: inherit;display: flex; align-items:center; gap: 0.5rem;">
-        <div class="">
-          <img src="/assets/images/asaosa-logo-nav.png" alt="ASAOSA Logo" style="width: 50px; height: 50px;">
+  <nav
+    class="fixed w-full z-50 top-0 transition-all duration-300 bg-surface-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <div class="flex-shrink-0 flex items-center gap-2">
+          <a href="/" class="flex items-center gap-2">
+            <img alt="ASAOSA Logo" class="h-10 w-10 rounded-full" src="/assets/images/asaosa-logo-nav.png" />
+            <span
+              class="font-display font-bold text-4xl text-primary dark:text-primary uppercase tracking-tight">ASAOSA</span>
+          </a>
         </div>
-        <span>ASAOSA</span>
-      </a>
+        <div class="hidden md:flex space-x-8 items-center">
+          <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors"
+            href="/">Inicio</a>
+          <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors"
+            href="/about/">Nosotros</a>
+          <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors"
+            href="/junta-directiva/">Junta Directiva</a>
+          <a class="bg-primary text-white px-6 py-2.5 rounded-full hover:bg-opacity-90 transition-all shadow-md hover:shadow-lg font-medium"
+            href="/donacion">Donación</a>
+        </div>
+        <div class="md:hidden flex items-center">
+          <button class="text-gray-600 dark:text-gray-300 hover:text-primary">
+            <span class="material-symbols-outlined text-3xl">menu</span>
+          </button>
+        </div>
+      </div>
     </div>
-    <ul class="nav-menu" id="navMenu">
-      <li><a href="/">Inicio</a></li>
-      <li><a href="/about/">Nosotros</a></li>
-      <li><a href="/junta-directiva/">Junta Directiva</a></li>
-      <li><a href="/donacion/">Donación</a></li>
-    </ul>
-    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menú">
-      ☰
-    </button>
   </nav>
 </header>
 
   
-<section class="hero" style="min-height: 50vh; padding-top: 120px;">
-  <div class="hero-overlay"
-    style="background: linear-gradient(135deg, rgba(45, 80, 22, 0.85) 0%, rgba(74, 124, 47, 0.8) 100%);"></div>
-  <div class="hero-content">
-    <h1>Sobre Nosotros</h1>
-    <p>Conoce nuestra historia y misión</p>
-  </div>
-</section>
-
-<section style="padding: 4rem 2rem;">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">¿Quiénes Somos?</h2>
+<main class="pt-20">
+  
+  <section class="hero" style="min-height: 50vh; padding-top: 120px;">
+    <div class="hero-overlay"
+      style="background: linear-gradient(135deg, rgba(45, 80, 22, 0.85) 0%, rgba(74, 124, 47, 0.8) 100%);"></div>
+    <div class="hero-content">
+      <h1 class="font-display text-4xl md:text-5xl font-bold mb-6 capitalize text-white">Sobre Nosotros</h1>
+      <p class="text-white text-lg md:text-xl font-light">Conoce nuestra historia y misión</p>
     </div>
-
-    <div style="max-width: 900px; margin: 0 auto;">
-      <div
-        style="background: white; padding: 2.5rem; border-radius: 16px; box-shadow: var(--shadow-md); margin-bottom: 2rem;">
-        <h3 style="color: var(--color-green-dark); margin-bottom: 1.5rem;">ASAOSA</h3>
-        <p style="font-size: 1.125rem; line-height: 1.8; color: var(--color-gray-dark);">
-          La <strong>Asociación de Artesanos, recolectores y recicladores de la Península de Osa (ASAOSA)</strong>
-          es una organización sin fines de lucro dedicada a la valorización de residuos sólidos mediante programas
-          de reciclaje y compostaje en la región de la Península de Osa, Puntarenas, Costa Rica.
-        </p>
-      </div>
-
-      <div
-        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
-        <div
-          style="background: var(--color-green-extra-light); padding: 2.5rem; border-radius: 16px; border-left: 6px solid var(--color-green-medium);">
-          <h3 style="color: var(--color-green-dark); margin-bottom: 1.5rem;">Nuestra Misión</h3>
-          <p style="font-size: 1.125rem; line-height: 1.8; color: var(--color-gray-dark); margin: 0;">
-            Promover la valorización de residuos sólidos a través de la recolección, clasificación y procesamiento
-            de materiales reciclables, contribuyendo a la conservación del medio ambiente y generando oportunidades
-            económicas sostenibles para los miembros de nuestra comunidad.
+  </section>
+  
+  <section class="relative py-12 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 lg:gap-12">
+        <div class="bg-white p-10 border-l-4 border-primary shadow-sm rounded-md">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="material-symbols-outlined text-primary text-4xl">eco</span>
+            <h2 class="font-display text-3xl font-bold text-primary uppercase tracking-tight">Misión
+            </h2>
+          </div>
+          <p class="text-lg text-gray-600 leading-relaxed font-light">
+            Promover la valorización de residuos sólidos mediante la educación, recolección y
+            aprovechamiento eficiente, involucrando a las comunidades de la Península de Osa en el
+            desarrollo de una cultura de sostenibilidad.
           </p>
         </div>
-
-        <div
-          style="background: white; padding: 2.5rem; border-radius: 16px; box-shadow: var(--shadow-md); border-top: 6px solid var(--color-yellow-primary);">
-          <h3 style="color: var(--color-green-dark); margin-bottom: 1.5rem;">Nuestra Visión</h3>
-          <p style="font-size: 1.125rem; line-height: 1.8; color: var(--color-gray-dark); margin: 0;">
-            Ser la organización líder en gestión de residuos en la Península de Osa, reconocida por nuestro
-            compromiso con la sostenibilidad ambiental, la innovación en procesos de reciclaje y el desarrollo
-            socioeconómico de nuestra región.
+        <div class="bg-white p-10 border-l-4 border-primary shadow-sm rounded-md">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="material-symbols-outlined text-primary text-4xl">visibility</span>
+            <h2 class="font-display text-3xl font-bold text-primary uppercase tracking-tight">Visión
+            </h2>
+          </div>
+          <p class="text-lg text-gray-600 leading-relaxed font-light">
+            Ser la organización líder en gestión de residuos sólidos en Costa Rica, reconocida por su
+            impacto social y ambiental positivo, logrando que la Península de Osa sea un modelo mundial
+            de comunidad libre de contaminación.
           </p>
         </div>
       </div>
-
-      <div
-        style="background: white; padding: 2.5rem; border-radius: 16px; box-shadow: var(--shadow-md); margin-bottom: 3rem;">
-        <h3 style="color: var(--color-green-dark); margin-bottom: 1.5rem;">Antecedentes</h3>
-        <p style="margin-bottom: 2rem;">Conoce más sobre la historia y los hitos que han marcado el camino de ASAOSA en
-          nuestro documento oficial de antecedentes.</p>
+    </div>
+  </section>
+  
+  <section class="py-12 bg-eco-cream relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-full abstract-bg pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="mb-16">
+        <h2 class="font-display text-4xl font-bold text-primary mb-2">¿Qué Hacemos?</h2>
+        <div class="w-16 h-1 bg-accent"></div>
+      </div>
+      <div class="space-y-6">
         <div
-          style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #e0e0e0; border-radius: 8px;">
-          <iframe src="/assets/documents/antecendendes-asaosa.pdf"
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
-            title="Antecedentes ASAOSA"></iframe>
+          class="glass-card flex flex-col md:flex-row items-center p-8 gap-8 group hover:bg-white/90 transition-all duration-300">
+          <div
+            class="bg-primary/10 p-5 rounded-full text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+            <span class="material-symbols-outlined text-4xl">local_shipping</span>
+          </div>
+          <div class="flex-1">
+            <h3 class="font-bold text-xl text-primary mb-2">Recolección de Residuos</h3>
+            <p class="text-gray-600">Rutas estratégicamente programadas que recorren las comunidades
+              locales para recuperar materiales valorizables con precisión técnica.</p>
+          </div>
+
         </div>
-        <div style="margin-top: 1.5rem; text-align: center;">
-          <a href="/assets/documents/antecendendes-asaosa.pdf" download class="cta-button"
-            style="display: inline-block; padding: 0.75rem 1.5rem; font-size: 0.9rem;">
-            Descargar PDF
-          </a>
-        </div>
-      </div>
-
-      <div
-        style="background: var(--color-yellow-pale); padding: 2.5rem; border-radius: 16px; border-left: 6px solid var(--color-yellow-primary);">
-        <h3 style="color: var(--color-green-dark); margin-bottom: 1.5rem;">Gestor Autorizado</h3>
-        <p style="font-size: 1.125rem; line-height: 1.8; color: var(--color-gray-dark); margin-bottom: 1rem;">
-          ASAOSA está oficialmente registrada como <strong>Gestor Autorizado</strong> por el Ministerio de Salud de
-          Costa Rica,
-          con el código de registro:
-        </p>
-        <p
-          style="font-size: 1.25rem; font-weight: 700; color: var(--color-green-dark); text-align: center; padding: 1rem; background: white; border-radius: 8px;">
-          MS-DRRSBRU-DARSG-RGA0705-2025
-        </p>
-        <p style="font-size: 1rem; line-height: 1.8; color: var(--color-gray-dark); margin-top: 1rem;">
-          <strong>Cédula Jurídica:</strong> 3-002-559586
-        </p>
-      </div>
-
-      <div
-        style="margin-top: 3rem; background: white; padding: 2.5rem; border-radius: 16px; box-shadow: var(--shadow-md);">
-        <h3 style="color: var(--color-green-dark); margin-bottom: 1.5rem;">¿Qué Hacemos?</h3>
-        <div style="display: grid; gap: 1.5rem;">
-          <div style="display: flex; gap: 1rem; align-items: start;">
-            <div
-              style="flex-shrink: 0; width: 50px; height: 50px; background: var(--color-green-extra-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
-              ♻️</div>
-            <div>
-              <h4 style="color: var(--color-green-dark); margin-bottom: 0.5rem;">Recolección de Residuos</h4>
-              <p style="color: var(--color-gray-dark); margin: 0;">Operamos rutas de recolección regulares en diferentes
-                comunidades de la Península de Osa.</p>
-            </div>
+        <div
+          class="glass-card flex flex-col md:flex-row items-center p-8 gap-8 group hover:bg-white/90 transition-all duration-300">
+          <div
+            class="bg-primary/10 p-5 rounded-full text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+            <span class="material-symbols-outlined text-4xl">factory</span>
           </div>
-
-          <div style="display: flex; gap: 1rem; align-items: start;">
-            <div
-              style="flex-shrink: 0; width: 50px; height: 50px; background: var(--color-green-extra-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
-              📦</div>
-            <div>
-              <h4 style="color: var(--color-green-dark); margin-bottom: 0.5rem;">Centro de Acopio</h4>
-              <p style="color: var(--color-gray-dark); margin: 0;">Gestionamos un centro de acopio donde recibimos,
-                clasificamos y procesamos materiales reciclables.</p>
-            </div>
-          </div>
-
-          <div style="display: flex; gap: 1rem; align-items: start;">
-            <div
-              style="flex-shrink: 0; width: 50px; height: 50px; background: var(--color-green-extra-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
-              🌱</div>
-            <div>
-              <h4 style="color: var(--color-green-dark); margin-bottom: 0.5rem;">Educación Ambiental</h4>
-              <p style="color: var(--color-gray-dark); margin: 0;">Promovemos la conciencia ambiental y educamos sobre
-                la importancia del reciclaje y la gestión adecuada de residuos.</p>
-            </div>
-          </div>
-
-          <div style="display: flex; gap: 1rem; align-items: start;">
-            <div
-              style="flex-shrink: 0; width: 50px; height: 50px; background: var(--color-green-extra-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
-              🤝</div>
-            <div>
-              <h4 style="color: var(--color-green-dark); margin-bottom: 0.5rem;">Desarrollo Comunitario</h4>
-              <p style="color: var(--color-gray-dark); margin: 0;">Generamos oportunidades de empleo y desarrollo
-                económico para los miembros de nuestra asociación.</p>
-            </div>
+          <div class="flex-1">
+            <h3 class="font-bold text-xl text-primary mb-2">Centro de Acopio</h3>
+            <p class="text-gray-600">Infraestructura especializada de alto rendimiento para la
+              clasificación, compactación y despacho industrial de materiales.</p>
           </div>
         </div>
-      </div>
-
-      <div style="margin-top: 3rem; text-align: center;">
-        <h3 style="color: var(--color-green-dark); margin-bottom: 1.5rem;">Ubicación</h3>
-        <p style="font-size: 1.125rem; color: var(--color-gray-dark); margin-bottom: 2rem;">
-          📍 500 metros sur de la Pulpería Playa Blanca<br>
-          La Palma de Puerto Jiménez<br>
-          Puerto Jiménez, Puntarenas, Costa Rica
-        </p>
-        <a href="/donacion/" class="cta-button" style="display: inline-block;">Apoya Nuestra Misión</a>
+        <div
+          class="glass-card flex flex-col md:flex-row items-center p-8 gap-8 group hover:bg-white/90 transition-all duration-300">
+          <div
+            class="bg-primary/10 p-5 rounded-full text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+            <span class="material-symbols-outlined text-4xl">school</span>
+          </div>
+          <div class="flex-1">
+            <h3 class="font-bold text-xl text-primary mb-2">Educación Ambiental</h3>
+            <p class="text-gray-600">Programas de formación técnica y talleres en instituciones para
+              fomentar una cultura de segregación desde el origen.</p>
+          </div>
+        </div>
+        <div
+          class="glass-card flex flex-col md:flex-row items-center p-8 gap-8 group hover:bg-white/90 transition-all duration-300">
+          <div
+            class="bg-primary/10 p-5 rounded-full text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+            <span class="material-symbols-outlined text-4xl">groups</span>
+          </div>
+          <div class="flex-1">
+            <h3 class="font-bold text-xl text-primary mb-2">Desarrollo Comunitario</h3>
+            <p class="text-gray-600">Fomento del empleo verde y apoyo estructural a emprendimientos
+              locales basados en economía circular.</p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-
-  <footer class="footer">
-  <div class="container">
-    <div style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1.5rem;">
-      <a href="https://facebook.com/ASAOSA" target="_blank" aria-label="Facebook"
-        style="color: white; font-size: 1.5rem; transition: transform 0.3s ease;">
-        <span style="font-style: normal;">📘</span>
-      </a>
-      <a href="https://instagram.com/ASAOSA" target="_blank" aria-label="Instagram"
-        style="color: white; font-size: 1.5rem; transition: transform 0.3s ease;">
-        <span style="font-style: normal;">📸</span>
-      </a>
-      <a href="https://tiktok.com/@ASAOSA" target="_blank" aria-label="TikTok"
-        style="color: white; font-size: 1.5rem; transition: transform 0.3s ease;">
-        <span style="font-style: normal;">🎵</span>
+  </section>
+  
+  <section class="py-12 bg-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="font-display text-4xl font-bold text-primary mb-8">Nuestra Historia</h2>
+      <p class="text-lg text-gray-600 mb-12 leading-relaxed">
+        Nacimos de la necesidad de profesionalizar la gestión ambiental en la Península de Osa. ASAOSA ha
+        evolucionado para convertirse en el referente técnico y social en el manejo de residuos, uniendo la
+        tradición local con estándares modernos de sostenibilidad.
+      </p>
+      <a class="inline-flex items-center gap-3 bg-primary text-white px-10 py-4 rounded-sm hover:bg-forest-dark transition-all shadow-md font-bold group"
+        href="#">
+        <span class="material-symbols-outlined">picture_as_pdf</span>
+        Descargar Antecedentes (PDF)
+        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">download</span>
       </a>
     </div>
-    <p>
-      &copy; 2025 ASAOSA - Asociación de Artesanos, recolectores y recicladores de la Península de Osa.
-    </p>
+  </section>
+  
+  <section class="py-12 bg-primary text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 container">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+        <div class="flex-1 space-y-6">
+          <h2 class="font-display text-4xl font-bold text-white">Credenciales
+            Oficiales</h2>
+          <div class="space-y-4">
+            <div class="flex items-center gap-4 bg-white/5 p-4 border-l-2 border-accent">
+              <span class="material-symbols-outlined text-accent">verified</span>
+              <div class="flex flex-col">
+                <span class="font-mono text-sm tracking-tighter">Gestor Autorizado</span>
+                <span class="font-mono text-sm tracking-tighter">MS-DRRSBRU-DARSG-RGA0705-2025</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 bg-white/5 p-4 border-l-2 border-accent">
+              <span class="material-symbols-outlined text-accent">fingerprint</span>
+              <div class="flex flex-col">
+                <span class="font-mono text-sm tracking-tighter">Cédula Jurídica</span>
+                <span class="font-mono text-sm tracking-tighter">3-002-559586</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <img alt="Autenticidad QR" class="w-40 h-40 bg-white rounded-sm shadow-2xl" src="/assets/images/qr-cga.png" />
+          <p class="mt-4 text-xs font-bold text-center uppercase tracking-widest text-white">
+            Validación Oficial</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+  <footer class="bg-primary dark:bg-black text-white py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div class="space-y-6">
+        <div class="flex items-center gap-2">
+          <img alt="ASAOSA Logo" class="h-10 w-10 rounded-full bg-white p-0.5"
+            src="/assets/images/asaosa-logo-nav.png" />
+          <span class="font-display font-bold text-2xl">ASAOSA</span>
+        </div>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Comprometidos con el desarrollo sostenible de la Península de Osa a través del manejo integral de residuos.
+        </p>
+        <a class="inline-block bg-white text-[#1A4517] font-bold px-6 py-2.5 rounded-full hover:bg-secondary transition-colors text-sm"
+          href="#">Contáctanos</a>
+      </div>
+      <div class="space-y-4">
+        <h3 class="font-display font-bold text-lg text-white">Dirección</h3>
+        <p class="text-gray-300 text-sm">
+          500 metros sur de la Pulpería Playa Blanca<br />
+          La Palma de Puerto Jiménez<br />
+          Puerto Jiménez, Puntarenas
+        </p>
+      </div>
+      <div class="space-y-4">
+        <h3 class="font-display font-bold text-lg text-white">Enlaces</h3>
+        <ul class="space-y-2 text-sm text-gray-300">
+          <li><a class="hover:text-secondary transition-colors" href="/">Inicio</a></li>
+          <li><a class="hover:text-secondary transition-colors" href="/about">Nosotros</a></li>
+          <li><a class="hover:text-secondary transition-colors" href="/junta-directiva">Junta Directiva</a></li>
+          <li><a class="hover:text-secondary transition-colors" href="/donacion">Donación</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-xs text-center md:text-left">
+        © 2025 ASAOSA - Asociación de Artesanos, recolectores y recicladores de la Península de Osa.
+      </p>
+      <div class="flex gap-4">
+        <a class="hover:text-white transition-colors" href="#"><span class="material-icons-outlined">facebook</span></a>
+        <a class="hover:text-white transition-colors" href="#"><span class="material-icons-outlined">email</span></a>
+        <a class="hover:text-white transition-colors" href="#"><span class="material-icons-outlined">tiktok</span></a>
+      </div>
+    </div>
   </div>
 </footer>
+
 
   <script src="/assets/js/script.js"></script>
 </body>
