@@ -8,36 +8,21 @@ description: "Apoya nuestra labor de reciclaje y valorización de residuos en la
   <div class="hero-overlay"
     style="background: linear-gradient(135deg, rgba(45, 80, 22, 0.85) 0%, rgba(74, 124, 47, 0.8) 100%);"></div>
   <div class="hero-content">
-    <h1>Apoya Nuestra Misión</h1>
+    <h1 class="font-display">Apoya Nuestra Misión</h1>
     <p>Tu donación ayuda a crear un futuro más sostenible</p>
   </div>
 </section>
 
 <section style="padding: 4rem 2rem; background: var(--color-white);">
   <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">¿Por Qué Donar?</h2>
-      <p class="section-subtitle">
-        Tu apoyo nos permite continuar con nuestra labor de reciclaje y educación ambiental
-      </p>
-    </div>
-
-    <div style="max-width: 900px; margin: 0 auto;">
-      <div
-        style="background: var(--color-green-extra-light); padding: 2.5rem; border-radius: 16px; margin-bottom: 3rem; border-left: 6px solid var(--color-green-medium);">
-        <p style="font-size: 1.125rem; line-height: 1.8; color: var(--color-gray-dark); margin: 0;">
-          ASAOSA es una organización sin fines de lucro dedicada a la valorización de residuos en la Península de Osa.
-          Con tu donación, podemos expandir nuestras rutas de recolección, mejorar nuestras instalaciones y educar a
-          más personas sobre la importancia del reciclaje.
-        </p>
-      </div>
-
+    <div>
       <div style="margin-bottom: 3rem;">
-        <h3 style="color: var(--color-green-dark); margin-bottom: 1.5rem; text-align: center;">Tu Donación Nos Permite:
+        <h3 class="font-display text-center text-[2em] mb-6">Tu
+          Donación Nos Permite:
         </h3>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <div
-            style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: var(--shadow-sm); text-align: center; border: 2px solid var(--color-green-light);">
+            class="flex flex-col justify-start items-center gap-2 bg-white rounded-md p-6 border border-gray-200 shadow-md">
             <div style="font-size: 3rem; margin-bottom: 1rem;"><span
                 class="material-symbols-outlined text-[3rem] text-primary">
                 local_shipping
@@ -48,7 +33,7 @@ description: "Apoya nuestra labor de reciclaje y valorización de residuos en la
           </div>
 
           <div
-            style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: var(--shadow-sm); text-align: center; border: 2px solid var(--color-green-light);">
+            class="flex flex-col justify-start items-center gap-2 bg-white rounded-md p-6 border border-gray-200 shadow-md">
             <div style="font-size: 3rem; margin-bottom: 1rem;">
               <span class="material-symbols-outlined text-[3rem] text-primary">
                 warehouse
@@ -60,7 +45,7 @@ description: "Apoya nuestra labor de reciclaje y valorización de residuos en la
           </div>
 
           <div
-            style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: var(--shadow-sm); text-align: center; border: 2px solid var(--color-green-light);">
+            class="flex flex-col justify-start items-center gap-2 bg-white rounded-md p-6 border border-gray-200 shadow-md">
             <div style="font-size: 3rem; margin-bottom: 1rem;">
               <span class="material-symbols-outlined text-[3rem] text-primary">
                 book_ribbon
@@ -72,7 +57,7 @@ description: "Apoya nuestra labor de reciclaje y valorización de residuos en la
           </div>
 
           <div
-            style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: var(--shadow-sm); text-align: center; border: 2px solid var(--color-green-light);">
+            class="flex flex-col justify-start items-center gap-2 bg-white rounded-md p-6 border border-gray-200 shadow-md">
             <div style="font-size: 3rem; margin-bottom: 1rem;">
               <span class="material-symbols-outlined text-[3rem] text-primary">
                 work
@@ -83,6 +68,10 @@ description: "Apoya nuestra labor de reciclaje y valorización de residuos en la
               sostenible en la comunidad</p>
           </div>
         </div>
+        <p style="margin-top: 2rem; font-size: 0.95rem; color: var(--color-gray-dark); text-align: center;">
+          Aclaración: ASAOSA es una organización sin fines de lucro dedicada a la valorización de residuos en la
+          Península de Osa.
+        </p>
       </div>
 
       {# <div
@@ -553,25 +542,27 @@ description: "Apoya nuestra labor de reciclaje y valorización de residuos en la
 
       </script>
 
-      <div
-        style="background: var(--color-yellow-pale); padding: 2.5rem; border-radius: 16px; border-left: 6px solid var(--color-yellow-primary); margin-bottom: 2rem;">
-        <h3
-          style="color: var(--color-green-dark); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-          <span style="font-size: 1.5rem;">📦</span> Donación de Materiales y Equipos
+      <div class="my-6">
+        <h3 class="text-[2rem] font-display text-center">
+          Donación de Materiales y Equipos
         </h3>
-        <p style="color: var(--color-gray-dark); margin-bottom: 1rem; font-size: 1.125rem;">
+      </div>
+      <div class="my-6 bg-[#E8F5E9] p-6 rounded-md">
+
+        <h2 style="color: var(--color-gray-dark); margin-bottom: 1rem; font-size: 1.125rem;">
           También aceptamos donaciones de equipos y materiales que nos ayuden en nuestra labor:
-        </p>
+        </h2>
         <ul style="color: var(--color-gray-dark); line-height: 1.8; margin-left: 1.5rem;">
-          <li>Herramientas para clasificación de residuos</li>
-          <li>Equipos de protección personal (guantes, mascarillas, etc.)</li>
-          <li>Contenedores y sacos para materiales reciclables</li>
-          <li>Balanzas y equipos de pesaje</li>
-          <li>Vehículos para transporte de materiales</li>
+          <li style="list-style: disc; margin-bottom: .5rem;">Herramientas para clasificación de residuos</li>
+          <li style="list-style: disc; margin-bottom: .5rem;">Equipos de protección personal (guantes, mascarillas,
+            etc.)</li>
+          <li style="list-style: disc; margin-bottom: .5rem;">Contenedores y sacos para materiales reciclables</li>
+          <li style="list-style: disc; margin-bottom: .5rem;">Balanzas y equipos de pesaje</li>
+          <li style="list-style: disc;">Vehículos para transporte de materiales</li>
         </ul>
       </div>
 
-      <div class="flex flex-col items-center">
+      <div class="flex flex-col items-center my-12">
         <h3 style="color: var(--color-green-dark); margin-bottom: 1.5rem;">¿Tienes Preguntas?</h3>
         <p style="font-size: 1.125rem; color: var(--color-gray-dark); margin-bottom: 2rem;">
           Contáctanos para más información sobre cómo puedes apoyar nuestra misión
@@ -585,8 +576,7 @@ description: "Apoya nuestra labor de reciclaje y valorización de residuos en la
         </a>
       </div>
 
-      <div
-        style="margin-top: 3rem; padding: 2rem; background: var(--color-green-extra-light); border-radius: 16px; text-align: center;">
+      <div class="rounded-md bg-[#E8F5E9] p-6 text-center my-12">
         <p style="color: var(--color-gray-dark); font-size: 1rem; margin: 0; line-height: 1.6;">
           <strong>Cédula Jurídica:</strong> 3-002-559586<br>
           <strong>Gestor Autorizado:</strong> MS-DRRSBRU-DARSG-RGA0705-2025
