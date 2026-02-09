@@ -27,6 +27,12 @@
           colors: {
             primary: "#799F5E",
             secondary: "#FDBA36",
+            accent: "#F9A825",
+            "brand-green": {
+              light: "#7CB342",
+              medium: "#4A7C2F",
+              dark: "#2D5016",
+            },
             "background-light": "#F9FAF8",
             "background-dark": "#1A2018",
             "surface-light": "#FFFFFF",
@@ -35,8 +41,8 @@
             "text-dark": "#E5E7EB",
           },
           fontFamily: {
-            sans: ['"DM Sans"', 'sans-serif'],
-            display: ['"Playfair Display"', 'serif'],
+            sans: ['"Inter"', 'sans-serif'],
+            display: ['"Poppins"', 'sans-serif'],
           }
         },
       },
@@ -70,16 +76,21 @@
       scrollbar-width: none;
     }
 
-    .section-title {
-      font-size: 2.5rem;
-    }
-
     .hero-content {
       font-size: 2.5rem;
     }
+
+    .scrolled nav {
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 16px rgba(45, 80, 22, 0.12);
+    }
+
+    header.scrolled nav {
+      height: 4.5rem;
+    }
   </style>
 
-  <link rel="stylesheet" href="/assets/css/styles.css" />
   <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
 </head>
 
@@ -119,12 +130,12 @@
   
 <main class="pt-20">
   
-  <section class="hero" style="min-height: 50vh; padding-top: 120px;">
-    <div class="hero-overlay"
-      style="background: linear-gradient(135deg, rgba(45, 80, 22, 0.85) 0%, rgba(74, 124, 47, 0.8) 100%);"></div>
-    <div class="hero-content">
-      <h1 class="font-display text-4xl md:text-5xl font-bold mb-6 capitalize text-white">Sobre Nosotros</h1>
-      <p class="text-white text-lg md:text-xl font-light">Conoce nuestra historia y misión</p>
+  <section class="min-h-[50vh] flex items-center justify-center relative overflow-hidden pt-20">
+    <div class="absolute inset-0 bg-gradient-to-br from-[rgba(45,80,22,0.85)] to-[rgba(74,124,47,0.8)] z-[1]"></div>
+    <div class="max-w-[1400px] mx-auto px-8 py-16 text-center relative z-[10]">
+      <h1 class="font-display text-4xl md:text-5xl font-bold mb-6 capitalize text-white drop-shadow-md">Sobre Nosotros
+      </h1>
+      <p class="text-white text-lg md:text-xl font-light drop-shadow-sm">Conoce nuestra historia y misión</p>
     </div>
   </section>
   
@@ -239,7 +250,7 @@
   </section>
   
   <section class="py-12 bg-primary text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 container">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row items-center justify-between gap-12">
         <div class="flex-1 space-y-6">
           <h2 class="font-display text-4xl font-bold text-white">Credenciales

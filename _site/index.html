@@ -27,6 +27,12 @@
           colors: {
             primary: "#799F5E",
             secondary: "#FDBA36",
+            accent: "#F9A825",
+            "brand-green": {
+              light: "#7CB342",
+              medium: "#4A7C2F",
+              dark: "#2D5016",
+            },
             "background-light": "#F9FAF8",
             "background-dark": "#1A2018",
             "surface-light": "#FFFFFF",
@@ -35,8 +41,8 @@
             "text-dark": "#E5E7EB",
           },
           fontFamily: {
-            sans: ['"DM Sans"', 'sans-serif'],
-            display: ['"Playfair Display"', 'serif'],
+            sans: ['"Inter"', 'sans-serif'],
+            display: ['"Poppins"', 'sans-serif'],
           }
         },
       },
@@ -70,16 +76,21 @@
       scrollbar-width: none;
     }
 
-    .section-title {
-      font-size: 2.5rem;
-    }
-
     .hero-content {
       font-size: 2.5rem;
     }
+
+    .scrolled nav {
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 16px rgba(45, 80, 22, 0.12);
+    }
+
+    header.scrolled nav {
+      height: 4.5rem;
+    }
   </style>
 
-  <link rel="stylesheet" href="/assets/css/styles.css" />
   <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
 </head>
 
@@ -118,25 +129,27 @@
 
   
 <!-- HERO SECTION -->
-<section class="hero" id="inicio">
+<section class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20" id="inicio">
   <!-- Video Background -->
-  <div class="hero-video-background">
+  <div class="absolute inset-0 z-0 overflow-hidden brightness-[.5]">
     <iframe
       src="https://www.youtube.com/embed/i7LGcgGXxyM?autoplay=1&mute=1&controls=0&loop=1&playlist=i7LGcgGXxyM&modestbranding=1&rel=0&showinfo=0&playsinline=1&disablekb=1&iv_load_policy=3"
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100vw] h-[100vh] pointer-events-none min-w-full min-h-full object-cover"
       frameborder="0" allow="autoplay; encrypted-media" allowfullscreen title="Video de fondo - Reciclaje"></iframe>
   </div>
   <!-- Overlay oscuro para mejorar legibilidad del texto -->
-  <div class="hero-overlay"></div>
+  <div class="absolute inset-0 bg-gradient-to-br from-[rgba(45,80,22,0.75)] to-[rgba(74,124,47,0.7)] z-[1]"></div>
   <!-- Contenido del hero -->
-  <div class="hero-content">
-    <h1 class="font-display text-4xl md:text-5xl font-bold text-white mb-4">Transformamos Residuos en Valor</h1>
-    <p class="text-white text-lg md:text-xl font-light">
+  <div class="max-w-[1400px] mx-auto px-8 py-16 text-center relative z-[10]">
+    <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 drop-shadow-2xl">Transformamos
+      Residuos en Valor</h1>
+    <p class="text-white text-lg md:text-xl lg:text-2xl font-light max-w-2xl mx-auto mb-8 drop-shadow-lg">
       Juntos creamos un futuro más sostenible a través del reciclaje y la
       valorización de residuos. Cada material que reciclas hace la
       diferencia.
     </p>
     <a href="#materiales"
-      class="rounded-full px-8 py-4 text-white bg-yellow-600 hover:bg-yellow-700 hover:text-gray-200 transition-colors text-[22px] font-light shadow-md">Descubre
+      class="inline-block rounded-full px-10 py-4 text-white bg-accent hover:bg-yellow-500 transition-all duration-300 text-[22px] font-bold shadow-2xl hover:-translate-y-1 active:scale-95 border-b-4 border-yellow-700">Descubre
       Qué
       Reciclamos</a>
   </div>
@@ -157,7 +170,7 @@
     </div>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
       <div
-        class="group bg-surface-light dark:bg-surface-dark rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
+        class="material-card group bg-surface-light dark:bg-surface-dark rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
         <div
           class="w-16 h-16 mx-auto bg-green-50 dark:bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
           <span class="material-icons-outlined text-3xl text-primary">description</span>
@@ -167,7 +180,7 @@
           revistas, cajas limpias y secas.</p>
       </div>
       <div
-        class="group bg-surface-light dark:bg-surface-dark rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
+        class="material-card group bg-surface-light dark:bg-surface-dark rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
         <div
           class="w-16 h-16 mx-auto bg-green-50 dark:bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
           <span class="material-icons-outlined text-3xl text-primary">local_drink</span>
@@ -177,7 +190,7 @@
           detergentes. Limpios.</p>
       </div>
       <div
-        class="group bg-surface-light dark:bg-surface-dark rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
+        class="material-card group bg-surface-light dark:bg-surface-dark rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
         <div
           class="w-16 h-16 mx-auto bg-green-50 dark:bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
           <span class="material-icons-outlined text-3xl text-primary">sanitizer</span>
@@ -187,7 +200,7 @@
           productos de limpieza.</p>
       </div>
       <div
-        class="group bg-surface-light dark:bg-surface-dark rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
+        class="material-card group bg-surface-light dark:bg-surface-dark rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
         <div
           class="w-16 h-16 mx-auto bg-green-50 dark:bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
           <span class="material-icons-outlined text-3xl text-primary">takeout_dining</span>
@@ -197,7 +210,7 @@
           limpio. Sin restos.</p>
       </div>
       <div
-        class="group bg-surface-light dark:bg-surface-dark rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
+        class="material-card group bg-surface-light dark:bg-surface-dark rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
         <div
           class="w-16 h-16 mx-auto bg-green-50 dark:bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
           <span class="material-icons-outlined text-3xl text-primary">build</span>
@@ -207,7 +220,7 @@
           metálicos. Limpios y sin óxido.</p>
       </div>
       <div
-        class="group bg-surface-light dark:bg-surface-dark rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
+        class="material-card group bg-surface-light dark:bg-surface-dark rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
         <div
           class="w-16 h-16 mx-auto bg-green-50 dark:bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
           <span class="material-icons-outlined text-3xl text-primary">electrical_services</span>
@@ -217,7 +230,7 @@
           electrodomésticos pequeños.</p>
       </div>
       <div
-        class="group bg-surface-light dark:bg-surface-dark rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
+        class="material-card group bg-surface-light dark:bg-surface-dark rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
         <div
           class="w-16 h-16 mx-auto bg-green-50 dark:bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
           <span class="material-icons-outlined text-3xl text-primary">wine_bar</span>
@@ -227,7 +240,7 @@
           vidrio. Sin espejos.</p>
       </div>
       <div
-        class="group bg-surface-light dark:bg-surface-dark rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
+        class="material-card group bg-surface-light dark:bg-surface-dark rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
         <div
           class="w-16 h-16 mx-auto bg-green-50 dark:bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
           <span class="material-icons-outlined text-3xl text-primary">inventory_2</span>
@@ -375,7 +388,7 @@
     </div>
     <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
       <div
-        class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm p-8 border border-gray-100 dark:border-gray-800 flex flex-col items-center">
+        class="plastic-card bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm p-8 border border-gray-100 dark:border-gray-800 flex flex-col items-center">
         <div
           class="w-20 h-20 rounded-full bg-primary flex items-center justify-center text-white text-3xl font-bold mb-4 shadow-lg shadow-primary/30">
           1</div>
@@ -398,7 +411,7 @@
         </div>
       </div>
       <div
-        class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm p-8 border border-gray-100 dark:border-gray-800 flex flex-col items-center">
+        class="plastic-card bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm p-8 border border-gray-100 dark:border-gray-800 flex flex-col items-center">
         <div
           class="w-20 h-20 rounded-full bg-primary flex items-center justify-center text-white text-3xl font-bold mb-4 shadow-lg shadow-primary/30">
           2</div>
@@ -451,7 +464,7 @@
     </div>
     <div class="space-y-6">
       <div
-        class="flex flex-col md:flex-row gap-6 p-6 bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 hover:border-l-8 hover:border-l-secondary transition-all">
+        class="step flex flex-col md:flex-row gap-6 p-6 bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 hover:border-l-8 hover:border-l-secondary transition-all">
         <div class="flex-shrink-0">
           <div
             class="w-12 h-12 rounded-full bg-primary/50 flex items-center justify-center text-primary font-bold text-xl">
@@ -466,7 +479,7 @@
         </div>
       </div>
       <div
-        class="flex flex-col md:flex-row gap-6 p-6 bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 hover:border-l-8 hover:border-l-secondary transition-all">
+        class="step flex flex-col md:flex-row gap-6 p-6 bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 hover:border-l-8 hover:border-l-secondary transition-all">
         <div class="flex-shrink-0">
           <div
             class="w-12 h-12 rounded-full bg-primary/50 flex items-center justify-center text-primary font-bold text-xl">
@@ -481,7 +494,7 @@
         </div>
       </div>
       <div
-        class="flex flex-col md:flex-row gap-6 p-6 bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 hover:border-l-8 hover:border-l-secondary transition-all">
+        class="step flex flex-col md:flex-row gap-6 p-6 bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 hover:border-l-8 hover:border-l-secondary transition-all">
         <div class="flex-shrink-0">
           <div
             class="w-12 h-12 rounded-full bg-primary/50 flex items-center justify-center text-primary font-bold text-xl">
@@ -496,7 +509,7 @@
         </div>
       </div>
       <div
-        class="flex flex-col md:flex-row gap-6 p-6 bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 hover:border-l-8 hover:border-l-secondary transition-all">
+        class="step flex flex-col md:flex-row gap-6 p-6 bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 hover:border-l-8 hover:border-l-secondary transition-all">
         <div class="flex-shrink-0">
           <div
             class="w-12 h-12 rounded-full bg-primary/50 flex items-center justify-center text-primary font-bold text-xl">
@@ -511,7 +524,7 @@
         </div>
       </div>
       <div
-        class="flex flex-col md:flex-row gap-6 p-6 bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 hover:border-l-8 hover:border-l-secondary transition-all">
+        class="step flex flex-col md:flex-row gap-6 p-6 bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 hover:border-l-8 hover:border-l-secondary transition-all">
         <div class="flex-shrink-0">
           <div
             class="w-12 h-12 rounded-full bg-primary/50 flex items-center justify-center text-primary font-bold text-xl">
@@ -526,7 +539,7 @@
         </div>
       </div>
       <div
-        class="flex flex-col md:flex-row gap-6 p-6 bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 hover:border-l-8 hover:border-l-secondary transition-all">
+        class="step flex flex-col md:flex-row gap-6 p-6 bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 hover:border-l-8 hover:border-l-secondary transition-all">
         <div class="flex-shrink-0">
           <div
             class="w-12 h-12 rounded-full bg-primary/50 flex items-center justify-center text-primary font-bold text-xl">

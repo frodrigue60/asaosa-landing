@@ -27,6 +27,12 @@
           colors: {
             primary: "#799F5E",
             secondary: "#FDBA36",
+            accent: "#F9A825",
+            "brand-green": {
+              light: "#7CB342",
+              medium: "#4A7C2F",
+              dark: "#2D5016",
+            },
             "background-light": "#F9FAF8",
             "background-dark": "#1A2018",
             "surface-light": "#FFFFFF",
@@ -35,8 +41,8 @@
             "text-dark": "#E5E7EB",
           },
           fontFamily: {
-            sans: ['"DM Sans"', 'sans-serif'],
-            display: ['"Playfair Display"', 'serif'],
+            sans: ['"Inter"', 'sans-serif'],
+            display: ['"Poppins"', 'sans-serif'],
           }
         },
       },
@@ -70,16 +76,21 @@
       scrollbar-width: none;
     }
 
-    .section-title {
-      font-size: 2.5rem;
-    }
-
     .hero-content {
       font-size: 2.5rem;
     }
+
+    .scrolled nav {
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 16px rgba(45, 80, 22, 0.12);
+    }
+
+    header.scrolled nav {
+      height: 4.5rem;
+    }
   </style>
 
-  <link rel="stylesheet" href="/assets/css/styles.css" />
   <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
 </head>
 
@@ -117,191 +128,216 @@
 </header>
 
   
-<section class="hero" style="min-height: 50vh; padding-top: 120px;">
-  <div class="hero-overlay"
-    style="background: linear-gradient(135deg, rgba(45, 80, 22, 0.85) 0%, rgba(74, 124, 47, 0.8) 100%);"></div>
-  <div class="hero-content">
-    <h1 class="font-display">Apoya Nuestra Misión</h1>
-    <p>Tu donación ayuda a crear un futuro más sostenible</p>
-  </div>
-</section>
+<main class="pt-20">
+  <!-- Hero Section -->
+  <section class="relative min-h-[50vh] flex items-center justify-center pt-[120px] overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-[#2D5016]/85 to-[#4A7C2F]/80 z-10"></div>
+    <div class="hero-content relative z-20 text-center px-4">
+      <h1 class="font-display text-4xl md:text-6xl font-bold text-white mb-6 capitalize leading-tight">Apoya Nuestra
+        Misión</h1>
+      <p class="text-white text-lg md:text-2xl font-light opacity-90 max-w-2xl mx-auto">
+        Tu donación ayuda a crear un futuro más sostenible a través del reciclaje y la valorización de residuos.
+      </p>
+    </div>
+  </section>
 
-<section style="padding: 4rem 2rem; background: var(--color-white);">
-  <div class="container">
-    <div>
-      <div style="margin-bottom: 3rem;">
-        <h3 class="font-display text-center text-[2em] mb-6">Tu
-          Donación Nos Permite:
-        </h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+  <section class="py-16 px-8 bg-white dark:bg-background-dark">
+    <div class="max-w-7xl mx-auto container">
+      <div class="mb-20">
+        <div class="text-center mb-12">
+          <h3 class="font-display text-[2rem] md:text-[2.5rem] font-bold text-gray-900 dark:text-white mb-6">Tu Donación
+            Nos Permite:</h3>
+          <div class="w-24 h-1.5 bg-secondary mx-auto rounded-full mb-8"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Item 1 -->
           <div
-            class="flex flex-col justify-start items-center gap-2 bg-white rounded-md p-6 border border-gray-200 shadow-md">
-            <div style="font-size: 3rem; margin-bottom: 1rem;"><span
-                class="material-symbols-outlined text-[3rem] text-primary">
-                local_shipping
-              </span></div>
-            <h4 style="color: var(--color-green-dark); margin-bottom: 0.5rem;">Expandir Rutas</h4>
-            <p style="color: var(--color-gray-dark); margin: 0; font-size: 0.95rem;">Llegar a más comunidades con
-              nuestro servicio de recolección</p>
+            class="flex flex-col justify-start items-center gap-4 bg-white dark:bg-surface-dark rounded-xl p-8 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow group">
+            <div
+              class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+              <span class="material-symbols-outlined text-[3rem] text-primary">local_shipping</span>
+            </div>
+            <h4 class="text-[#2D5016] dark:text-primary font-bold text-xl mb-2">Expandir Rutas</h4>
+            <p class="text-gray-600 dark:text-gray-400 text-center text-[0.95rem] leading-relaxed">
+              Llegar a más comunidades con nuestro servicio de recolección profesional.
+            </p>
           </div>
 
+          <!-- Item 2 -->
           <div
-            class="flex flex-col justify-start items-center gap-2 bg-white rounded-md p-6 border border-gray-200 shadow-md">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">
-              <span class="material-symbols-outlined text-[3rem] text-primary">
-                warehouse
-              </span>
+            class="flex flex-col justify-start items-center gap-4 bg-white dark:bg-surface-dark rounded-xl p-8 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow group">
+            <div
+              class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+              <span class="material-symbols-outlined text-[3rem] text-primary">warehouse</span>
             </div>
-            <h4 style="color: var(--color-green-dark); margin-bottom: 0.5rem;">Mejorar Instalaciones</h4>
-            <p style="color: var(--color-gray-dark); margin: 0; font-size: 0.95rem;">Actualizar equipos y ampliar el
-              centro de acopio</p>
+            <h4 class="text-[#2D5016] dark:text-primary font-bold text-xl mb-2">Mejorar Instalaciones</h4>
+            <p class="text-gray-600 dark:text-gray-400 text-center text-[0.95rem] leading-relaxed">
+              Actualizar equipos y ampliar la capacidad operativa de nuestro centro de acopio.
+            </p>
           </div>
 
+          <!-- Item 3 -->
           <div
-            class="flex flex-col justify-start items-center gap-2 bg-white rounded-md p-6 border border-gray-200 shadow-md">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">
-              <span class="material-symbols-outlined text-[3rem] text-primary">
-                book_ribbon
-              </span>
+            class="flex flex-col justify-start items-center gap-4 bg-white dark:bg-surface-dark rounded-xl p-8 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow group">
+            <div
+              class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+              <span class="material-symbols-outlined text-[3rem] text-primary">book_ribbon</span>
             </div>
-            <h4 style="color: var(--color-green-dark); margin-bottom: 0.5rem;">Educar</h4>
-            <p style="color: var(--color-gray-dark); margin: 0; font-size: 0.95rem;">Programas de educación ambiental en
-              escuelas y comunidades</p>
+            <h4 class="text-[#2D5016] dark:text-primary font-bold text-xl mb-2">Educar</h4>
+            <p class="text-gray-600 dark:text-gray-400 text-center text-[0.95rem] leading-relaxed">
+              Mantener y ampliar programas de educación ambiental en escuelas y comunidades.
+            </p>
           </div>
 
+          <!-- Item 4 -->
           <div
-            class="flex flex-col justify-start items-center gap-2 bg-white rounded-md p-6 border border-gray-200 shadow-md">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">
-              <span class="material-symbols-outlined text-[3rem] text-primary">
-                work
-              </span>
+            class="flex flex-col justify-start items-center gap-4 bg-white dark:bg-surface-dark rounded-xl p-8 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow group">
+            <div
+              class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+              <span class="material-symbols-outlined text-[3rem] text-primary">work</span>
             </div>
-            <h4 style="color: var(--color-green-dark); margin-bottom: 0.5rem;">Crear Empleos</h4>
-            <p style="color: var(--color-gray-dark); margin: 0; font-size: 0.95rem;">Generar oportunidades de trabajo
-              sostenible en la comunidad</p>
+            <h4 class="text-[#2D5016] dark:text-primary font-bold text-xl mb-2">Crear Empleos</h4>
+            <p class="text-gray-600 dark:text-gray-400 text-center text-[0.95rem] leading-relaxed">
+              Generar oportunidades de trabajo digno y sostenible vinculadas a la economía circular.
+            </p>
           </div>
         </div>
-        <p style="margin-top: 2rem; font-size: 0.95rem; color: var(--color-gray-dark); text-align: center;">
-          Aclaración: ASAOSA es una organización sin fines de lucro dedicada a la valorización de residuos en la
-          Península de Osa.
+
+        <p class="mt-12 text-[0.95rem] text-gray-500 dark:text-gray-400 text-center max-w-2xl mx-auto italic">
+          Aclaración: ASAOSA es una organización sin fines de lucro dedicada a la valorización integral de residuos en
+          toda la Península de Osa.
         </p>
       </div>
 
-      
+      <!-- Formas de Donar Section -->
+      <section
+        class="relative text-white bg-gradient-to-br from-[#4A7C2F] to-[#2D5016] rounded-3xl p-8 md:p-12 mb-20 overflow-hidden shadow-xl"
+        aria-labelledby="donate-title">
+        <!-- Subtle Glow Overlay -->
+        <div class="absolute inset-0 z-0 pointer-events-none opacity-20">
+          <div
+            class="absolute -top-[20%] -right-[20%] w-[60%] h-[60%] bg-[radial-gradient(closest-side,#fff_0%,transparent_70%)] rounded-full">
+          </div>
+        </div>
 
-      <!-- Bloque HTML: Formas de Donar -->
-      <section class="donate-section" aria-labelledby="donate-title">
-        <div class="donate-inner container">
-          <h2 id="donate-title" class="donate-title">Formas de Donar</h2>
+        <div class="relative z-10 max-w-5xl mx-auto">
+          <h2 id="donate-title" class="font-display text-center text-3xl md:text-4xl font-bold text-white mb-2">Formas
+            de Donar</h2>
+          <p id="donate-status" class="min-h-[1.5rem] text-center text-yellow-200 text-sm mb-8" role="status"
+            aria-live="polite"></p>
 
-          <!-- Feedback accesible para acciones (copiar) -->
-          <p id="donate-status" class="donate-status" role="status" aria-live="polite"></p>
-
-          <div class="donate-grid">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <!-- IBAN Account 1 -->
-            <article class="donate-card" aria-labelledby="iban1-title">
-              <header class="donate-card__header" style="display: flex; align-items: center; gap: 0.5rem;">
-                <span class="material-symbols-outlined text-[2rem] text-white">
-                  account_balance
-                </span>
-                <h3 id="iban1-title" class="text-white text-2xl">Cuenta IBAN (Principal)</h3>
+            <article
+              class="bg-white/10 border border-white/20 rounded-2xl backdrop-blur-md shadow-lg p-8 flex flex-col justify-between"
+              aria-labelledby="iban1-title">
+              <header class="flex items-center gap-3 mb-6 border-b border-white/10 pb-4">
+                <span class="material-symbols-outlined text-[2rem] text-white">account_balance</span>
+                <h3 id="iban1-title" class="text-yellow-200 text-xl font-bold">Cuenta IBAN (Principal)</h3>
               </header>
 
-              <div class="donate-card__details" aria-labelledby="iban1-title">
-                <div class="" style="display: flex; align-items: start; gap: 0.5rem;flex-direction: column;">
-                  <span style="color: #a5d6a7;"><strong>Banco</strong></span>
-                  <span>[Nombre del Banco 1]</span>
+              <div class="space-y-6">
+                <div class="flex flex-col gap-1">
+                  <span class="text-[#A5D6A7] font-bold text-xs uppercase tracking-wider">Banco</span>
+                  <span class="font-medium">[Nombre del Banco 1]</span>
                 </div>
-                <div class="" style="display: flex; align-items: start; gap: 0.5rem;flex-direction: column;">
-                  <span style="color: #a5d6a7;"><strong>IBAN</strong></span>
-                  <div style="display: flex; align-items: start; gap: 0.5rem;flex-direction: column;">
-                    <code class="code-inline iban">CR00 0000 0000 0000 0000 01</code>
-                    <button class="btn btn-ghost copy-btn" data-copy="CR00 0000 0000 0000 0000 01"
-                      aria-label="Copiar IBAN de la cuenta principal">
+                <div class="flex flex-col gap-2">
+                  <span class="text-[#A5D6A7] font-bold text-xs uppercase tracking-wider">IBAN</span>
+                  <div class="flex flex-wrap items-center gap-3">
+                    <code
+                      class="code-inline bg-black/20 border border-white/10 px-3 py-1.5 rounded-lg font-mono text-sm tracking-widest text-white">CR00 0000 0000 0000 0000 01</code>
+                    <button
+                      class="px-4 py-1.5 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-sm font-bold transition-all hover:translate-y-[-1px] copy-btn"
+                      data-copy="CR00 0000 0000 0000 0000 01" aria-label="Copiar IBAN cuenta principal">
                       Copiar
                     </button>
                   </div>
                 </div>
-                <div class="" style="display: flex; align-items: start; gap: 0.5rem;flex-direction: column;">
-                  <span style="color: #a5d6a7;"><strong>Beneficiario</strong></span>
-                  <span>ASAOSA</span>
+                <div class="flex flex-col gap-1">
+                  <span class="text-[#A5D6A7] font-bold text-xs uppercase tracking-wider">Beneficiario</span>
+                  <span class="font-medium">ASAOSA</span>
                 </div>
               </div>
             </article>
 
             <!-- IBAN Account 2 -->
-            <article class="donate-card" aria-labelledby="iban2-title">
-              <header class="donate-card__header">
-                <span class="material-symbols-outlined text-[2rem] text-white">
-                  account_balance
-                </span>
-                <h3 id="iban2-title" class="text-white text-2xl">Cuenta IBAN (Secundaria)</h3>
+            <article
+              class="bg-white/10 border border-white/20 rounded-2xl backdrop-blur-md shadow-lg p-8 flex flex-col justify-between"
+              aria-labelledby="iban2-title">
+              <header class="flex items-center gap-3 mb-6 border-b border-white/10 pb-4">
+                <span class="material-symbols-outlined text-[2rem] text-white">account_balance</span>
+                <h3 id="iban2-title" class="text-yellow-200 text-xl font-bold">Cuenta IBAN (Secundaria)</h3>
               </header>
 
-              <div class="donate-card__details">
-                <div class="" style="display: flex; align-items: start; gap: 0.5rem;flex-direction: column;">
-                  <span style="color: #a5d6a7;"><strong>Banco</strong></span>
-                  <span>[Nombre del Banco 2]</span>
+              <div class="space-y-6">
+                <div class="flex flex-col gap-1">
+                  <span class="text-[#A5D6A7] font-bold text-xs uppercase tracking-wider">Banco</span>
+                  <span class="font-medium">[Nombre del Banco 2]</span>
                 </div>
-                <div class="" style="display: flex; align-items: start; gap: 0.5rem;flex-direction: column;">
-                  <span style="color: #a5d6a7;"><strong>IBAN</strong></span>
-                  <div style="display: flex; align-items: start; gap: 0.5rem;flex-direction: column;">
-                    <code class="code-inline iban">CR00 0000 0000 0000 0000 02</code>
-                    <button class="btn btn-ghost copy-btn" data-copy="CR00 0000 0000 0000 0000 02"
-                      aria-label="Copiar IBAN de la cuenta principal">
+                <div class="flex flex-col gap-2">
+                  <span class="text-[#A5D6A7] font-bold text-xs uppercase tracking-wider">IBAN</span>
+                  <div class="flex flex-wrap items-center gap-3">
+                    <code
+                      class="code-inline bg-black/20 border border-white/10 px-3 py-1.5 rounded-lg font-mono text-sm tracking-widest text-white">CR00 0000 0000 0000 0000 02</code>
+                    <button
+                      class="px-4 py-1.5 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-sm font-bold transition-all hover:translate-y-[-1px] copy-btn"
+                      data-copy="CR00 0000 0000 0000 0000 02" aria-label="Copiar IBAN cuenta secundaria">
                       Copiar
                     </button>
                   </div>
                 </div>
-                <div class="" style="display: flex; align-items: start; gap: 0.5rem;flex-direction: column;">
-                  <span style="color: #a5d6a7;"><strong>Beneficiario</strong></span>
-                  <span>ASAOSA</span>
+                <div class="flex flex-col gap-1">
+                  <span class="text-[#A5D6A7] font-bold text-xs uppercase tracking-wider">Beneficiario</span>
+                  <span class="font-medium">ASAOSA</span>
                 </div>
               </div>
             </article>
 
             <!-- SINPE Móvil -->
-            <article class="donate-card" aria-labelledby="sinpe-title">
-              <header class="donate-card__header">
-                <span class="material-symbols-outlined text-[2rem] text-white">
-                  mobile_3
-                </span>
-                <h3 id="sinpe-title" class="text-white text-2xl">SINPE Móvil</h3>
+            <article
+              class="bg-white/10 border border-white/20 rounded-2xl backdrop-blur-md shadow-lg p-8 flex flex-col justify-between"
+              aria-labelledby="sinpe-title">
+              <header class="flex items-center gap-3 mb-6 border-b border-white/10 pb-4">
+                <span class="material-symbols-outlined text-[2rem] text-white">mobile_3</span>
+                <h3 id="sinpe-title" class="text-yellow-200 text-xl font-bold">SINPE Móvil</h3>
               </header>
 
-              <div class="donate-card__details">
-                <div class="" style="display: flex; align-items: start; gap: 0.5rem;flex-direction: column;">
-                  <span style="color: #a5d6a7;"><strong>Teléfono</strong></span>
-                  <div style="display: flex; align-items: start; gap: 0.5rem;flex-direction: column;">
-                    <code class="code-inline phone">[Número de teléfono]</code>
-                    <button class="btn btn-ghost copy-btn" data-copy="[Número de teléfono]"
-                      aria-label="Copiar número de SINPE Móvil">
+              <div class="space-y-6">
+                <div class="flex flex-col gap-2">
+                  <span class="text-[#A5D6A7] font-bold text-xs uppercase tracking-wider">Teléfono</span>
+                  <div class="flex items-center gap-3">
+                    <code
+                      class="code-inline bg-black/20 border border-white/10 px-4 py-1.5 rounded-lg font-mono text-lg text-white font-bold">[Número de teléfono]</code>
+                    <button
+                      class="px-4 py-1.5 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-sm font-bold transition-all hover:translate-y-[-1px] copy-btn"
+                      data-copy="[Número de teléfono]" aria-label="Copiar número de SINPE Móvil">
                       Copiar
                     </button>
                   </div>
                 </div>
-                <div class="" style="display: flex; align-items: start; gap: 0.5rem;flex-direction: column;">
-                  <span style="color: #a5d6a7;"><strong>Beneficiario</strong></span>
-                  <span>ASAOSA</span>
+                <div class="flex flex-col gap-1">
+                  <span class="text-[#A5D6A7] font-bold text-xs uppercase tracking-wider">Beneficiario</span>
+                  <span class="font-medium">ASAOSA</span>
                 </div>
               </div>
             </article>
 
             <!-- PayPal -->
-            <article class="donate-card" aria-labelledby="paypal-title">
-              <header class="donate-card__header">
-                <span class="material-symbols-outlined text-[2rem] text-white">
-                  credit_card
-                </span>
-                <h3 id="paypal-title" class="text-white text-2xl">PayPal</h3>
+            <article
+              class="bg-white/10 border border-white/20 rounded-2xl backdrop-blur-md shadow-lg p-8 flex flex-col justify-between"
+              aria-labelledby="paypal-title">
+              <header class="flex items-center gap-3 mb-6 border-b border-white/10 pb-4">
+                <span class="material-symbols-outlined text-[2rem] text-white">credit_card</span>
+                <h3 id="paypal-title" class="text-yellow-200 text-xl font-bold">PayPal</h3>
               </header>
 
-              <div class="donate-card__content">
-                <p class="donate-description">
-                  Donaciones internacionales de forma segura a través de PayPal.
+              <div class="space-y-6">
+                <p class="text-gray-100/90 leading-relaxed">
+                  Realiza donaciones internacionales de forma segura a través de nuestra plataforma de PayPal.
                 </p>
-                <a href="https://www.paypal.me/ASAOSA" class="btn btn-ghost copy-btn"
-                  data-copy="https://www.paypal.me/ASAOSA" aria-label="Donar con PayPal">
+                <a href="https://www.paypal.me/ASAOSA" target="_blank"
+                  class="inline-flex items-center justify-center w-full px-6 py-3 bg-[#0070BA] hover:bg-[#005ea6] text-white font-bold rounded-xl shadow-[0_6px_16px_rgba(0,112,186,0.35)] transition-all hover:translate-y-[-1px] hover:shadow-[0_10px_24px_rgba(0,112,186,0.5)]">
                   Donar con PayPal
                 </a>
               </div>
@@ -310,333 +346,103 @@
         </div>
       </section>
 
-      <style>
-        /* CSS */
-        /* Paleta proporcionada */
-        :root {
-          /* Primary Green Palette */
-          --color-green-dark: #2d5016;
-          --color-green-medium: #4a7c2f;
-          --color-green-light: #7cb342;
-          --color-green-pale: #a5d6a7;
-          --color-green-extra-light: #e8f5e9;
+      <!-- Donación de Materiales Section -->
+      <div class="mb-20">
+        <div class="text-center mb-10">
+          <h3 class="font-display text-3xl font-bold text-gray-900 dark:text-white mb-4">Donación de Materiales y
+            Equipos</h3>
+          <div class="w-16 h-1 bg-secondary mx-auto rounded-full"></div>
+        </div>
 
-          /* Yellow Palette */
-          --color-yellow-primary: #f9a825;
-          --color-yellow-light: #fdd835;
-          --color-yellow-pale: #fff9c4;
-
-          /* Neutral Colors */
-          --color-white: #ffffff;
-          --color-cream: #f5f5f0;
-          --color-gray-light: #e0e0e0;
-          --color-gray-medium: #757575;
-          --color-gray-dark: #2d2d2d;
-
-          /* Tokens del componente */
-          --donate-radius: 16px;
-          --donate-card-radius: 12px;
-          --donate-space-1: .5rem;
-          --donate-space-2: 1rem;
-          --donate-space-3: 1.5rem;
-          --donate-space-4: 2rem;
-
-          --donate-text: var(--color-white);
-          --donate-heading: var(--color-yellow-light);
-
-          --donate-card-bg: rgba(255, 255, 255, 0.12);
-          /* glass surface */
-          --donate-card-border: rgba(255, 255, 255, 0.22);
-          --donate-card-shadow: 0 8px 24px rgba(0, 0, 0, .18);
-
-          --paypal-blue: #0070ba;
-
-          --focus-outline: 3px solid var(--color-yellow-primary);
-        }
-
-        /* Utilidades mínimas */
-        .container {
-          width: min(1100px, 100% - 2rem);
-          margin-inline: auto;
-        }
-
-        .sr-only {
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          padding: 0;
-          margin: -1px;
-          overflow: hidden;
-          clip: rect(0, 0, 0, 0);
-          white-space: nowrap;
-          border: 0;
-        }
-
-        :focus-visible {
-          outline: var(--focus-outline);
-          outline-offset: 3px;
-        }
-
-        /* Sección principal */
-        .donate-section {
-          color: var(--donate-text);
-          background: linear-gradient(135deg, var(--color-green-medium), var(--color-green-dark));
-          position: relative;
-          border-radius: var(--donate-radius);
-          padding: var(--donate-space-4);
-          margin-block: var(--donate-space-4);
-          overflow: hidden;
-        }
-
-        /* Highlight sutil en el fondo para armonía */
-        .donate-section::before {
-          content: "";
-          position: absolute;
-          inset: -20% -20% auto auto;
-          width: 60%;
-          height: 60%;
-          background: radial-gradient(closest-side, rgba(255, 255, 255, .18), transparent 70%);
-          transform: translate(10%, -10%);
-          pointer-events: none;
-        }
-
-        .donate-inner {
-          position: relative;
-          z-index: 1;
-        }
-
-        .donate-title {
-          margin: 0 0 var(--donate-space-3);
-          text-align: center;
-          font-size: clamp(1.4rem, 2.8vw, 1.8rem);
-          letter-spacing: .2px;
-          color: var(--donate-text);
-        }
-
-        .donate-status {
-          min-height: 1.25rem;
-          text-align: center;
-          color: var(--color-yellow-pale);
-          margin-bottom: var(--donate-space-2);
-        }
-
-        /* Grid responsivo */
-        .donate-grid {
-          display: grid;
-          grid-template-columns: 1fr;
-          gap: var(--donate-space-2);
-        }
-
-        @media (min-width: 768px) {
-          .donate-section {
-            padding: calc(var(--donate-space-4) + .5rem);
-          }
-
-          .donate-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
-        }
-
-        /* Tarjeta */
-        .donate-card {
-          background: var(--donate-card-bg);
-          border: 1px solid var(--donate-card-border);
-          border-radius: var(--donate-card-radius);
-          backdrop-filter: blur(8px);
-          box-shadow: var(--donate-card-shadow);
-          padding: var(--donate-space-3);
-        }
-
-        .donate-card__header {
-          display: flex;
-          align-items: center;
-          gap: .6rem;
-          margin-bottom: var(--donate-space-2);
-          border-bottom: 1px solid rgba(255, 255, 255, .14);
-          padding-bottom: .75rem;
-        }
-
-        .donate-card__icon {
-          font-size: 1.5rem;
-          line-height: 1;
-        }
-
-        .donate-card__title {
-          margin: 0;
-          font-size: 1.125rem;
-          color: var(--donate-heading);
-        }
-
-        /* Detalles con semántica */
-        .donate-card__details {
-          display: grid;
-          gap: .75rem;
-          margin: 0;
-        }
-
-        .detail-row {
-          display: grid;
-          grid-template-columns: 120px 1fr;
-          align-items: start;
-          gap: .75rem;
-        }
-
-        .detail-row dt {
-          font-weight: 700;
-          color: var(--color-green-pale);
-        }
-
-        .detail-row dd {
-          margin: 0;
-        }
-
-        .code-inline {
-          display: inline-block;
-          padding: .35rem .55rem;
-          border-radius: 8px;
-          background: rgba(255, 255, 255, .10);
-          border: 1px solid rgba(255, 255, 255, .20);
-          font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-          color: var(--donate-text);
-          letter-spacing: .4px;
-        }
-
-        /* Contenido libre (PayPal) */
-        .donate-card__content {
-          display: grid;
-          gap: var(--donate-space-2);
-        }
-
-        .donate-description {
-          margin: 0;
-          color: var(--color-cream);
-        }
-
-        /* Botones */
-        .btn {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          height: 40px;
-          padding: 0 .9rem;
-          border-radius: 10px;
-          border: 1px solid transparent;
-          font-weight: 600;
-          letter-spacing: .2px;
-          cursor: pointer;
-          transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease, color .18s ease;
-        }
-
-        .btn:hover {
-          transform: translateY(-1px);
-        }
-
-        .btn-ghost {
-          background: rgba(255, 255, 255, .10);
-          border-color: rgba(255, 255, 255, .22);
-          color: var(--donate-text);
-        }
-
-        .btn-ghost:hover {
-          background: rgba(255, 255, 255, .16);
-          box-shadow: 0 6px 16px rgba(0, 0, 0, .18);
-        }
-
-        .paypal-btn {
-          background: var(--paypal-blue);
-          color: var(--color-white);
-          box-shadow: 0 6px 16px rgba(0, 112, 186, .35);
-        }
-
-        .paypal-btn:hover {
-          box-shadow: 0 10px 24px rgba(0, 112, 186, .5);
-        }
-
-        /* Movimiento reducido */
-        @media (prefers-reduced-motion: reduce) {
-          * {
-            animation-duration: .001ms !important;
-            transition-duration: .001ms !important;
-          }
-        }
-      </style>
-
-      <script>
-
-        /* JavaScript (ES6+) */
-        (function donateBlock() {
-          const status = document.getElementById('donate-status');
-
-          const copyText = async (text) => {
-            try {
-              await navigator.clipboard.writeText(text);
-              status.textContent = 'Copiado al portapapeles.';
-            } catch {
-              // Fallback si el permiso de clipboard falla
-              const ta = document.createElement('textarea');
-              ta.value = text;
-              document.body.appendChild(ta);
-              ta.select();
-              try { document.execCommand('copy'); status.textContent = 'Copiado al portapapeles.'; }
-              catch { status.textContent = 'No se pudo copiar. Selecciona y copia manualmente.'; }
-              finally { document.body.removeChild(ta); }
-            }
-          };
-
-          document.querySelectorAll('.copy-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-              const text = btn.dataset.copy || '';
-              if (!text) return;
-              copyText(text);
-            });
-          });
-        })();
-
-      </script>
-
-      <div class="my-6">
-        <h3 class="text-[2rem] font-display text-center">
-          Donación de Materiales y Equipos
-        </h3>
-      </div>
-      <div class="my-6 bg-[#E8F5E9] p-6 rounded-md">
-
-        <h2 style="color: var(--color-gray-dark); margin-bottom: 1rem; font-size: 1.125rem;">
-          También aceptamos donaciones de equipos y materiales que nos ayuden en nuestra labor:
-        </h2>
-        <ul style="color: var(--color-gray-dark); line-height: 1.8; margin-left: 1.5rem;">
-          <li style="list-style: disc; margin-bottom: .5rem;">Herramientas para clasificación de residuos</li>
-          <li style="list-style: disc; margin-bottom: .5rem;">Equipos de protección personal (guantes, mascarillas,
-            etc.)</li>
-          <li style="list-style: disc; margin-bottom: .5rem;">Contenedores y sacos para materiales reciclables</li>
-          <li style="list-style: disc; margin-bottom: .5rem;">Balanzas y equipos de pesaje</li>
-          <li style="list-style: disc;">Vehículos para transporte de materiales</li>
-        </ul>
+        <div
+          class="bg-[#E8F5E9] dark:bg-green-900/10 p-8 rounded-2xl border border-green-100 dark:border-green-800/20 max-w-4xl mx-auto shadow-sm">
+          <h2 class="text-[#2D5016] dark:text-green-400 font-bold text-lg md:text-xl mb-6 flex items-center gap-2">
+            <span class="material-symbols-outlined">emoji_objects</span>
+            También aceptamos materiales que nos ayuden en nuestra labor operativa:
+          </h2>
+          <ul class="grid md:grid-cols-2 gap-4 ml-4">
+            <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+              <span class="w-2 h-2 rounded-full bg-secondary"></span>
+              Herramientas para clasificación de residuos
+            </li>
+            <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+              <span class="w-2 h-2 rounded-full bg-secondary"></span>
+              Equipos de protección personal (EPP)
+            </li>
+            <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+              <span class="w-2 h-2 rounded-full bg-secondary"></span>
+              Contenedores y sacos industriales
+            </li>
+            <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+              <span class="w-2 h-2 rounded-full bg-secondary"></span>
+              Balanzas y equipos de pesaje técnico
+            </li>
+            <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300 md:col-span-2">
+              <span class="w-2 h-2 rounded-full bg-secondary"></span>
+              Vehículos o apoyo logístico para transporte de materiales
+            </li>
+          </ul>
+        </div>
       </div>
 
-      <div class="flex flex-col items-center my-12">
-        <h3 style="color: var(--color-green-dark); margin-bottom: 1.5rem;">¿Tienes Preguntas?</h3>
-        <p style="font-size: 1.125rem; color: var(--color-gray-dark); margin-bottom: 2rem;">
-          Contáctanos para más información sobre cómo puedes apoyar nuestra misión
+      <!-- Call to Action Section -->
+      <div class="flex flex-col items-center p-12 text-center mb-20 shadow-sm">
+        <h3 class="text-[#2D5016] dark:text-primary font-display text-3xl font-bold mb-4">¿Tienes Preguntas?</h3>
+        <p class="text-gray-600 dark:text-gray-400 text-lg mb-10 max-w-xl mx-auto">
+          Contáctanos si deseas más información sobre cómo puedes apoyar nuestra misión de sostenibilidad.
         </p>
-        <a href="mailto:Asaosa2005@gmail.com" class="rounded-full bg-[#799F5E] flex items-center gap-2 px-4 py-2 w-fit">
-          <span class="material-symbols-outlined text-[2rem] text-white">
-            mail
-          </span> <span class="text-white">
-            Contáctanos
-          </span>
+        <a href="mailto:Asaosa2005@gmail.com"
+          class="inline-flex items-center gap-3 px-8 py-4 bg-primary text-white rounded-full font-bold shadow-lg hover:bg-opacity-90 transition-all hover:scale-[1.02] active:scale-[0.98]">
+          <span class="material-symbols-outlined">mail</span>
+          Contáctanos por correo electrónico
         </a>
       </div>
 
-      <div class="rounded-md bg-[#E8F5E9] p-6 text-center my-12">
-        <p style="color: var(--color-gray-dark); font-size: 1rem; margin: 0; line-height: 1.6;">
-          <strong>Cédula Jurídica:</strong> 3-002-559586<br>
-          <strong>Gestor Autorizado:</strong> MS-DRRSBRU-DARSG-RGA0705-2025
-        </p>
+      <!-- Legal Info Footer -->
+      <div
+        class="bg-gray-100 dark:bg-black/40 rounded-2xl p-8 text-center max-w-3xl mx-auto border border-gray-200 dark:border-gray-800">
+        <div class="grid md:grid-cols-2 gap-6 items-center">
+          <div class="space-y-1">
+            <span class="text-xs font-bold uppercase tracking-widest text-gray-400">Cédula Jurídica</span>
+            <p class="text-[#2D5016] dark:text-primary font-mono font-bold text-lg">3-002-559586</p>
+          </div>
+          <div class="space-y-1">
+            <span class="text-xs font-bold uppercase tracking-widest text-gray-400">Gestor Autorizado</span>
+            <p class="text-[#2D5016] dark:text-primary font-mono font-bold text-sm">MS-DRRSBRU-DARSG-RGA0705-2025</p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</main>
+
+<script>
+  (function donateBlock() {
+    const status = document.getElementById('donate-status');
+    let timer;
+
+    const copyText = async (text) => {
+      try {
+        await navigator.clipboard.writeText(text);
+        status.textContent = '✓ Texto copiado al portapapeles.';
+
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+          status.textContent = '';
+        }, 3000);
+      } catch (err) {
+        status.textContent = 'Error al copiar. Por favor, selecciona el texto manualmente.';
+      }
+    };
+
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const text = btn.dataset.copy || '';
+        if (text) copyText(text);
+      });
+    });
+  })();
+</script>
 
   <footer class="bg-primary dark:bg-black text-white py-16">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
