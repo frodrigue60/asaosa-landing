@@ -12,7 +12,7 @@
 
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap"
     rel="stylesheet" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
   <link
@@ -50,34 +50,8 @@
   </script>
 
   <style>
-    .timeline-scroll-container::-webkit-scrollbar {
-      height: 4px;
-    }
-
-    .timeline-scroll-container::-webkit-scrollbar-thumb {
-      background: #799F5E33;
-      border-radius: 10px;
-    }
-
-    .timeline-scroll-container::-webkit-scrollbar-thumb:hover {
-      background: #799F5E;
-    }
-
     .material-symbols-outlined {
       font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-    }
-
-    .no-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
-
-    .no-scrollbar {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-
-    .hero-content {
-      font-size: 2.5rem;
     }
 
     .scrolled nav {
@@ -143,7 +117,8 @@
   </nav>
 </header>
 
-  
+  <main>
+    
 <main class="pt-20">
   <!-- Hero Section -->
   <!-- Hero Section -->
@@ -159,7 +134,7 @@
   </section>
 
   <!-- Board Members Grid -->
-  <section class="py-12 bg-[#F5F5F0]">
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-[#F5F5F0]">
     <div class="max-w-[1400px] mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-12 mx-12 lg:mx-0">
         <div class="bg-white p-10 border-l-4 border-primary shadow-sm rounded-md flex flex-col justify-between">
@@ -167,54 +142,70 @@
           <h3 class="text-xl font-bold text-brand-green-dark my-2">Rosa Iris Gerarda Avila Araya</h3>
           <div class="text-sm text-gray-600">Cédula: 5-0188-0330</div>
           <div class="text-sm text-gray-600">Representación: Judicial y Extrajudicial</div>
-          <div class="mt-4 text-xs bg-brand-green-extra-light p-2 rounded-sm text-brand-green-dark">
-            Vigencia: 16/07/2024 al 15/07/2026
+          <div class="mt-4">
+            <span
+              class="inline-flex items-center px-3 py-1 rounded-sm text-xs font-semibold bg-primary/10 text-brand-green-dark border border-primary/20">
+              Vigencia: 16/07/2024 al 15/07/2026
+            </span>
           </div>
         </div>
 
         <div class="bg-white p-10 border-l-4 border-primary shadow-sm rounded-md flex flex-col justify-between">
           <div class="text-2xl font-semibold text-primary mb-2">Vicepresidente</div>
-          <h3 class="member-name">Emanuel Porras Avila</h3>
-          <div class="member-info">Cédula: 6-0386-0935</div>
-          <div class="member-info">Representación: Judicial y Extrajudicial</div>
-          <div class="member-validity">
-            Vigencia: 16/07/2024 al 15/07/2026
+          <h3 class="text-xl font-bold text-brand-green-dark my-2">Emanuel Porras Avila</h3>
+          <div class="text-sm text-gray-600">Cédula: 6-0386-0935</div>
+          <div class="text-sm text-gray-600">Representación: Judicial y Extrajudicial</div>
+          <div class="mt-4">
+            <span
+              class="inline-flex items-center px-3 py-1 rounded-sm text-xs font-semibold bg-primary/10 text-brand-green-dark border border-primary/20">
+              Vigencia: 16/07/2024 al 15/07/2026
+            </span>
           </div>
         </div>
 
         <div class="bg-white p-10 border-l-4 border-primary shadow-sm rounded-md flex flex-col justify-between">
           <div class="text-2xl font-semibold text-primary mb-2">Secretario</div>
-          <h3 class="member-name">Merys Dayanna Badilla Aguero</h3>
-          <div class="member-info">Cédula: 1-1277-0778</div>
-          <div class="member-info">Representación: No aplica</div>
-          <div class="member-validity">
-            Vigencia: 16/07/2024 al 15/07/2026
+          <h3 class="text-xl font-bold text-brand-green-dark my-2">Merys Dayanna Badilla Aguero</h3>
+          <div class="text-sm text-gray-600">Cédula: 1-1277-0778</div>
+          <div class="text-sm text-gray-600">Representación: No aplica</div>
+          <div class="mt-4">
+            <span
+              class="inline-flex items-center px-3 py-1 rounded-sm text-xs font-semibold bg-primary/10 text-brand-green-dark border border-primary/20">
+              Vigencia: 16/07/2024 al 15/07/2026
+            </span>
           </div>
         </div>
 
         <div class="bg-white p-10 border-l-4 border-primary shadow-sm rounded-md flex flex-col justify-between">
           <div class="text-2xl font-semibold text-primary mb-2">Tesorero</div>
-          <h3 class="member-name">Soriada Porras Avila</h3>
-          <div class="member-info">Cédula: 1-1293-0861</div>
-          <div class="member-info">Representación: No aplica</div>
-          <div class="member-validity">
-            Vigencia: 16/07/2024 al 15/07/2026
+          <h3 class="text-xl font-bold text-brand-green-dark my-2">Soriada Porras Avila</h3>
+          <div class="text-sm text-gray-600">Cédula: 1-1293-0861</div>
+          <div class="text-sm text-gray-600">Representación: No aplica</div>
+          <div class="mt-4">
+            <span
+              class="inline-flex items-center px-3 py-1 rounded-sm text-xs font-semibold bg-primary/10 text-brand-green-dark border border-primary/20">
+              Vigencia: 16/07/2024 al 15/07/2026
+            </span>
           </div>
         </div>
 
         <div class="bg-white p-10 border-l-4 border-primary shadow-sm rounded-md flex flex-col justify-between">
           <div class="text-2xl font-semibold text-primary mb-2">Vocal</div>
-          <h3 class="member-name">Marjorie Porras Avila</h3>
-          <div class="member-info">Cédula: 6-0291-0147</div>
-          <div class="member-info">Representación: No aplica</div>
-          <div class="member-validity">
-            Vigencia: 16/07/2024 al 15/07/2026
+          <h3 class="text-xl font-bold text-brand-green-dark my-2">Marjorie Porras Avila</h3>
+          <div class="text-sm text-gray-600">Cédula: 6-0291-0147</div>
+          <div class="text-sm text-gray-600">Representación: No aplica</div>
+          <div class="mt-4">
+            <span
+              class="inline-flex items-center px-3 py-1 rounded-sm text-xs font-semibold bg-primary/10 text-brand-green-dark border border-primary/20">
+              Vigencia: 16/07/2024 al 15/07/2026
+            </span>
           </div>
         </div>
       </div>
     </div>
   </section>
 </main>
+  </main>
 
   <footer class="bg-primary dark:bg-black text-white py-16">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
