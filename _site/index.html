@@ -118,10 +118,26 @@
             href="/donacion">Donación</a>
         </div>
         <div class="md:hidden flex items-center">
-          <button class="text-gray-600 dark:text-gray-300 hover:text-primary">
+          <button id="mobileMenuToggle" class="text-gray-600 dark:text-gray-300 hover:text-primary focus:outline-none">
             <span class="material-symbols-outlined text-3xl">menu</span>
           </button>
         </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="navMenu"
+      class="hidden md:hidden bg-white dark:bg-background-dark border-t border-gray-100 dark:border-gray-800 absolute w-full left-0 shadow-lg transition-all duration-300">
+      <div class="px-4 pt-2 pb-6 space-y-1 sm:px-3">
+        <a href="/"
+          class="block px-3 py-4 text-base font-medium text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Inicio</a>
+        <a href="/about/"
+          class="block px-3 py-4 text-base font-medium text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Nosotros</a>
+        <a href="/junta-directiva/"
+          class="block px-3 py-4 text-base font-medium text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Junta
+          Directiva</a>
+        <a href="/donacion"
+          class="block px-3 py-4 text-base font-medium text-white bg-primary rounded-md text-center mt-4">Donación</a>
       </div>
     </div>
   </nav>
@@ -134,7 +150,7 @@
   <div class="absolute inset-0 z-0 overflow-hidden brightness-[.5]">
     <iframe
       src="https://www.youtube.com/embed/i7LGcgGXxyM?autoplay=1&mute=1&controls=0&loop=1&playlist=i7LGcgGXxyM&modestbranding=1&rel=0&showinfo=0&playsinline=1&disablekb=1&iv_load_policy=3"
-      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100vw] h-[100vh] pointer-events-none min-w-full min-h-full object-cover"
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] min-w-full h-full min-h-[56.25vw] pointer-events-none object-cover"
       frameborder="0" allow="autoplay; encrypted-media" allowfullscreen title="Video de fondo - Reciclaje"></iframe>
   </div>
   <!-- Overlay oscuro para mejorar legibilidad del texto -->

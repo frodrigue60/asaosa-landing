@@ -11,16 +11,24 @@ document.addEventListener("DOMContentLoaded", () => {
     const navLinks = navMenu.querySelectorAll("a");
 
     mobileMenuToggle.addEventListener("click", () => {
-      navMenu.classList.toggle("active");
-      mobileMenuToggle.textContent = navMenu.classList.contains("active")
-        ? "✕"
-        : "☰";
+      navMenu.classList.toggle("hidden");
+      const icon = mobileMenuToggle.querySelector(".material-symbols-outlined");
+      if (icon) {
+        icon.textContent = navMenu.classList.contains("hidden")
+          ? "menu"
+          : "close";
+      }
     });
 
     navLinks.forEach((link) => {
       link.addEventListener("click", () => {
-        navMenu.classList.remove("active");
-        mobileMenuToggle.textContent = "☰";
+        navMenu.classList.add("hidden");
+        const icon = mobileMenuToggle.querySelector(
+          ".material-symbols-outlined",
+        );
+        if (icon) {
+          icon.textContent = "menu";
+        }
       });
     });
   }
@@ -52,43 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         header.classList.remove("scrolled");
       }
-    });
-  }
-
-  // 4. Fade-in Animations (Intersection Observer)
-  const observerOptions = { threshold: 0.1 };
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-    });
-  }, observerOptions);
-
-  // Observe all fade-in-up elements
-  document.querySelectorAll(".fade-in-up").forEach((element) => {
-    observer.observe(element);
-  });
-
-  // Stagger static elements if they exist
-  const plasticsGrid = document.querySelector(".plastics-grid");
-  if (plasticsGrid) {
-    plasticsGrid.querySelectorAll(".plastic-card").forEach((card, index) => {
-      card.style.transitionDelay = `${index * 0.15}s`;
-    });
-  }
-
-  const stepsContainer = document.querySelector(".steps-container");
-  if (stepsContainer) {
-    stepsContainer.querySelectorAll(".step").forEach((step, index) => {
-      step.style.transitionDelay = `${index * 0.1}s`;
-    });
-  }
-
-  const materialsGrid = document.querySelector(".materials-grid");
-  if (materialsGrid) {
-    materialsGrid.querySelectorAll(".material-card").forEach((card, index) => {
-      card.style.transitionDelay = `${index * 0.05}s`;
     });
   }
 });
