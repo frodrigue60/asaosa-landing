@@ -11,8 +11,10 @@
   <title>{{ title or 'ASAOSA - Valorización de Residuos' }}</title>
 
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=optional"
     rel="stylesheet" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
   <link
@@ -54,9 +56,18 @@
       font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
     }
 
+    /* Critical CSS: navbar background pre-rendered before Tailwind CDN compiles.
+       Equivalent to bg-surface-light/90 + backdrop-blur-md from Tailwind config. */
+    #header nav {
+      background-color: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
     .scrolled nav {
       background-color: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       box-shadow: 0 4px 16px rgba(45, 80, 22, 0.12);
     }
 
