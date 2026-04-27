@@ -1,56 +1,58 @@
 # ASAOSA - Valorización de Residuos
 
-Sitio web oficial de **ASAOSA**, una organización sin fines de lucro dedicada a la valorización de residuos sólidos mediante el reciclaje y el compostaje en la Península de Osa, Costa Rica.
+Sitio web oficial de **ASAOSA**, organización sin fines de lucro enfocada en la valorización de residuos sólidos a través del reciclaje y compostaje en la Península de Osa, Costa Rica.
 
-## 🚀 Tecnologías Usadas
+## Tecnologías Utilizadas
 
-Este proyecto está construido con un enfoque moderno y de alto rendimiento utilizando:
+El desarrollo del proyecto emplea las siguientes herramientas y frameworks para garantizar el rendimiento y la escalabilidad:
 
-*   **[Eleventy (11ty)](https://www.11ty.dev/)**: Generador de sitios estáticos (SSG) para una velocidad de carga óptima.
-*   **[Nunjucks](https://mozilla.github.io/nunjucks/)**: Motor de plantillas para la estructura del sitio.
-*   **[Tailwind CSS](https://tailwindcss.com/)**: Framework de CSS para un diseño responsivo y moderno (implementado vía CDN con configuración personalizada).
-*   **Vanilla JavaScript**: Para interactividad ligera y animaciones.
-*   **Google Fonts**: Tipografías Inter y Poppins.
+*   **[Eleventy (11ty)](https://www.11ty.dev/)**: Generador de sitios estáticos (SSG) utilizado para optimizar los tiempos de carga y la entrega de contenido.
+*   **[Nunjucks](https://mozilla.github.io/nunjucks/)**: Motor de plantillas que facilita la creación de estructuras modulares y reutilizables.
+*   **[Tailwind CSS](https://tailwindcss.com/)**: Marco de trabajo CSS orientado a utilidades para la implementación de un diseño responsivo y moderno.
+*   **JavaScript (Vanilla)**: Empleado para la gestión de interactividad y animaciones ligeras en el lado del cliente.
+*   **Google Fonts**: Integración de las familias tipográficas Inter y Poppins.
 
-## 🛠️ Comandos de Uso
+## Comandos de Ejecución
 
-Asegúrate de tener instalado [Node.js](https://nodejs.org/) en tu sistema antes de comenzar.
+El entorno requiere la presencia de Node.js para la ejecución de los siguientes comandos.
 
-### 1. Instalación de dependencias
+### Instalación de Dependencias
+
+Para instalar los paquetes necesarios definidos en el archivo de configuración:
 
 ```bash
 npm install
 ```
 
-### 2. Desarrollo (Servidor local)
+### Entorno de Desarrollo
 
-Ejecuta el servidor de desarrollo con recarga en vivo (browser-sync):
+Inicio del servidor local con capacidad de recarga automática en tiempo real:
 
 ```bash
 npm run dev
 ```
 
-El sitio estará disponible en `http://localhost:8081` (o el puerto que se indique en la terminal).
+El acceso local se realiza a través de la dirección `http://localhost:8081`.
 
-### 3. Compilación para producción
+### Compilación para Producción
 
-Genera los archivos estáticos finales en la carpeta `_site`:
+Generación de los archivos estáticos definitivos en el directorio `_site`:
 
 ```bash
 npm run build
 ```
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
-*   `src/`: Archivos fuente del proyecto.
-    *   `_includes/`: Componentes reutilizables y layouts.
-    *   `assets/`: Imágenes, documentos, CSS y scripts globales.
-    *   `index.njk`: Página de inicio.
-    *   `sobre-nosotros.njk`: Información sobre la misión y visión.
-    *   `junta-directiva.njk`: Miembros de la organización.
-    *   `donacion.njk`: Información bancaria y canales de apoyo.
-*   `_site/`: Directorio generado con el sitio listo para desplegar.
+*   `src/`: Directorio raíz de los archivos de origen.
+    *   `_includes/`: Almacena componentes modulares y plantillas de diseño (layouts).
+    *   `assets/`: Recursos estáticos como imágenes, documentos, estilos y scripts.
+    *   `index.njk`: Punto de entrada y página principal.
+    *   `sobre-nosotros.njk`: Información institucional, misión y visión.
+    *   `junta-directiva.njk`: Detalle de los miembros de la organización.
+    *   `donacion.njk`: Datos bancarios y mecanismos de contribución financiera.
+*   `_site/`: Directorio de salida que contiene la versión compilada lista para su despliegue.
 
-## 📄 Licencia
+## Licencia
 
-Este proyecto está bajo la licencia ISC.
+Este proyecto se distribuye bajo los términos de la licencia ISC.
