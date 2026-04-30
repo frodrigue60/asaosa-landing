@@ -1,0 +1,22 @@
+[
+  {
+    "titulo": "Recolección de Residuos",
+    "icono": "local_shipping",
+    "descripcion": "Rutas estratégicamente programadas que recorren las comunidades locales para recuperar materiales valorizables con precisión técnica."
+  },
+  {
+    "titulo": "Centro de Acopio",
+    "icono": "factory",
+    "descripcion": "Infraestructura especializada de alto rendimiento para la clasificación, compactación y despacho industrial de materiales."
+  },
+  {
+    "titulo": "Educación Ambiental",
+    "icono": "school",
+    "descripcion": "Programas de formación técnica y talleres en instituciones para fomentar una cultura de segregación desde el origen."
+  },
+  {
+    "titulo": "Desarrollo Comunitario",
+    "icono": "groups",
+    "descripcion": "Fomento del empleo verde y apoyo estructural a emprendimientos locales basados en economía circular."
+  }
+]

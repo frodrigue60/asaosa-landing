@@ -12,32 +12,29 @@
   {# Open Graph / Social #}
   <meta property="og:title" content="{{ title or 'ASAOSA - Valorización de Residuos' }}" />
   <meta property="og:description" content="{{ description or 'ONG dedicada a la valorización de residuos mediante reciclaje y compostaje en la Península de Osa.' }}" />
-  {% if site and site.url %}
   <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-  <meta property="og:image" content="{{ site.url }}/assets/images/og-default.svg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="{{ site.url }}/assets/images/og-default.svg" />
-  {% else %}
-  <meta property="og:url" content="{{ page.url }}" />
-  <meta property="og:image" content="/assets/images/og-default.svg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="/assets/images/og-default.svg" />
-  {% endif %}
+  <meta property="og:image" content="{{ '/assets/images/og-default.svg' | url }}" />
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ASAOSA" />
+
+  {# Twitter #}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ title or 'ASAOSA - Valorización de Residuos' }}" />
+  <meta name="twitter:description" content="{{ description or 'ONG dedicada a la valorización de residuos mediante reciclaje y compostaje en la Península de Osa.' }}" />
+  <meta name="twitter:image" content="{{ '/assets/images/og-default.svg' | url }}" />
+
   <meta name="keywords"
     content="reciclaje, compostaje, valorización de residuos, plásticos PET, plásticos HDPE, cartón, papel, vidrio, aluminio, ASAOSA, Península de Osa" />
   <title>{{ title or 'ASAOSA - Valorización de Residuos' }}</title>
 
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap"
-    rel="stylesheet" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
   <link
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
     rel="stylesheet" />
+
+  {# AOS - Animate On Scroll #}
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <script>
     tailwind.config = {
@@ -61,8 +58,8 @@
             "text-dark": "#E5E7EB",
           },
           fontFamily: {
-            sans: ['"Inter"', 'sans-serif'],
-            display: ['"Poppins"', 'sans-serif'],
+            sans: ['ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif'],
+            display: ['ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif'],
           }
         },
       },
@@ -75,8 +72,15 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "ASAOSA",
-    "url": "{{ site.url if site and site.url else 'https://asaosa.org' }}",
-    "logo": "{{ site.url if site and site.url else 'https://asaosa.org' }}/assets/images/asaosa-logo-nav.png"
+    "url": "{{ site.url }}",
+    "logo": "{{ site.url }}/assets/images/asaosa-logo-nav.png",
+    "description": "{{ site.description }}",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Puerto Jiménez",
+      "addressRegion": "Puntarenas",
+      "addressCountry": "CR"
+    }
   }
   </script>
 
@@ -85,23 +89,14 @@
       font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
     }
 
-    /* Critical CSS: navbar background pre-rendered before Tailwind CDN compiles.
-       Equivalent to bg-surface-light/90 + backdrop-blur-md from Tailwind config. */
     #header nav {
-      background-color: rgba(255, 255, 255, 0.9);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      background-color: white;
+      transition: all 0.3s ease;
     }
 
     .scrolled nav {
-      background-color: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      background-color: white;
       box-shadow: 0 4px 16px rgba(45, 80, 22, 0.12);
-    }
-
-    header.scrolled nav {
-      height: 4.5rem;
     }
   </style>
 
@@ -119,6 +114,7 @@
   {% include "components/footer.njk" %}
 
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="/assets/js/script.js"></script>
 </body>
 

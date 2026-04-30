@@ -26,6 +26,7 @@ aceptamos y cómo preparar tus residuos para el centro de acopio."
       diferencia.
     </p>
     <a href="#materiales"
+      title="Ver los materiales que reciclamos en ASAOSA"
       class="inline-block rounded-full px-6 py-3 md:px-8 md:py-4 lg:px-10 lg:py-4 text-white bg-accent hover:bg-yellow-500 transition-all duration-300 text-lg md:text-xl lg:text-[22px] font-bold shadow-2xl hover:-translate-y-1 active:scale-95 border-b-4 border-yellow-700">
       Descubre Qué Reciclamos
     </a>
@@ -37,95 +38,26 @@ aceptamos y cómo preparar tus residuos para el centro de acopio."
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
       <span class="text-primary font-bold tracking-widest uppercase text-xs">Materiales</span>
-      <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">¿Qué
-        Materiales
-        Reciclamos?</h2>
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">¿Qué Materiales Reciclamos?</h2>
       <div class="w-20 h-1 bg-secondary mx-auto rounded-full mb-6"></div>
       <p class="max-w-2xl mx-auto text-gray-600 dark:text-gray-400">
         Aceptamos una amplia variedad de materiales valorizables. Encuentra el tuyo y comienza a reciclar.
       </p>
     </div>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
+      {% for material in materiales %}
       <div
+        data-aos="fade-up"
+        data-aos-delay="{{ loop.index0 * 100 }}"
         class="material-card group bg-surface-light dark:bg-surface-dark rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
         <div
           class="w-16 h-16 mx-auto bg-green-50 dark:bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-          <span class="material-icons-outlined text-3xl text-primary">description</span>
+          <span class="material-icons-outlined text-3xl text-primary">{{ material.icono }}</span>
         </div>
-        <h3 class="font-bold text-gray-900 dark:text-white mb-2">Papel y Cartón</h3>
-        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Papel de oficina, periódicos,
-          revistas, cajas limpias y secas.</p>
+        <h3 class="font-bold text-gray-900 dark:text-white mb-2">{{ material.nombre }}</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">{{ material.descripcion }}</p>
       </div>
-      <div
-        class="material-card group bg-surface-light dark:bg-surface-dark rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
-        <div
-          class="w-16 h-16 mx-auto bg-green-50 dark:bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-          <span class="material-icons-outlined text-3xl text-primary">local_drink</span>
-        </div>
-        <h3 class="font-bold text-gray-900 dark:text-white mb-2">Plástico PET (#1)</h3>
-        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Botellas de bebidas, alimentos o
-          detergentes. Limpios.</p>
-      </div>
-      <div
-        class="material-card group bg-surface-light dark:bg-surface-dark rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
-        <div
-          class="w-16 h-16 mx-auto bg-green-50 dark:bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-          <span class="material-icons-outlined text-3xl text-primary">sanitizer</span>
-        </div>
-        <h3 class="font-bold text-gray-900 dark:text-white mb-2">Plástico HDPE (#2)</h3>
-        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Botellas de detergente, champú,
-          productos de limpieza.</p>
-      </div>
-      <div
-        class="material-card group bg-surface-light dark:bg-surface-dark rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
-        <div
-          class="w-16 h-16 mx-auto bg-green-50 dark:bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-          <span class="material-icons-outlined text-3xl text-primary">takeout_dining</span>
-        </div>
-        <h3 class="font-bold text-gray-900 dark:text-white mb-2">Aluminio</h3>
-        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Latas de bebidas, papel aluminio
-          limpio. Sin restos.</p>
-      </div>
-      <div
-        class="material-card group bg-surface-light dark:bg-surface-dark rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
-        <div
-          class="w-16 h-16 mx-auto bg-green-50 dark:bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-          <span class="material-icons-outlined text-3xl text-primary">build</span>
-        </div>
-        <h3 class="font-bold text-gray-900 dark:text-white mb-2">Hojalata</h3>
-        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Latas de conservas, envases
-          metálicos. Limpios y sin óxido.</p>
-      </div>
-      <div
-        class="material-card group bg-surface-light dark:bg-surface-dark rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
-        <div
-          class="w-16 h-16 mx-auto bg-green-50 dark:bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-          <span class="material-icons-outlined text-3xl text-primary">electrical_services</span>
-        </div>
-        <h3 class="font-bold text-gray-900 dark:text-white mb-2">Chatarra</h3>
-        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Piezas metálicas, cables,
-          electrodomésticos pequeños.</p>
-      </div>
-      <div
-        class="material-card group bg-surface-light dark:bg-surface-dark rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
-        <div
-          class="w-16 h-16 mx-auto bg-green-50 dark:bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-          <span class="material-icons-outlined text-3xl text-primary">wine_bar</span>
-        </div>
-        <h3 class="font-bold text-gray-900 dark:text-white mb-2">Vidrio</h3>
-        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Botellas, frascos, envases de
-          vidrio. Sin espejos.</p>
-      </div>
-      <div
-        class="material-card group bg-surface-light dark:bg-surface-dark rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
-        <div
-          class="w-16 h-16 mx-auto bg-green-50 dark:bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-          <span class="material-icons-outlined text-3xl text-primary">inventory_2</span>
-        </div>
-        <h3 class="font-bold text-gray-900 dark:text-white mb-2">Tetrapak</h3>
-        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Cartones de leche o jugos,
-          enjuagados sin restos.</p>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -134,118 +66,42 @@ aceptamos y cómo preparar tus residuos para el centro de acopio."
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="rutas">
   <div class="text-center mb-16">
     <span class="text-primary font-bold tracking-widest uppercase text-xs">Calendario de Recolección</span>
-    <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mt-3 mb-4">Nuestras Rutas
-    </h2>
+    <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mt-3 mb-4">Nuestras Rutas</h2>
     <div class="w-24 h-1.5 bg-secondary mx-auto rounded-full mb-8"></div>
     <p class="max-w-xl mx-auto text-gray-500 dark:text-gray-400 text-lg">
       Sigue nuestro cronograma mensual para saber cuándo pasaremos por tu comunidad.
     </p>
   </div>
   <div class="relative">
-    <!-- Desktop Line -->
     <div class="absolute top-16 left-0 right-0 h-0.5 bg-gray-100 dark:bg-gray-800 hidden lg:block"></div>
-
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-12 lg:gap-6 lg:justify-between">
-      <!-- Day 1 -->
-      <div class="flex flex-col items-center relative h-full">
+      {% for ruta in rutas %}
+      <div 
+        data-aos="zoom-in"
+        data-aos-delay="{{ loop.index0 * 100 }}"
+        class="flex flex-col items-center relative h-full">
         <div
           class="relative z-10 w-24 h-24 md:w-32 md:h-32 rounded-full bg-white dark:bg-surface-dark border-4 border-primary shadow-timeline flex flex-col items-center justify-center transition-transform hover:scale-105 duration-300 mb-6 md:mb-10 group">
-          <span class="text-[10px] md:text-sm sm:text-xs uppercase font-bold text-gray-400 text-primary">Todos
-            los</span>
-          <span class="text-xl md:text-2xl font-bold text-primary">Martes</span>
+          <span class="text-[10px] md:text-sm sm:text-xs uppercase font-bold text-gray-400 text-primary">{{ ruta.frecuencia }}</span>
+          <span class="text-xl md:text-2xl font-bold text-primary">{{ ruta.dia }}</span>
         </div>
+        {% if not loop.last %}
         <div class="absolute top-32 left-1/2 -translate-x-1/2 w-0.5 h-10 bg-gray-100 lg:hidden"></div>
+        {% endif %}
         <div
           class="m-2 w-full flex-1 bg-background-light dark:bg-surface-dark rounded-xl p-6 md:p-8 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl transition-all text-center">
           <span class="material-symbols-outlined text-primary mb-4 block text-3xl md:text-4xl">location_on</span>
           <h4 class="font-bold text-gray-900 dark:text-white text-base md:text-lg mb-4">Puntos de Entrega</h4>
           <ul class="space-y-2 md:space-y-3">
-            <li class="text-gray-600 dark:text-gray-400 flex items-center gap-2 text-sm md:text-base">
-              <span class="w-1 h-1 rounded-full bg-secondary"></span> Puerto Jiménez
+            {% for punto in ruta.puntos %}
+            <li class="text-gray-600 dark:text-gray-400 flex items-center justify-center gap-2 text-sm md:text-base">
+              <span class="w-1 h-1 rounded-full bg-secondary"></span> {{ punto }}
             </li>
+            {% endfor %}
           </ul>
         </div>
       </div>
-
-      <!-- Day 2 -->
-      <div class="flex flex-col items-center relative h-full">
-        <div
-          class="relative z-10 w-24 h-24 md:w-32 md:h-32 rounded-full bg-white dark:bg-surface-dark border-4 border-primary shadow-timeline flex flex-col items-center justify-center transition-transform hover:scale-105 duration-300 mb-6 md:mb-10 group">
-          <span class="text-[10px] md:text-sm sm:text-xs uppercase font-bold text-gray-400 text-primary">1er
-            Jueves</span>
-          <span class="text-xl md:text-2xl font-bold text-primary">del Mes</span>
-        </div>
-        <div class="absolute top-32 left-1/2 -translate-x-1/2 w-0.5 h-10 bg-gray-100 lg:hidden"></div>
-        <div
-          class="m-2 w-full flex-1 bg-background-light dark:bg-surface-dark rounded-xl p-6 md:p-8 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl transition-all text-center">
-          <span class="material-symbols-outlined text-primary mb-4 block text-3xl md:text-4xl">location_on</span>
-          <h4 class="font-bold text-gray-900 dark:text-white text-base md:text-lg mb-4">Puntos de Entrega</h4>
-          <ul class="space-y-2 md:space-y-3">
-            <li class="text-gray-600 dark:text-gray-400 flex items-center gap-2 text-sm md:text-base">
-              <span class="w-1 h-1 rounded-full bg-secondary"></span> Puerto Escondido
-            </li>
-            <li class="text-gray-600 dark:text-gray-400 flex items-center gap-2 text-sm md:text-base">
-              <span class="w-1 h-1 rounded-full bg-secondary"></span> La Palma
-            </li>
-            <li class="text-gray-600 dark:text-gray-400 flex items-center gap-2 text-sm md:text-base">
-              <span class="w-1 h-1 rounded-full bg-secondary"></span> Guadalupe
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Day 3 -->
-      <div class="flex flex-col items-center relative h-full">
-        <div
-          class="relative z-10 w-24 h-24 md:w-32 md:h-32 rounded-full bg-white dark:bg-surface-dark border-4 border-primary shadow-timeline flex flex-col items-center justify-center transition-transform hover:scale-105 duration-300 mb-6 md:mb-10 group">
-          <span class="text-[10px] md:text-sm sm:text-xs uppercase font-bold text-gray-400 text-primary">2do
-            Jueves</span>
-          <span class="text-xl md:text-2xl font-bold text-primary">del Mes</span>
-        </div>
-        <div class="absolute top-32 left-1/2 -translate-x-1/2 w-0.5 h-10 bg-gray-100 lg:hidden"></div>
-        <div
-          class="m-2 w-full flex-1 bg-background-light dark:bg-surface-dark rounded-xl p-6 md:p-8 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl transition-all text-center">
-          <span class="material-symbols-outlined text-primary mb-4 block text-3xl md:text-4xl">location_on</span>
-          <h4 class="font-bold text-gray-900 dark:text-white text-base md:text-lg mb-4">Puntos de Entrega</h4>
-          <ul class="space-y-2 md:space-y-3">
-            <li class="text-gray-600 dark:text-gray-400 flex items-center gap-2 text-sm md:text-base">
-              <span class="w-1 h-1 rounded-full bg-secondary"></span> Palo Seco
-            </li>
-            <li class="text-gray-600 dark:text-gray-400 flex items-center gap-2 text-sm md:text-base">
-              <span class="w-1 h-1 rounded-full bg-secondary"></span> Cañaza
-            </li>
-            <li class="text-gray-600 dark:text-gray-400 flex items-center gap-2 text-sm md:text-base">
-              <span class="w-1 h-1 rounded-full bg-secondary"></span> Agujas
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Day 4 -->
-      <div class="flex flex-col items-center relative h-full">
-        <div
-          class="relative z-10 w-24 h-24 md:w-32 md:h-32 rounded-full bg-white dark:bg-surface-dark border-4 border-primary shadow-timeline flex flex-col items-center justify-center transition-transform hover:scale-105 duration-300 mb-6 md:mb-10 group">
-          <span class="text-[10px] md:text-sm sm:text-xs uppercase font-bold text-gray-400 text-primary">3er
-            Jueves</span>
-          <span class="text-xl md:text-2xl font-bold text-primary">del Mes</span>
-        </div>
-        <div
-          class="m-2 w-full flex-1 bg-background-light dark:bg-surface-dark rounded-xl p-6 md:p-8 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl transition-all text-center">
-          <span class="material-symbols-outlined text-primary mb-4 block text-3xl md:text-4xl">location_on</span>
-          <h4 class="font-bold text-gray-900 dark:text-white text-base md:text-lg mb-4">Puntos de Entrega</h4>
-          <ul class="space-y-2 md:space-y-3">
-            <li class="text-gray-600 dark:text-gray-400 flex items-center gap-2 text-sm md:text-base">
-              <span class="w-1 h-1 rounded-full bg-secondary"></span> Sandalo
-            </li>
-            <li class="text-gray-600 dark:text-gray-400 flex items-center gap-2 text-sm md:text-base">
-              <span class="w-1 h-1 rounded-full bg-secondary"></span> Gallardo
-            </li>
-            <li class="text-gray-600 dark:text-gray-400 flex items-center gap-2 text-xs">
-              <span class="w-1 h-1 rounded-full bg-secondary shrink-0"></span> Dos Brazos de Río Tigre
-            </li>
-          </ul>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -254,61 +110,36 @@ aceptamos y cómo preparar tus residuos para el centro de acopio."
 <section class="bg-background-light dark:bg-background-dark py-12" id="plasticos">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-12">
-      <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Tipos de Plásticos
-        Reciclables</h2>
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Tipos de Plásticos Reciclables</h2>
       <div class="w-20 h-1 bg-secondary mx-auto rounded-full mb-6"></div>
       <p class="max-w-2xl mx-auto text-gray-600 dark:text-gray-400">
         Conoce los plásticos que aceptamos y aprende a identificarlos por su código de reciclaje.
       </p>
     </div>
     <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+      {% for plastico in plasticos %}
       <div
-        class="plastic-card bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm p-8 border border-gray-100 dark:border-gray-800 flex flex-col items-center">
+        data-aos="fade-up"
+        data-aos-delay="{{ loop.index0 * 150 }}"
+        class="plastic-card bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm p-8 border border-gray-100 dark:border-gray-800 flex flex-col items-center hover:shadow-md transition-shadow">
         <div
           class="w-20 h-20 rounded-full bg-primary flex items-center justify-center text-white text-3xl font-bold mb-4 shadow-lg shadow-primary/30">
-          1</div>
-        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">PET</h3>
-        <p class="text-xs uppercase tracking-widest text-gray-400 mb-4">Polietileno Tereftalato</p>
-        <p class="text-gray-600 dark:text-gray-300 text-center mb-6 text-sm">El PET es uno de los plásticos más
-          reciclables y comunes. Es ligero, resistente y transparente, ideal para bebidas y alimentos.</p>
+          {{ plastico.numero }}</div>
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">{{ plastico.sigla }}</h3>
+        <p class="text-xs uppercase tracking-widest text-gray-400 mb-4">{{ plastico.nombre }}</p>
+        <p class="text-gray-600 dark:text-gray-300 text-center mb-6 text-sm">{{ plastico.descripcion }}</p>
         <div class="bg-green-50 dark:bg-background-dark w-full rounded-md p-5">
           <p class="font-bold text-sm text-primary mb-3">Ejemplos comunes:</p>
           <ul class="text-sm space-y-2 text-gray-600 dark:text-gray-400">
+            {% for ejemplo in plastico.ejemplos %}
             <li class="flex items-center gap-2"><span
-                class="material-symbols-outlined text-sm text-primary">check_circle</span>Botellas de agua y refrescos
+                class="material-symbols-outlined text-sm text-primary">check_circle</span>{{ ejemplo }}
             </li>
-            <li class="flex items-center gap-2"><span
-                class="material-symbols-outlined text-sm text-primary">check_circle</span>Envases de jugos y aceite</li>
-            <li class="flex items-center gap-2"><span
-                class="material-symbols-outlined text-sm text-primary">check_circle</span>Recipientes de alimentos
-              transparentes</li>
+            {% endfor %}
           </ul>
         </div>
       </div>
-      <div
-        class="plastic-card bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm p-8 border border-gray-100 dark:border-gray-800 flex flex-col items-center">
-        <div
-          class="w-20 h-20 rounded-full bg-primary flex items-center justify-center text-white text-3xl font-bold mb-4 shadow-lg shadow-primary/30">
-          2</div>
-        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">HDPE</h3>
-        <p class="text-xs uppercase tracking-widest text-gray-400 mb-4">Polietileno de Alta Densidad</p>
-        <p class="text-gray-600 dark:text-gray-300 text-center mb-6 text-sm">El HDPE es un plástico rígido y duradero,
-          resistente a químicos y perfecto para productos de limpieza y cuidado personal.</p>
-        <div class="bg-green-50 dark:bg-background-dark w-full rounded-md p-5">
-          <p class="font-bold text-sm text-primary mb-3">Ejemplos comunes:</p>
-          <ul class="text-sm space-y-2 text-gray-600 dark:text-gray-400">
-            <li class="flex items-center gap-2"><span
-                class="material-symbols-outlined text-sm text-primary">check_circle</span>Botellas de detergente y
-              limpiadores</li>
-            <li class="flex items-center gap-2"><span
-                class="material-symbols-outlined text-sm text-primary">check_circle</span>Envases de champú y
-              acondicionador</li>
-            <li class="flex items-center gap-2"><span
-                class="material-symbols-outlined text-sm text-primary">check_circle</span>Botellas de leche y jugos
-              (opacas)</li>
-          </ul>
-        </div>
-      </div>
+      {% endfor %}
     </div>
     <div class="mt-12 bg-[#EFF6E8] dark:bg-primary/20 rounded-md p-6 flex items-start gap-4 shadow-md">
       <div>
@@ -330,104 +161,31 @@ aceptamos y cómo preparar tus residuos para el centro de acopio."
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
       <span class="text-primary font-bold tracking-widest uppercase text-xs">Preparación</span>
-      <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">¿Cómo Preparar Tus
-        Residuos?</h2>
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">¿Cómo Preparar Tus Residuos?</h2>
       <div class="w-20 h-1 bg-secondary mx-auto rounded-full mb-6"></div>
       <p class="max-w-2xl mx-auto text-gray-600 dark:text-gray-400">
         Sigue estos pasos simples para asegurar que tus materiales sean aceptados en nuestro centro de acopio.
       </p>
     </div>
     <div class="space-y-6">
+      {% for paso in preparacion %}
       <div
+        data-aos="fade-left"
+        data-aos-delay="{{ loop.index0 * 100 }}"
         class="step flex flex-col md:flex-row gap-6 p-6 bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 hover:border-l-8 hover:border-l-secondary transition-all">
         <div class="flex-shrink-0">
           <div
             class="w-12 h-12 rounded-full bg-primary/50 flex items-center justify-center text-primary font-bold text-xl">
-            1</div>
+            {{ loop.index }}</div>
         </div>
         <div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Limpia los Materiales</h3>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">{{ paso.titulo }}</h3>
           <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-            Enjuaga los envases para eliminar residuos de comida, bebidas o productos. No necesitan estar completamente
-            esterilizados, pero sí libres de residuos visibles.
+            {{ paso.descripcion }}
           </p>
         </div>
       </div>
-      <div
-        class="step flex flex-col md:flex-row gap-6 p-6 bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 hover:border-l-8 hover:border-l-secondary transition-all">
-        <div class="flex-shrink-0">
-          <div
-            class="w-12 h-12 rounded-full bg-primary/50 flex items-center justify-center text-primary font-bold text-xl">
-            2</div>
-        </div>
-        <div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Seca Completamente</h3>
-          <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-            Deja que los materiales se sequen al aire antes de almacenarlos. Esto previene malos olores y el crecimiento
-            de moho o bacterias.
-          </p>
-        </div>
-      </div>
-      <div
-        class="step flex flex-col md:flex-row gap-6 p-6 bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 hover:border-l-8 hover:border-l-secondary transition-all">
-        <div class="flex-shrink-0">
-          <div
-            class="w-12 h-12 rounded-full bg-primary/50 flex items-center justify-center text-primary font-bold text-xl">
-            3</div>
-        </div>
-        <div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Separa por Tipo</h3>
-          <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-            Agrupa los materiales por categoría: papel con papel, plástico con plástico, vidrio con vidrio, metales con
-            metales. No mezcles diferentes tipos.
-          </p>
-        </div>
-      </div>
-      <div
-        class="step flex flex-col md:flex-row gap-6 p-6 bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 hover:border-l-8 hover:border-l-secondary transition-all">
-        <div class="flex-shrink-0">
-          <div
-            class="w-12 h-12 rounded-full bg-primary/50 flex items-center justify-center text-primary font-bold text-xl">
-            4</div>
-        </div>
-        <div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Remueve Tapas y Etiquetas</h3>
-          <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-            Quita tapas, tapones y etiquetas siempre que sea posible. Estos suelen ser de materiales diferentes que
-            dificultan el proceso de reciclaje.
-          </p>
-        </div>
-      </div>
-      <div
-        class="step flex flex-col md:flex-row gap-6 p-6 bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 hover:border-l-8 hover:border-l-secondary transition-all">
-        <div class="flex-shrink-0">
-          <div
-            class="w-12 h-12 rounded-full bg-primary/50 flex items-center justify-center text-primary font-bold text-xl">
-            5</div>
-        </div>
-        <div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Compacta los Envases</h3>
-          <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-            Aplasta botellas y cajas para reducir el volumen. Esto facilita el transporte y almacenamiento, haciendo el
-            proceso más eficiente.
-          </p>
-        </div>
-      </div>
-      <div
-        class="step flex flex-col md:flex-row gap-6 p-6 bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 hover:border-l-8 hover:border-l-secondary transition-all">
-        <div class="flex-shrink-0">
-          <div
-            class="w-12 h-12 rounded-full bg-primary/50 flex items-center justify-center text-primary font-bold text-xl">
-            6</div>
-        </div>
-        <div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Lleva al Centro de Acopio</h3>
-          <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-            Transporta tus materiales preparados a nuestro centro de acopio en bolsas o cajas. Nuestro equipo estará
-            feliz de recibirlos y orientarte.
-          </p>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>

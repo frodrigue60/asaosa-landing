@@ -61,54 +61,21 @@ permalink: "/sobre-nosotros/"
       </p> #}
     </div>
     <div class="space-y-6">
+      {% for servicio in servicios %}
       <div
-        class="glass-card flex flex-col md:flex-row items-center p-8 gap-8 group bg-primary/20 hover:bg-white/50 transition-all duration-300 rounded-md">
+        data-aos="fade-up"
+        data-aos-delay="{{ loop.index0 * 100 }}"
+        class="flex flex-col md:flex-row items-center p-8 gap-8 group bg-primary/20 hover:bg-white transition-all duration-300 rounded-md border border-transparent hover:border-primary/30 shadow-sm hover:shadow-md">
         <div
           class="bg-primary/10 p-5 rounded-full text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-          <span class="material-symbols-outlined text-4xl">local_shipping</span>
+          <span class="material-symbols-outlined text-4xl">{{ servicio.icono }}</span>
         </div>
         <div class="flex-1">
-          <h3 class="font-bold text-xl text-primary mb-2">Recolección de Residuos</h3>
-          <p class="text-gray-600">Rutas estratégicamente programadas que recorren las comunidades
-            locales para recuperar materiales valorizables con precisión técnica.</p>
+          <h3 class="font-bold text-xl text-primary mb-2">{{ servicio.titulo }}</h3>
+          <p class="text-gray-600">{{ servicio.descripcion }}</p>
         </div>
       </div>
-      <div
-        class="glass-card flex flex-col md:flex-row items-center p-8 gap-8 group bg-primary/20 hover:bg-white/50 transition-all duration-300 rounded-md">
-        <div
-          class="bg-primary/10 p-5 rounded-full text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-          <span class="material-symbols-outlined text-4xl">factory</span>
-        </div>
-        <div class="flex-1">
-          <h3 class="font-bold text-xl text-primary mb-2">Centro de Acopio</h3>
-          <p class="text-gray-600">Infraestructura especializada de alto rendimiento para la
-            clasificación, compactación y despacho industrial de materiales.</p>
-        </div>
-      </div>
-      <div
-        class="glass-card flex flex-col md:flex-row items-center p-8 gap-8 group bg-primary/20 hover:bg-white/50 transition-all duration-300 rounded-md">
-        <div
-          class="bg-primary/10 p-5 rounded-full text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-          <span class="material-symbols-outlined text-4xl">school</span>
-        </div>
-        <div class="flex-1">
-          <h3 class="font-bold text-xl text-primary mb-2">Educación Ambiental</h3>
-          <p class="text-gray-600">Programas de formación técnica y talleres en instituciones para
-            fomentar una cultura de segregación desde el origen.</p>
-        </div>
-      </div>
-      <div
-        class="glass-card flex flex-col md:flex-row items-center p-8 gap-8 group bg-primary/20 hover:bg-white/50 transition-all duration-300 rounded-md">
-        <div
-          class="bg-primary/10 p-5 rounded-full text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-          <span class="material-symbols-outlined text-4xl">groups</span>
-        </div>
-        <div class="flex-1">
-          <h3 class="font-bold text-xl text-primary mb-2">Desarrollo Comunitario</h3>
-          <p class="text-gray-600">Fomento del empleo verde y apoyo estructural a emprendimientos
-            locales basados en economía circular.</p>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>

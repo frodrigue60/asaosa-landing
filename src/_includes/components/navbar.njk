@@ -4,8 +4,8 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
         <div class="flex-shrink-0 flex items-center gap-2">
-          <a href="/" class="flex items-center gap-2">
-            <img alt="ASAOSA Logo" class="h-10 w-10 rounded-full" src="/assets/images/asaosa-logo-nav.png" />
+          <a href="/" class="flex items-center gap-2" title="Ir al inicio">
+            <img alt="ASAOSA Logo" title="Logotipo de ASAOSA" class="h-10 w-10 rounded-full" src="/assets/images/asaosa-logo-nav.png" />
             <span
               class="font-display font-bold text-4xl text-primary dark:text-primary uppercase tracking-tight">ASAOSA</span>
           </a>
@@ -14,30 +14,30 @@
           {# Inicio #}
           {% if page.url == '/' %}
           <a class="text-primary dark:text-primary hover:text-gray-500 dark:hover:text-gray-500 font-medium transition-colors"
-            href="/">Inicio</a>
+            href="/" title="Ir a la página de inicio">Inicio</a>
           {% else %}
           <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors"
-            href="/">Inicio</a>
+            href="/" title="Ir a la página de inicio">Inicio</a>
           {% endif %}
           {# Nosotros #}
           {% if page.url == '/sobre-nosotros/' %}
           <a class="text-primary dark:text-primary hover:text-gray-500 dark:hover:text-gray-500 font-medium transition-colors"
-            href="/sobre-nosotros/">Nosotros</a>
+            href="/sobre-nosotros/" title="Conocer más sobre nuestra organización">Nosotros</a>
           {% else %}
           <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors"
-            href="/sobre-nosotros/">Nosotros</a>
+            href="/sobre-nosotros/" title="Conocer más sobre nuestra organización">Nosotros</a>
           {% endif %}
           {# Junta Directiva #}
           {% if page.url == '/junta-directiva/' %}
           <a class="text-primary dark:text-primary hover:text-gray-500 dark:hover:text-gray-500 font-medium transition-colors"
-            href="/junta-directiva/">Junta Directiva</a>
+            href="/junta-directiva/" title="Ver los miembros de nuestra junta directiva">Junta Directiva</a>
           {% else %}
           <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors"
-            href="/junta-directiva/">Junta Directiva</a>
+            href="/junta-directiva/" title="Ver los miembros de nuestra junta directiva">Junta Directiva</a>
           {% endif %}
 
           <a class="bg-primary text-white px-6 py-2.5 rounded-full hover:bg-opacity-90 transition-[background-color,box-shadow] shadow-md hover:shadow-lg font-medium"
-            href="/donacion">Donación</a>
+            href="/donacion" title="Apoya nuestra causa con una donación">Donación</a>
         </div>
         <div class="md:hidden flex items-center">
           <button id="mobileMenuToggle" aria-controls="navMenu" aria-expanded="false" class="text-gray-600 dark:text-gray-300 hover:text-primary focus:outline-none">

@@ -1,0 +1,26 @@
+[
+  {
+    "titulo": "Limpia los Materiales",
+    "descripcion": "Enjuaga los envases para eliminar residuos de comida, bebidas o productos. No necesitan estar completamente esterilizados, pero sí libres de residuos visibles."
+  },
+  {
+    "titulo": "Seca Completamente",
+    "descripcion": "Deja que los materiales se sequen al aire antes de almacenarlos. Esto previene malos olores y el crecimiento de moho o bacterias."
+  },
+  {
+    "titulo": "Separa por Tipo",
+    "descripcion": "Agrupa los materiales por categoría: papel con papel, plástico con plástico, vidrio con vidrio, metales con metales. No mezcles diferentes tipos."
+  },
+  {
+    "titulo": "Remueve Tapas y Etiquetas",
+    "descripcion": "Quita tapas, tapones y etiquetas siempre que sea posible. Estos suelen ser de materiales diferentes que dificultan el proceso de reciclaje."
+  },
+  {
+    "titulo": "Compacta los Envases",
+    "descripcion": "Aplasta botellas y cajas para reducir el volumen. Esto facilita el transporte y almacenamiento, haciendo el proceso más eficiente."
+  },
+  {
+    "titulo": "Lleva al Centro de Acopio",
+    "descripcion": "Transporta tus materiales preparados a nuestro centro de acopio en bolsas o cajas. Nuestro equipo estará feliz de recibirlos y orientarte."
+  }
+]

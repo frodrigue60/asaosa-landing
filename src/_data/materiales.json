@@ -1,0 +1,42 @@
+[
+  {
+    "nombre": "Papel y Cartón",
+    "icono": "description",
+    "descripcion": "Papel de oficina, periódicos, revistas, cajas limpias y secas."
+  },
+  {
+    "nombre": "Plástico PET (#1)",
+    "icono": "local_drink",
+    "descripcion": "Botellas de bebidas, alimentos o detergentes. Limpios."
+  },
+  {
+    "nombre": "Plástico HDPE (#2)",
+    "icono": "sanitizer",
+    "descripcion": "Botellas de detergente, champú, productos de limpieza."
+  },
+  {
+    "nombre": "Aluminio",
+    "icono": "takeout_dining",
+    "descripcion": "Latas de bebidas, papel aluminio limpio. Sin restos."
+  },
+  {
+    "nombre": "Hojalata",
+    "icono": "build",
+    "descripcion": "Latas de conservas, envases metálicos. Limpios y sin óxido."
+  },
+  {
+    "nombre": "Chatarra",
+    "icono": "electrical_services",
+    "descripcion": "Piezas metálicas, cables, electrodomésticos pequeños."
+  },
+  {
+    "nombre": "Vidrio",
+    "icono": "wine_bar",
+    "descripcion": "Botellas, frascos, envases de vidrio. Sin espejos."
+  },
+  {
+    "nombre": "Tetrapak",
+    "icono": "inventory_2",
+    "descripcion": "Cartones de leche o jugos, enjuagados sin restos."
+  }
+]

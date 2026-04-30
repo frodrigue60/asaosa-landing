@@ -13,17 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
     mobileMenuToggle.addEventListener("click", () => {
       navMenu.classList.toggle("hidden");
       const icon = mobileMenuToggle.querySelector(".material-symbols-outlined");
-    if (icon) {
-      icon.textContent = navMenu.classList.contains("hidden")
-        ? "menu"
-        : "close";
-    }
-    // Accessibility: reflect state in aria-expanded
-    const isHidden = navMenu.classList.contains("hidden");
-    mobileMenuToggle.setAttribute("aria-expanded", String(!isHidden));
-    // Accessibility: reflect state in aria-expanded
-    const isHidden = navMenu.classList.contains("hidden");
-    mobileMenuToggle.setAttribute("aria-expanded", String(!isHidden));
+      if (icon) {
+        icon.textContent = navMenu.classList.contains("hidden")
+          ? "menu"
+          : "close";
+      }
+      // Accessibility: reflect state in aria-expanded
+      const isHidden = navMenu.classList.contains("hidden");
+      mobileMenuToggle.setAttribute("aria-expanded", String(!isHidden));
     });
 
     navLinks.forEach((link) => {
@@ -49,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
-        const header = document.querySelector(".header");
+        const header = document.getElementById("header");
         const headerHeight = header ? header.offsetHeight : 0;
         const targetPosition = targetElement.offsetTop - headerHeight;
 
@@ -67,6 +64,15 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         header.classList.remove("scrolled");
       }
+    });
+  }
+
+  // 4. Initialize AOS (Animate On Scroll)
+  if (typeof AOS !== "undefined") {
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 100,
     });
   }
 });

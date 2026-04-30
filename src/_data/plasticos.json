@@ -1,0 +1,24 @@
+[
+  {
+    "numero": 1,
+    "sigla": "PET",
+    "nombre": "Polietileno Tereftalato",
+    "descripcion": "El PET es uno de los plásticos más reciclables y comunes. Es ligero, resistente y transparente, ideal para bebidas y alimentos.",
+    "ejemplos": [
+      "Botellas de agua y refrescos",
+      "Envases de jugos y aceite",
+      "Recipientes de alimentos transparentes"
+    ]
+  },
+  {
+    "numero": 2,
+    "sigla": "HDPE",
+    "nombre": "Polietileno de Alta Densidad",
+    "descripcion": "El HDPE es un plástico rígido y duradero, resistente a químicos y perfecto para productos de limpieza y cuidado personal.",
+    "ejemplos": [
+      "Botellas de detergente y limpiadores",
+      "Envases de champú y acondicionador",
+      "Botellas de leche y jugos (opacas)"
+    ]
+  }
+]

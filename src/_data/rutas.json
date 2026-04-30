@@ -1,0 +1,36 @@
+[
+  {
+    "frecuencia": "Todos los",
+    "dia": "Martes",
+    "puntos": [
+      "Puerto Jiménez"
+    ]
+  },
+  {
+    "frecuencia": "1er Jueves",
+    "dia": "del Mes",
+    "puntos": [
+      "Puerto Escondido",
+      "La Palma",
+      "Guadalupe"
+    ]
+  },
+  {
+    "frecuencia": "2do Jueves",
+    "dia": "del Mes",
+    "puntos": [
+      "Palo Seco",
+      "Cañaza",
+      "Agujas"
+    ]
+  },
+  {
+    "frecuencia": "3er Jueves",
+    "dia": "del Mes",
+    "puntos": [
+      "Sandalo",
+      "Gallardo",
+      "Dos Brazos de Río Tigre"
+    ]
+  }
+]
