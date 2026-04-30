@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ASAOSA - Transformamos Residuos en Valor</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#799F5E",
+                        secondary: "#FDBA36",
+                        "background-light": "#F9FAF8",
+                        "background-dark": "#1A2018",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#2C3329",
+                        "text-light": "#374151",
+                        "text-dark": "#E5E7EB",
+                    },
+                    fontFamily: {
+                        sans: ['"DM Sans"', 'sans-serif'],
+                        display: ['"Playfair Display"', 'serif'],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                        '3xl': '2rem',
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                        'timeline': '0 10px 40px -10px rgba(121, 159, 94, 0.1)',
+                    }
+                },
+            },
+        };
+    </script>
+    <style type="text/tailwindcss">
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { height: 6px; width: 6px; }
+        ::-webkit-scrollbar-track { background: #F1F5F9; }
+        ::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
+        .timeline-scroll-container::-webkit-scrollbar {
+            height: 4px;
+        }
+        .timeline-scroll-container::-webkit-scrollbar-thumb {
+            background: #799F5E33;
+        }
+        .timeline-scroll-container::-webkit-scrollbar-thumb:hover {
+            background: #799F5E;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-sans transition-colors duration-300 antialiased">
+    <nav
+        class="fixed w-full z-50 top-0 transition-all duration-300 bg-surface-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <img alt="ASAOSA Logo" class="h-10 w-10 rounded-full"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0K29v3ji7Xk-QX93bfxC_scuraxCnTmRTsLN2kugCuG-_MXbevm2Ms-Ze4mTC4bFQSjxDC_0dXV5d7ekNUtKVZIxWBaAvtjBpRa0RfmQRlj_jRcQXGuTsg-J8ZMIMJ53ByEwuyD4y4Uth3LgbTtoIV7ANGo2A89i89w84Vkb8otrqIkwij4tpd3Uio7BYaI3q-KACVifyj1xRZnkjvYiDL10W9ArvmNoo9rUgZhDZgTzeDAMpe2e2FhOvHywcWnLHSzZ8Zx-_iE_j" />
+                    <span
+                        class="font-display font-bold text-xl text-primary dark:text-primary uppercase tracking-tight">ASAOSA</span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors"
+                        href="#">Inicio</a>
+                    <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors"
+                        href="#">Nosotros</a>
+                    <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors"
+                        href="#">Junta Directiva</a>
+                    <a class="bg-primary text-white px-6 py-2.5 rounded-full hover:bg-opacity-90 transition-all shadow-md hover:shadow-lg font-medium"
+                        href="#">Donación</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-600 dark:text-gray-300 hover:text-primary">
+                        <span class="material-symbols-outlined text-3xl">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img alt="Green nature background" class="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkGWzCTUvKX-7JOz546mstpPti6vi-_ajFIqHF5IJaueMSIX1QQEP3suzdlY74kLCDbf-03C-PkUKQGMJDTGR2qondx5z2JFi_UXVeSi5VD_gjYDqkMNgpu7iR54tNDY6Rnd__mgL82TonZmfjl29LFvdR8CqYHhTEZg1CWvG0tE6ukYl9Ic2Jode8dvVj7F6rp_-axyJuMvk2uSOLbroEzCCqS6VXsv5gvoXgz9ZBMBpVTtf_upbq6saBuy6KllWzY1Tx-ylYnSze" />
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/40 dark:from-background-dark/95 dark:to-background-dark/60 mix-blend-multiply">
+                </div>
+            </div>
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+                <h1
+                    class="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 tracking-tight drop-shadow-sm">
+                    Transformamos <br class="hidden md:block" />Residuos en Valor
+                </h1>
+                <p class="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-white/90 leading-relaxed font-light">
+                    Juntos creamos un futuro más sostenible a través del reciclaje y la valorización de residuos. Cada
+                    material que reciclas hace la diferencia.
+                </p>
+                <div class="mt-10">
+                    <a class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-full text-white bg-secondary hover:bg-opacity-90 md:text-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                        href="#materiales">
+                        Descubre Qué Reciclamos
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="py-20 bg-background-light dark:bg-background-dark" id="materiales">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">¿Qué
+                        Materiales Reciclamos?</h2>
+                    <div class="w-20 h-1 bg-secondary mx-auto rounded-full mb-6"></div>
+                    <p class="max-w-2xl mx-auto text-gray-600 dark:text-gray-400">
+                        Aceptamos una amplia variedad de materiales valorizables. Encuentra el tuyo y comienza a
+                        reciclar.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
+                    <div
+                        class="group bg-surface-light dark:bg-surface-dark rounded-2xl p-6 text-center shadow-soft hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
+                        <div
+                            class="w-16 h-16 mx-auto bg-green-50 dark:bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl text-primary">description</span>
+                        </div>
+                        <h3 class="font-bold text-gray-900 dark:text-white mb-2">Papel y Cartón</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Papel de oficina,
+                            periódicos, revistas, cajas limpias y secas.</p>
+                    </div>
+                    <div
+                        class="group bg-surface-light dark:bg-surface-dark rounded-2xl p-6 text-center shadow-soft hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
+                        <div
+                            class="w-16 h-16 mx-auto bg-green-50 dark:bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl text-primary">local_drink</span>
+                        </div>
+                        <h3 class="font-bold text-gray-900 dark:text-white mb-2">Plástico PET (#1)</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Botellas de bebidas,
+                            alimentos o detergentes. Limpios.</p>
+                    </div>
+                    <div
+                        class="group bg-surface-light dark:bg-surface-dark rounded-2xl p-6 text-center shadow-soft hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
+                        <div
+                            class="w-16 h-16 mx-auto bg-green-50 dark:bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl text-primary">sanitizer</span>
+                        </div>
+                        <h3 class="font-bold text-gray-900 dark:text-white mb-2">Plástico HDPE (#2)</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Botellas de detergente,
+                            champú, productos de limpieza.</p>
+                    </div>
+                    <div
+                        class="group bg-surface-light dark:bg-surface-dark rounded-2xl p-6 text-center shadow-soft hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
+                        <div
+                            class="w-16 h-16 mx-auto bg-green-50 dark:bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl text-primary">takeout_dining</span>
+                        </div>
+                        <h3 class="font-bold text-gray-900 dark:text-white mb-2">Aluminio</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Latas de bebidas, papel
+                            aluminio limpio. Sin restos.</p>
+                    </div>
+                    <div
+                        class="group bg-surface-light dark:bg-surface-dark rounded-2xl p-6 text-center shadow-soft hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
+                        <div
+                            class="w-16 h-16 mx-auto bg-green-50 dark:bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl text-primary">build</span>
+                        </div>
+                        <h3 class="font-bold text-gray-900 dark:text-white mb-2">Hojalata</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Latas de conservas, envases
+                            metálicos. Limpios y sin óxido.</p>
+                    </div>
+                    <div
+                        class="group bg-surface-light dark:bg-surface-dark rounded-2xl p-6 text-center shadow-soft hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
+                        <div
+                            class="w-16 h-16 mx-auto bg-green-50 dark:bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl text-primary">electrical_services</span>
+                        </div>
+                        <h3 class="font-bold text-gray-900 dark:text-white mb-2">Chatarra</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Piezas metálicas, cables,
+                            electrodomésticos pequeños.</p>
+                    </div>
+                    <div
+                        class="group bg-surface-light dark:bg-surface-dark rounded-2xl p-6 text-center shadow-soft hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
+                        <div
+                            class="w-16 h-16 mx-auto bg-green-50 dark:bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl text-primary">wine_bar</span>
+                        </div>
+                        <h3 class="font-bold text-gray-900 dark:text-white mb-2">Vidrio</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Botellas, frascos, envases
+                            de vidrio. Sin espejos.</p>
+                    </div>
+                    <div
+                        class="group bg-surface-light dark:bg-surface-dark rounded-2xl p-6 text-center shadow-soft hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800">
+                        <div
+                            class="w-16 h-16 mx-auto bg-green-50 dark:bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl text-primary">inventory_2</span>
+                        </div>
+                        <h3 class="font-bold text-gray-900 dark:text-white mb-2">Tetrapak</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Cartones de leche o jugos,
+                            enjuagados sin restos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-24 bg-white dark:bg-gray-900 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-20">
+                    <span class="text-primary font-bold tracking-widest uppercase text-xs">Calendario de
+                        Recolección</span>
+                    <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mt-3 mb-4">
+                        Nuestras Rutas</h2>
+                    <div class="w-24 h-1.5 bg-secondary mx-auto rounded-full mb-8"></div>
+                    <p class="max-w-xl mx-auto text-gray-500 dark:text-gray-400 text-lg">
+                        Sigue nuestro cronograma mensual para saber cuándo pasaremos por tu comunidad.
+                    </p>
+                </div>
+                <div class="relative">
+                    <div class="absolute top-16 left-0 right-0 h-0.5 bg-gray-100 dark:bg-gray-800 hidden lg:block">
+                    </div>
+                    <div
+                        class="timeline-scroll-container flex overflow-x-auto pb-12 gap-8 lg:gap-0 lg:justify-between no-scrollbar snap-x cursor-grab active:cursor-grabbing">
+                        <div class="flex-shrink-0 w-72 lg:w-1/4 flex flex-col items-center snap-center relative">
+                            <div
+                                class="relative z-10 w-32 h-32 rounded-full bg-white dark:bg-surface-dark border-4 border-primary shadow-timeline flex flex-col items-center justify-center transition-transform hover:scale-105 duration-300 mb-10 group">
+                                <span
+                                    class="text-xs uppercase font-bold text-gray-400 group-hover:text-primary transition-colors">Todos
+                                    los</span>
+                                <span class="text-2xl font-bold text-primary">Martes</span>
+                            </div>
+                            <div class="absolute top-32 left-1/2 -translate-x-1/2 w-0.5 h-10 bg-gray-100 lg:hidden">
+                            </div>
+                            <div
+                                class="w-full bg-background-light dark:bg-surface-dark rounded-2xl p-8 border border-gray-100 dark:border-gray-800 shadow-soft hover:shadow-xl transition-all text-center">
+                                <span
+                                    class="material-symbols-outlined text-primary mb-4 block text-4xl">location_on</span>
+                                <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-4">Puntos de Entrega</h4>
+                                <ul class="space-y-3">
+                                    <li class="text-gray-600 dark:text-gray-400 flex items-center justify-center gap-2">
+                                        <span class="w-1 h-1 rounded-full bg-secondary"></span>
+                                        Puerto Jiménez
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-72 lg:w-1/4 flex flex-col items-center snap-center relative">
+                            <div
+                                class="relative z-10 w-32 h-32 rounded-full bg-white dark:bg-surface-dark border-4 border-primary shadow-timeline flex flex-col items-center justify-center transition-transform hover:scale-105 duration-300 mb-10 group">
+                                <span
+                                    class="text-xs uppercase font-bold text-gray-400 group-hover:text-primary transition-colors">1er
+                                    Jueves</span>
+                                <span class="text-2xl font-bold text-primary">del Mes</span>
+                            </div>
+                            <div class="absolute top-32 left-1/2 -translate-x-1/2 w-0.5 h-10 bg-gray-100 lg:hidden">
+                            </div>
+                            <div
+                                class="w-full bg-background-light dark:bg-surface-dark rounded-2xl p-8 border border-gray-100 dark:border-gray-800 shadow-soft hover:shadow-xl transition-all text-center">
+                                <span
+                                    class="material-symbols-outlined text-primary mb-4 block text-4xl">local_shipping</span>
+                                <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-4">Puntos de Entrega</h4>
+                                <ul class="space-y-3">
+                                    <li class="text-gray-600 dark:text-gray-400 flex items-center justify-center gap-2">
+                                        <span class="w-1 h-1 rounded-full bg-secondary"></span> Puerto Escondido
+                                    </li>
+                                    <li class="text-gray-600 dark:text-gray-400 flex items-center justify-center gap-2">
+                                        <span class="w-1 h-1 rounded-full bg-secondary"></span> La Palma
+                                    </li>
+                                    <li class="text-gray-600 dark:text-gray-400 flex items-center justify-center gap-2">
+                                        <span class="w-1 h-1 rounded-full bg-secondary"></span> Guadalupe
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-72 lg:w-1/4 flex flex-col items-center snap-center relative">
+                            <div
+                                class="relative z-10 w-32 h-32 rounded-full bg-white dark:bg-surface-dark border-4 border-primary shadow-timeline flex flex-col items-center justify-center transition-transform hover:scale-105 duration-300 mb-10 group">
+                                <span
+                                    class="text-xs uppercase font-bold text-gray-400 group-hover:text-primary transition-colors">2do
+                                    Jueves</span>
+                                <span class="text-2xl font-bold text-primary">del Mes</span>
+                            </div>
+                            <div class="absolute top-32 left-1/2 -translate-x-1/2 w-0.5 h-10 bg-gray-100 lg:hidden">
+                            </div>
+                            <div
+                                class="w-full bg-background-light dark:bg-surface-dark rounded-2xl p-8 border border-gray-100 dark:border-gray-800 shadow-soft hover:shadow-xl transition-all text-center">
+                                <span class="material-symbols-outlined text-primary mb-4 block text-4xl">explore</span>
+                                <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-4">Puntos de Entrega</h4>
+                                <ul class="space-y-3">
+                                    <li class="text-gray-600 dark:text-gray-400 flex items-center justify-center gap-2">
+                                        <span class="w-1 h-1 rounded-full bg-secondary"></span> Palo Seco
+                                    </li>
+                                    <li class="text-gray-600 dark:text-gray-400 flex items-center justify-center gap-2">
+                                        <span class="w-1 h-1 rounded-full bg-secondary"></span> Cañaza
+                                    </li>
+                                    <li class="text-gray-600 dark:text-gray-400 flex items-center justify-center gap-2">
+                                        <span class="w-1 h-1 rounded-full bg-secondary"></span> Agujas
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-72 lg:w-1/4 flex flex-col items-center snap-center relative">
+                            <div
+                                class="relative z-10 w-32 h-32 rounded-full bg-white dark:bg-surface-dark border-4 border-primary shadow-timeline flex flex-col items-center justify-center transition-transform hover:scale-105 duration-300 mb-10 group">
+                                <span
+                                    class="text-xs uppercase font-bold text-gray-400 group-hover:text-primary transition-colors">3er
+                                    Jueves</span>
+                                <span class="text-2xl font-bold text-primary">del Mes</span>
+                            </div>
+                            <div
+                                class="w-full bg-background-light dark:bg-surface-dark rounded-2xl p-8 border border-gray-100 dark:border-gray-800 shadow-soft hover:shadow-xl transition-all text-center">
+                                <span
+                                    class="material-symbols-outlined text-primary mb-4 block text-4xl">home_work</span>
+                                <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-4">Puntos de Entrega</h4>
+                                <ul class="space-y-3">
+                                    <li class="text-gray-600 dark:text-gray-400 flex items-center justify-center gap-2">
+                                        <span class="w-1 h-1 rounded-full bg-secondary"></span> Sandalo
+                                    </li>
+                                    <li class="text-gray-600 dark:text-gray-400 flex items-center justify-center gap-2">
+                                        <span class="w-1 h-1 rounded-full bg-secondary"></span> Gallardo
+                                    </li>
+                                    <li
+                                        class="text-gray-600 dark:text-gray-400 flex items-center justify-center gap-2 text-xs">
+                                        <span class="w-1 h-1 rounded-full bg-secondary shrink-0"></span> Dos Brazos de
+                                        Río Tigre
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center gap-2 mt-4 lg:hidden">
+                        <div class="w-8 h-1 rounded-full bg-primary"></div>
+                        <div class="w-2 h-1 rounded-full bg-gray-200"></div>
+                        <div class="w-2 h-1 rounded-full bg-gray-200"></div>
+                        <div class="w-2 h-1 rounded-full bg-gray-200"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-20 bg-background-light dark:bg-background-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Tipos de
+                        Plásticos Reciclables</h2>
+                    <div class="w-20 h-1 bg-secondary mx-auto rounded-full mb-6"></div>
+                    <p class="max-w-2xl mx-auto text-gray-600 dark:text-gray-400">
+                        Conoce los plásticos que aceptamos y aprende a identificarlos por su código de reciclaje.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+                    <div
+                        class="bg-surface-light dark:bg-surface-dark rounded-2xl shadow-soft p-8 border border-gray-100 dark:border-gray-800 flex flex-col items-center">
+                        <div
+                            class="w-20 h-20 rounded-full bg-primary flex items-center justify-center text-white text-3xl font-bold mb-4 shadow-lg shadow-primary/30">
+                            1</div>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">PET</h3>
+                        <p class="text-xs uppercase tracking-widest text-gray-400 mb-4">Polietileno Tereftalato</p>
+                        <p class="text-gray-600 dark:text-gray-300 text-center mb-6 text-sm">El PET es uno de los
+                            plásticos más reciclables y comunes. Es ligero, resistente y transparente, ideal para
+                            bebidas y alimentos.</p>
+                        <div class="bg-green-50 dark:bg-background-dark w-full rounded-xl p-5">
+                            <p class="font-bold text-sm text-primary mb-3">Ejemplos comunes:</p>
+                            <ul class="text-sm space-y-2 text-gray-600 dark:text-gray-400">
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-sm text-primary">check_circle</span>Botellas
+                                    de agua y refrescos</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-sm text-primary">check_circle</span>Envases
+                                    de jugos y aceite</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-sm text-primary">check_circle</span>Recipientes
+                                    de alimentos transparentes</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-surface-light dark:bg-surface-dark rounded-2xl shadow-soft p-8 border border-gray-100 dark:border-gray-800 flex flex-col items-center">
+                        <div
+                            class="w-20 h-20 rounded-full bg-primary flex items-center justify-center text-white text-3xl font-bold mb-4 shadow-lg shadow-primary/30">
+                            2</div>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">HDPE</h3>
+                        <p class="text-xs uppercase tracking-widest text-gray-400 mb-4">Polietileno de Alta Densidad</p>
+                        <p class="text-gray-600 dark:text-gray-300 text-center mb-6 text-sm">El HDPE es un plástico
+                            rígido y duradero, resistente a químicos y perfecto para productos de limpieza y cuidado
+                            personal.</p>
+                        <div class="bg-green-50 dark:bg-background-dark w-full rounded-xl p-5">
+                            <p class="font-bold text-sm text-primary mb-3">Ejemplos comunes:</p>
+                            <ul class="text-sm space-y-2 text-gray-600 dark:text-gray-400">
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-sm text-primary">check_circle</span>Botellas
+                                    de detergente y limpiadores</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-sm text-primary">check_circle</span>Envases
+                                    de champú y acondicionador</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-sm text-primary">check_circle</span>Botellas
+                                    de leche y jugos (opacas)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 bg-[#EFF6E8] dark:bg-primary/20 rounded-xl p-6 flex items-start gap-4">
+                    <span class="material-symbols-outlined text-secondary text-3xl">lightbulb</span>
+                    <div>
+                        <h4 class="font-bold text-gray-900 dark:text-white mb-1">Consejo Importante</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                            Busca el número dentro del símbolo de reciclaje (triángulo de flechas) en la parte inferior
+                            de los envases. Si es #1 (PET) o #2 (HDPE), ¡lo aceptamos! Otros números de plástico
+                            actualmente no los procesamos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-20 bg-white dark:bg-gray-900">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">¿Cómo
+                        Preparar Tus Residuos?</h2>
+                    <div class="w-20 h-1 bg-secondary mx-auto rounded-full mb-6"></div>
+                    <p class="max-w-2xl mx-auto text-gray-600 dark:text-gray-400">
+                        Sigue estos pasos simples para asegurar que tus materiales sean aceptados en nuestro centro de
+                        acopio.
+                    </p>
+                </div>
+                <div class="space-y-6">
+                    <div
+                        class="flex flex-col md:flex-row gap-6 p-6 bg-surface-light dark:bg-surface-dark rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 hover:border-l-8 hover:border-l-secondary transition-all">
+                        <div class="flex-shrink-0">
+                            <div
+                                class="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center text-secondary font-bold text-xl">
+                                1</div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Limpia los Materiales</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                                Enjuaga los envases para eliminar residuos de comida, bebidas o productos. No necesitan
+                                estar completamente esterilizados, pero sí libres de residuos visibles.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex flex-col md:flex-row gap-6 p-6 bg-surface-light dark:bg-surface-dark rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 hover:border-l-8 hover:border-l-secondary transition-all">
+                        <div class="flex-shrink-0">
+                            <div
+                                class="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center text-secondary font-bold text-xl">
+                                2</div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Seca Completamente</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                                Deja que los materiales se sequen al aire antes de almacenarlos. Esto previene malos
+                                olores y el crecimiento de moho o bacterias.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-[#1A4517] dark:bg-black text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-2">
+                        <img alt="ASAOSA Logo" class="h-10 w-10 rounded-full bg-white p-0.5"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHPjQXtRTFbZZ0pnJomNKFiYpnCPgL3OLRvqqL2rSyYSJs76LvlvxZAJRgrJaHaRFDjcG3qGj4x23KH4JtICCXaQLarJsErNqMGh_jU2oMKvrpfPJTC9eHyLy9OXDMeeoY1i5WfISmJQMs1L1E4BKdFUiLA37pEjrq-M2lPCoyGbjLc0kWBobwzuzwOpKyNLacAy-QoBmOyGWBIjqfbkj9luxhgpt0dM1t7hf4Zg9UvT32PrnD3B1Uoh6G2urX13cQdBzUR15IrcA2" />
+                        <span class="font-display font-bold text-2xl uppercase tracking-tight">ASAOSA</span>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Comprometidos con el desarrollo sostenible de la Península de Osa a través del manejo integral
+                        de residuos.
+                    </p>
+                    <a class="inline-block bg-white text-[#1A4517] font-bold px-6 py-2.5 rounded-full hover:bg-secondary transition-colors text-sm"
+                        href="#">Contáctanos</a>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="font-display font-bold text-lg text-secondary">MS-DRRSBRU-DARSG-RGA0705-2025</h3>
+                    <p class="text-xs font-bold text-secondary uppercase tracking-wider">Dirección:</p>
+                    <p class="text-gray-300 text-sm">
+                        500 metros sur de la Pulpería Playa Blanca<br />
+                        La Palma de Puerto Jiménez<br />
+                        Puerto Jiménez, Puntarenas
+                    </p>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="font-display font-bold text-lg text-secondary">Enlaces</h3>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a class="hover:text-secondary transition-colors" href="#">Inicio</a></li>
+                        <li><a class="hover:text-secondary transition-colors" href="#">Nosotros</a></li>
+                        <li><a class="hover:text-secondary transition-colors" href="#">Junta Directiva</a></li>
+                        <li><a class="hover:text-secondary transition-colors" href="#">Donación</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col items-center md:items-start">
+                    <div class="bg-white p-2 rounded-lg inline-block mb-3">
+                        <img alt="QR Certificado" class="w-32 h-32"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCykg7npenbBMP2F2er0n__OzlSqTb7hAfHUHrdbbPRAI9FCoC3BcAQpD2huap9MPTJtWfqOvJdquJd8qiwIlSJEa8PFyOqelklwcrcUXl31rLljDaO6Z_vY5WX28-U-yNPVig6ldkSZ2718LgPH4EgddbTnvBZHyLE9Ed71XGBkAPaerqypg-cN-9dwy4nCS2y_MWOOsTVfm8B4nyft_MWxnIKpr2P5ZAFN_O2NnDw_monbuM3TpmJILYfzx6BZOWzYMZZ7zY3XtxP" />
+                    </div>
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-center md:text-left w-32">QR
+                        Certificado<br />Gestor Autorizado</p>
+                </div>
+            </div>
+            <div
+                class="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs text-gray-400 text-center md:text-left">
+                    © 2025 ASAOSA - Asociación de Artesanos, recolectores y recicladores de la Península de Osa.
+                </p>
+                <div class="flex gap-4">
+                    <a class="text-gray-400 hover:text-white transition-colors" href="#"><span
+                            class="material-symbols-outlined">share</span></a>
+                    <a class="text-gray-400 hover:text-white transition-colors" href="#"><span
+                            class="material-symbols-outlined">mail</span></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -13,11 +13,17 @@ document.addEventListener("DOMContentLoaded", () => {
     mobileMenuToggle.addEventListener("click", () => {
       navMenu.classList.toggle("hidden");
       const icon = mobileMenuToggle.querySelector(".material-symbols-outlined");
-      if (icon) {
-        icon.textContent = navMenu.classList.contains("hidden")
-          ? "menu"
-          : "close";
-      }
+    if (icon) {
+      icon.textContent = navMenu.classList.contains("hidden")
+        ? "menu"
+        : "close";
+    }
+    // Accessibility: reflect state in aria-expanded
+    const isHidden = navMenu.classList.contains("hidden");
+    mobileMenuToggle.setAttribute("aria-expanded", String(!isHidden));
+    // Accessibility: reflect state in aria-expanded
+    const isHidden = navMenu.classList.contains("hidden");
+    mobileMenuToggle.setAttribute("aria-expanded", String(!isHidden));
     });
 
     navLinks.forEach((link) => {
@@ -29,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (icon) {
           icon.textContent = "menu";
         }
+        mobileMenuToggle.setAttribute("aria-expanded", "false");
       });
     });
   }
