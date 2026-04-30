@@ -1,0 +1,70 @@
+{
+  "beneficios": [
+    {
+      "titulo": "Expandir Rutas",
+      "icono": "local_shipping",
+      "descripcion": "Llegar a más comunidades con nuestro servicio de recolección profesional."
+    },
+    {
+      "titulo": "Mejorar Instalaciones",
+      "icono": "warehouse",
+      "descripcion": "Actualizar equipos y ampliar la capacidad operativa de nuestro centro de acopio."
+    },
+    {
+      "titulo": "Educar",
+      "icono": "book_ribbon",
+      "descripcion": "Mantener y ampliar programas de educación ambiental en escuelas y comunidades."
+    },
+    {
+      "titulo": "Crear Empleos",
+      "icono": "work",
+      "descripcion": "Generar oportunidades de trabajo digno y sostenible vinculadas a la economía circular."
+    }
+  ],
+  "cuentas": [
+    {
+      "tipo": "IBAN (Colones)",
+      "banco": "Banco Nacional de Costa Rica",
+      "valor": "CR91015109410010038566",
+      "beneficiario": "ASAOSA",
+      "icono": "account_balance"
+    },
+    {
+      "tipo": "IBAN (Dólares)",
+      "banco": "Banco Nacional de Costa Rica",
+      "valor": "CR96015109420020056199",
+      "beneficiario": "ASAOSA",
+      "icono": "account_balance"
+    },
+    {
+      "tipo": "SINPE Móvil",
+      "banco": "Teléfono",
+      "valor": "(+506) XXXX XXXX",
+      "beneficiario": "ASAOSA",
+      "icono": "mobile_3"
+    }
+  ],
+  "paypal": {
+    "url": "https://www.paypal.me/ASAOSA",
+    "descripcion": "Realiza donaciones internacionales de forma segura a través de nuestra plataforma de PayPal."
+  },
+  "credenciales": [
+    {
+      "etiqueta": "Gestor Autorizado",
+      "valor": "MS-DRRSBRU-DARSG-RGA0705-2025",
+      "icono": "verified"
+    },
+    {
+      "etiqueta": "Cédula Jurídica",
+      "valor": "3-002-559586",
+      "icono": "fingerprint"
+    }
+  ],
+  "en_especie": [
+    "Herramientas para clasificación de residuos",
+    "Equipos de protección personal (EPP)",
+    "Contenedores y sacos industriales",
+    "Balanzas y equipos de pesaje técnico",
+    "Vehículos o apoyo logístico para transporte de materiales"
+  ]
+}

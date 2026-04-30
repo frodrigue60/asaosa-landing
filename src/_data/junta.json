@@ -1,0 +1,37 @@
+[
+  {
+    "puesto": "Presidente",
+    "nombre": "Rosa Iris Gerarda Avila Araya",
+    "cedula": "5-0188-0330",
+    "representacion": "Judicial y Extrajudicial",
+    "vigencia": "16/07/2024 al 15/07/2026"
+  },
+  {
+    "puesto": "Vicepresidente",
+    "nombre": "Emanuel Porras Avila",
+    "cedula": "6-0386-0935",
+    "representacion": "Judicial y Extrajudicial",
+    "vigencia": "16/07/2024 al 15/07/2026"
+  },
+  {
+    "puesto": "Secretario",
+    "nombre": "Merys Dayanna Badilla Aguero",
+    "cedula": "1-1277-0778",
+    "representacion": "No aplica",
+    "vigencia": "16/07/2024 al 15/07/2026"
+  },
+  {
+    "puesto": "Tesorero",
+    "nombre": "Soriada Porras Avila",
+    "cedula": "1-1293-0861",
+    "representacion": "No aplica",
+    "vigencia": "16/07/2024 al 15/07/2026"
+  },
+  {
+    "puesto": "Vocal",
+    "nombre": "Marjorie Porras Avila",
+    "cedula": "6-0291-0147",
+    "representacion": "No aplica",
+    "vigencia": "16/07/2024 al 15/07/2026"
+  }
+]
